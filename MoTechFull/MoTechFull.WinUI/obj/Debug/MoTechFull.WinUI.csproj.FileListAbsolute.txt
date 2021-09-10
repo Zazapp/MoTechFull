@@ -39,3 +39,5 @@ C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\o
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Login.frmLogin.resources
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.KorisnickiNalozi.frmKorisnickiNaloziDodajUredi.resources
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.KorisnickiNalozi.frmKorisnickiNaloziPrikazi.resources
+C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Kategorije.frmKategorijeDodajUredi.resources
+C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Kategorije.frmKategorijePrikazi.resources

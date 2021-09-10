@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MoTechFull.WinUI.Artikli;
+using MoTechFull.WinUI.Kategorije;
 using MoTechFull.WinUI.KorisnickiNalozi;
 
 namespace MoTechFull.WinUI
@@ -130,6 +131,20 @@ namespace MoTechFull.WinUI
         private void dodajUrediKorisnikaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmKorisnickiNaloziDodajUredi frm = new frmKorisnickiNaloziDodajUredi();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void pregledKategorijaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKategorijePrikazi frm = new frmKategorijePrikazi();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void dodajUrediKategorijuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKategorijeDodajUredi frm = new frmKategorijeDodajUredi();
             frm.MdiParent = this;
             frm.Show();
         }
