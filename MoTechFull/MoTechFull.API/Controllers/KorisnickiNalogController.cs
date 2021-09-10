@@ -13,7 +13,7 @@ namespace MoTechFull.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    //[Authorize]
+    [Authorize]
     public class KorisnickiNalogController : ControllerBase
     {
 

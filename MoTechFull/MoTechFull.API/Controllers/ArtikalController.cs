@@ -19,7 +19,6 @@ namespace MoTechFull.Controllers
         {
         }
 
-        [AllowAnonymous]
         [HttpGet("Recommend/{id}")]
         public List<Model.Artikli> Recommend(int id) 
         {
