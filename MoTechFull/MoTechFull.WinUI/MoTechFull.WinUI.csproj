@@ -105,6 +105,18 @@
     <Compile Include="frmPočetna.Designer.cs">
       <DependentUpon>frmPočetna.cs</DependentUpon>
     </Compile>
+    <Compile Include="KorisnickiNalozi\frmKorisnickiNaloziDodajUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KorisnickiNalozi\frmKorisnickiNaloziDodajUredi.Designer.cs">
+      <DependentUpon>frmKorisnickiNaloziDodajUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KorisnickiNalozi\frmKorisnickiNaloziPrikazi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KorisnickiNalozi\frmKorisnickiNaloziPrikazi.Designer.cs">
+      <DependentUpon>frmKorisnickiNaloziPrikazi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPočetna.resx">
       <DependentUpon>frmPočetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorisnickiNalozi\frmKorisnickiNaloziDodajUredi.resx">
+      <DependentUpon>frmKorisnickiNaloziDodajUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorisnickiNalozi\frmKorisnickiNaloziPrikazi.resx">
+      <DependentUpon>frmKorisnickiNaloziPrikazi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -159,7 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Kategorije\" />
-    <Folder Include="KorisnickiNalozi\" />
     <Folder Include="Proizvodjaci\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

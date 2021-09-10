@@ -1,4 +1,5 @@
 ﻿using MoTechFull.Model;
+using MoTechFull.WinUI.Artikli;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,13 @@ namespace MoTechFull.WinUI
             dgvArtikli.Columns["Proizvodjac"].Visible = false;
             dgvArtikli.Columns["KategorijaId"].Visible = false;
             dgvArtikli.Columns["ProizvodjacId"].Visible = false;
+        }
+
+        private void dgvArtikli_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var item = dgvArtikli.SelectedRows[0].DataBoundItem;
+            frmArtikliDodajUredi frm = new frmArtikliDodajUredi(item as MoTechFull.Model.Artikli);
+            frm.ShowDialog();
         }
     }
 }

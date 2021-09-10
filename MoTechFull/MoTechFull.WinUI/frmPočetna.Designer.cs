@@ -37,6 +37,9 @@ namespace MoTechFull.WinUI
             this.artikliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.korisniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledKorisnikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajUrediKorisnikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +47,8 @@ namespace MoTechFull.WinUI
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.artikliToolStripMenuItem});
+            this.artikliToolStripMenuItem,
+            this.korisniciToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(632, 24);
@@ -90,6 +94,29 @@ namespace MoTechFull.WinUI
             this.dodajToolStripMenuItem.Text = "Dodaj Uredi Artikal";
             this.dodajToolStripMenuItem.Click += new System.EventHandler(this.dodajToolStripMenuItem_Click);
             // 
+            // korisniciToolStripMenuItem
+            // 
+            this.korisniciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pregledKorisnikaToolStripMenuItem,
+            this.dodajUrediKorisnikaToolStripMenuItem});
+            this.korisniciToolStripMenuItem.Name = "korisniciToolStripMenuItem";
+            this.korisniciToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.korisniciToolStripMenuItem.Text = "Korisnici";
+            // 
+            // pregledKorisnikaToolStripMenuItem
+            // 
+            this.pregledKorisnikaToolStripMenuItem.Name = "pregledKorisnikaToolStripMenuItem";
+            this.pregledKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.pregledKorisnikaToolStripMenuItem.Text = "Pregled Korisnika";
+            this.pregledKorisnikaToolStripMenuItem.Click += new System.EventHandler(this.pregledKorisnikaToolStripMenuItem_Click);
+            // 
+            // dodajUrediKorisnikaToolStripMenuItem
+            // 
+            this.dodajUrediKorisnikaToolStripMenuItem.Name = "dodajUrediKorisnikaToolStripMenuItem";
+            this.dodajUrediKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.dodajUrediKorisnikaToolStripMenuItem.Text = "Dodaj Uredi Korisnika";
+            this.dodajUrediKorisnikaToolStripMenuItem.Click += new System.EventHandler(this.dodajUrediKorisnikaToolStripMenuItem_Click);
+            // 
             // frmPocetna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,6 +146,9 @@ namespace MoTechFull.WinUI
         private System.Windows.Forms.ToolStripMenuItem artikliToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pregledToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem korisniciToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pregledKorisnikaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajUrediKorisnikaToolStripMenuItem;
     }
 }
 

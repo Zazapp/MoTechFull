@@ -83,8 +83,10 @@ namespace MoTechFull.WinUI
             this.dgvArtikli.Location = new System.Drawing.Point(3, 16);
             this.dgvArtikli.Name = "dgvArtikli";
             this.dgvArtikli.ReadOnly = true;
+            this.dgvArtikli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArtikli.Size = new System.Drawing.Size(612, 217);
             this.dgvArtikli.TabIndex = 0;
+            this.dgvArtikli.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArtikli_CellContentClick);
             // 
             // frmPrikazArtikala
             // 
