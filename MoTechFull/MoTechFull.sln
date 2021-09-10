@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoTechFull.API", "MoTechFull.API\MoTechFull.API.csproj", "{28D8C426-FE6A-4C2D-BC12-7B197E65F2E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoTechFull.API", "MoTechFull.API\MoTechFull.API.csproj", "{28D8C426-FE6A-4C2D-BC12-7B197E65F2E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoTechFull.Model", "MoTechFull.Model\MoTechFull.Model.csproj", "{7C6980A2-3DDB-42AF-8AC4-F28AA96F4009}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoTechFull.Model", "MoTechFull.Model\MoTechFull.Model.csproj", "{7C6980A2-3DDB-42AF-8AC4-F28AA96F4009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoTechFull.WinUI", "MoTechFull.WinUI\MoTechFull.WinUI.csproj", "{9283D030-C0B5-44C2-88D9-B4724B879D71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7C6980A2-3DDB-42AF-8AC4-F28AA96F4009}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C6980A2-3DDB-42AF-8AC4-F28AA96F4009}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C6980A2-3DDB-42AF-8AC4-F28AA96F4009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9283D030-C0B5-44C2-88D9-B4724B879D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9283D030-C0B5-44C2-88D9-B4724B879D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9283D030-C0B5-44C2-88D9-B4724B879D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9283D030-C0B5-44C2-88D9-B4724B879D71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
