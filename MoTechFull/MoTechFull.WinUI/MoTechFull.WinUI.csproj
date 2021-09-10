@@ -81,14 +81,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIService.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Artikli\frmArtikliDodajUredi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Artikli\frmArtikliDodajUredi.Designer.cs">
+      <DependentUpon>frmArtikliDodajUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Artikli\frmArtikliPrikaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Artikli\frmArtikliPrikaz.Designer.cs">
+      <DependentUpon>frmArtikliPrikaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\frmUspjehDodajUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper\frmUspjehDodajUredi.Designer.cs">
+      <DependentUpon>frmUspjehDodajUredi.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Artikli\frmArtikliDodajUredi.resx">
+      <DependentUpon>frmArtikliDodajUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Artikli\frmArtikliPrikaz.resx">
+      <DependentUpon>frmArtikliPrikaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helper\frmUspjehDodajUredi.resx">
+      <DependentUpon>frmUspjehDodajUredi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -119,8 +140,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Artikli\" />
-    <Folder Include="Helper\" />
     <Folder Include="Kategorije\" />
     <Folder Include="KorisnickiNalozi\" />
     <Folder Include="Login\" />
