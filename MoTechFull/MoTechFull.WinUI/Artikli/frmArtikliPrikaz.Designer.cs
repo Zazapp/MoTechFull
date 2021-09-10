@@ -62,6 +62,7 @@ namespace MoTechFull.WinUI
             this.btnPretraga.TabIndex = 2;
             this.btnPretraga.Text = "Pretraži";
             this.btnPretraga.UseVisualStyleBackColor = true;
+            this.btnPretraga.Click += new System.EventHandler(this.btnPretraga_Click_1);
             // 
             // groupBox1
             // 

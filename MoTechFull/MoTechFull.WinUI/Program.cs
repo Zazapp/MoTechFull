@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoTechFull.WinUI.Login;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace MoTechFull.WinUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrikazArtikala());
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -37,7 +37,7 @@ namespace MoTechFull.WinUI.Helper
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("LEMON MILK Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 58);
+            this.label1.Location = new System.Drawing.Point(12, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(272, 21);
             this.label1.TabIndex = 0;
@@ -45,9 +45,9 @@ namespace MoTechFull.WinUI.Helper
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(105, 119);
+            this.btnOK.Location = new System.Drawing.Point(96, 108);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(84, 31);
             this.btnOK.TabIndex = 1;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -57,7 +57,7 @@ namespace MoTechFull.WinUI.Helper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 179);
+            this.ClientSize = new System.Drawing.Size(290, 163);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.label1);
             this.Name = "frmUspjehDodajUredi";

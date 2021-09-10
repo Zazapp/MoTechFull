@@ -20,7 +20,7 @@ namespace MoTechFull.WinUI
             InitializeComponent();
         }
 
-        private async void btnPretraga_Click(object sender, EventArgs e)
+        private async void btnPretraga_Click_1(object sender, EventArgs e)
         {
             ArtikliSearchObject searchRequest = new ArtikliSearchObject()
             {
@@ -35,8 +35,6 @@ namespace MoTechFull.WinUI
             dgvArtikli.Columns["Proizvodjac"].Visible = false;
             dgvArtikli.Columns["KategorijaId"].Visible = false;
             dgvArtikli.Columns["ProizvodjacId"].Visible = false;
-
         }
-
     }
 }
