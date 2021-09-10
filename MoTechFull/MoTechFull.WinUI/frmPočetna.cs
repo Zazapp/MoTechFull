@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MoTechFull.WinUI.Artikli;
 using MoTechFull.WinUI.Kategorije;
 using MoTechFull.WinUI.KorisnickiNalozi;
+using MoTechFull.WinUI.Proizvodjaci;
 
 namespace MoTechFull.WinUI
 {
@@ -145,6 +146,20 @@ namespace MoTechFull.WinUI
         private void dodajUrediKategorijuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmKategorijeDodajUredi frm = new frmKategorijeDodajUredi();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void pregledProizvodjacaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProizvodjaciPrikazi frm = new frmProizvodjaciPrikazi();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void dodajUrediProizvodjacaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProizvodjaciDodajUredi frm = new frmProizvodjaciDodajUredi();
             frm.MdiParent = this;
             frm.Show();
         }
