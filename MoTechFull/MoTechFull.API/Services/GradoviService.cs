@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace MoTechFull.Services
 {
-    public class ProizvodjaciService : BaseCRUDService<Model.Proizvodjaci, Database.Proizvodjac, ProizvodjaciSearchObject, ProizvodjaciInsertUpdateRequest,ProizvodjaciInsertUpdateRequest>, IProizvodjaciService
+    public class GradoviService : BaseCRUDService<Model.Gradovi, Database.Grad, GradoviSearchObject, GradoviInsertUpdateRequest, ProizvodjaciInsertUpdateRequest>, IGradoviService
     {
-        public ProizvodjaciService(MoTechContext context, IMapper mapper) : base(context, mapper) { }
+        public GradoviService(MoTechContext context, IMapper mapper) : base(context, mapper) { }
 
-        public override IEnumerable<Model.Proizvodjaci> Get(ProizvodjaciSearchObject search = null)
+        public override IEnumerable<Model.Gradovi> Get(GradoviSearchObject search = null)
         {
-            var entity = Context.Set<Database.Proizvodjac>().AsQueryable();
+            var entity = Context.Set<Database.Grad>().AsQueryable();
 
             //WARNING: NEVER DO THIS. EXECUTES QUERY ON DB
             //entity = entity.ToList();
@@ -28,7 +28,7 @@ namespace MoTechFull.Services
 
             var list = entity.ToList();
 
-            return _mapper.Map<List<Model.Proizvodjaci>>(list);
+            return _mapper.Map<List<Model.Gradovi>>(list);
         }
     }
 }

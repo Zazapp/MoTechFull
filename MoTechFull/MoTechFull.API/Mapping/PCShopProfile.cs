@@ -24,6 +24,10 @@ namespace MoTechFull.Mapping
             CreateMap<GradoviInsertUpdateRequest, Database.Grad>().ReverseMap();
             CreateMap<Database.Kanton, Model.Kantoni>().ReverseMap();
             CreateMap<KantoniInsertUpdateRequest, Database.Kanton>().ReverseMap();
+            CreateMap<Database.Racun, Model.Racuni>().ReverseMap();
+            CreateMap<RacuniInsertRequest, Database.Racun>().ReverseMap();
+            CreateMap<Database.Korpa, Model.Korpe>().ReverseMap();
+            CreateMap<KorpeInsertRequest, Database.Korpa>().ReverseMap();
         }
     }
 }
