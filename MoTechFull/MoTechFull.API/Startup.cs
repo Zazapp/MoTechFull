@@ -67,6 +67,9 @@ namespace MoTechFull.API
             services.AddScoped<IProizvodjaciService, ProizvodjaciService>();
             services.AddScoped<IKategorijeService, KategorijeService>();
             services.AddScoped<IArtikliService, ArtikliService>();
+            services.AddScoped<IGradoviService, GradoviService>();
+            services.AddScoped<IKantoniService, KantoniService>();
+
             services.AddAuthentication("BasicAuthentication")
                 .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationFilter>("BasicAuthentication", null);
 

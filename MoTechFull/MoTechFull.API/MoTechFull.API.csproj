@@ -25,11 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Database\" />
     <Folder Include="Filters\" />
     <Folder Include="Mapping\" />
-    <Folder Include="Services\" />
     <Folder Include="Security\" />
   </ItemGroup>
 
