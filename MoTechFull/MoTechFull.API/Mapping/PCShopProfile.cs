@@ -34,6 +34,8 @@ namespace MoTechFull.Mapping
             CreateMap<KorpeArtikliUpdateRequest, Database.KorpaArtikli>().ReverseMap();
             CreateMap<Database.KupacNarudzbe, Model.KupciNarudzbe>().ReverseMap();
             CreateMap<KupciNarudzbeInsertRequest, Database.KupacNarudzbe>().ReverseMap();
+            CreateMap<Database.NarudzbaStavke, Model.NarudzbeStavke>().ReverseMap();
+            CreateMap<NarudzbeStavkeInsertRequest, Database.NarudzbaStavke>().ReverseMap();
         }
     }
 }
