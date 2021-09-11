@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using MoTechFull.Database;
 using MoTechFull.Filters;
 using MoTechFull.Model;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace MoTechFull.Services
 {
-    public class KorpeService : BaseCRUDService<Model.Korpe, Database.Korpa, KorpeSearchObject, KorpeInsertRequest, object>, IKorpeService
+    public class KorpeService : BaseCRUDService<Model.Korpe, Database.Korpa, KorpeSearchObject, KorpeInsertRequest, KorpeUpdateRequest>, IKorpeService
     {
         public KorpeService(MoTechContext context, IMapper mapper) : base(context, mapper) { }
 
@@ -21,6 +22,20 @@ namespace MoTechFull.Services
             //WARNING: NEVER DO THIS. EXECUTES QUERY ON DB
             //entity = entity.ToList();
 
+            if (search.KorisnickiNalogId.HasValue)
+            {
+                entity = entity.Where(x => x.KorisnickiNalogId == search.KorisnickiNalogId);
+            }
+
+            if (search.KorpaId.HasValue)
+            {
+                entity = entity.Where(x => x.KorpaId == search.KorpaId);
+            }
+
+            if (search?.IncludeListKorisnickiNalog == true)
+            {
+                entity = entity.Include(x => x.KorisnickiNalog);
+            }
 
             var list = entity.ToList();
 

@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 namespace MoTechFull.Controllers
 {
 
-    public class KorpaController : BaseCRUDController<Model.Korpe, KorpeSearchObject, KorpeInsertRequest, KorpeUpdateRequest>
+    public class KorpeArtikliController : BaseCRUDController<Model.KorpeArtikli, KorpeArtikliSearchObject, KorpeArtikliInsertRequest, KorpeArtikliUpdateRequest>
     {
 
-        public KorpaController(IKorpeService service):base(service)
+        public KorpeArtikliController(IKorpeArtikliService service):base(service)
         {
         }
 

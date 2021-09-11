@@ -28,6 +28,10 @@ namespace MoTechFull.Mapping
             CreateMap<RacuniInsertRequest, Database.Racun>().ReverseMap();
             CreateMap<Database.Korpa, Model.Korpe>().ReverseMap();
             CreateMap<KorpeInsertRequest, Database.Korpa>().ReverseMap();
+            CreateMap<KorpeUpdateRequest, Database.Korpa>().ReverseMap();
+            CreateMap<Database.KorpaArtikli, Model.KorpeArtikli>().ReverseMap();
+            CreateMap<KorpeArtikliInsertRequest, Database.KorpaArtikli>().ReverseMap();
+            CreateMap<KorpeArtikliUpdateRequest, Database.KorpaArtikli>().ReverseMap();
         }
     }
 }
