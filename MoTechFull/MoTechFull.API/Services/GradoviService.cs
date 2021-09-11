@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MoTechFull.Services
 {
-    public class GradoviService : BaseCRUDService<Model.Gradovi, Database.Grad, GradoviSearchObject, GradoviInsertUpdateRequest, ProizvodjaciInsertUpdateRequest>, IGradoviService
+    public class GradoviService : BaseCRUDService<Model.Gradovi, Database.Grad, GradoviSearchObject, GradoviInsertUpdateRequest, GradoviInsertUpdateRequest>, IGradoviService
     {
         public GradoviService(MoTechContext context, IMapper mapper) : base(context, mapper) { }
 

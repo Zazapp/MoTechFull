@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace MoTechFull.Controllers
 {
 
-    public class KorpaController : BaseCRUDController<Model.Korpe, KorpeSearchObject, KorpeInsertUpdateRequest, KorpeInsertUpdateRequest>
+    public class KorpaController : BaseCRUDController<Model.Korpe, KorpeSearchObject, KorpeInsertRequest, object>
     {
 
         public KorpaController(IKorpeService service):base(service)

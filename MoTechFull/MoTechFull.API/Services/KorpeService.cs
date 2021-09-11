@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MoTechFull.Services
 {
-    public class KorpeService : BaseCRUDService<Model.Korpe, Database.Korpa, KorpeSearchObject, KorpeInsertUpdateRequest, KorpeInsertUpdateRequest>, IKorpeService
+    public class KorpeService : BaseCRUDService<Model.Korpe, Database.Korpa, KorpeSearchObject, KorpeInsertRequest, object>, IKorpeService
     {
         public KorpeService(MoTechContext context, IMapper mapper) : base(context, mapper) { }
 

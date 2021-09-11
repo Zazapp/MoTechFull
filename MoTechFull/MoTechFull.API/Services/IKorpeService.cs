@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MoTechFull.Services
 {
-    public interface IKorpeService: ICRUDService<Model.Korpe, KorpeSearchObject, KorpeInsertUpdateRequest, KorpeInsertUpdateRequest>
+    public interface IKorpeService: ICRUDService<Model.Korpe, KorpeSearchObject, KorpeInsertRequest, object>
     {
 
     }

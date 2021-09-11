@@ -8,6 +8,6 @@ namespace MoTechFull.Model.Requests
     {
 
         public DateTime DatumIzdavanja { get; set; }
-        public double Cijena { get; set; }
+        public double Iznos { get; set; }
     }
 }
