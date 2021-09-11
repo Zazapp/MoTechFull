@@ -294,7 +294,10 @@ namespace MoTechFull.API.Migrations
                     b.Property<DateTime>("DatumDodavanja")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("KupacId")
+                    b.Property<int>("KorisnickiNalogId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("KupacId")
                         .HasColumnType("int");
 
                     b.Property<string>("Opis")
@@ -302,7 +305,10 @@ namespace MoTechFull.API.Migrations
 
                     b.HasKey("KorpaId");
 
-                    b.HasIndex(new[] { "KupacId" }, "IX_Korpa_KupacId");
+                    b.HasIndex("KupacId");
+
+                    b.HasIndex(new[] { "KorisnickiNalogId" }, "IX_Korpa_KupacId")
+                        .HasDatabaseName("IX_Korpa_KupacId1");
 
                     b.ToTable("Korpa");
                 });
@@ -394,14 +400,20 @@ namespace MoTechFull.API.Migrations
                     b.Property<bool>("IsIsporucena")
                         .HasColumnType("bit");
 
-                    b.Property<int>("KupacId")
+                    b.Property<int>("KorisnickiNalogId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("KupacId")
                         .HasColumnType("int");
 
                     b.HasKey("KupacNarudzbeId");
 
+                    b.HasIndex("KupacId");
+
                     b.HasIndex(new[] { "GradId" }, "IX_KupacNarudzbe_GradId");
 
-                    b.HasIndex(new[] { "KupacId" }, "IX_KupacNarudzbe_KupacId");
+                    b.HasIndex(new[] { "KorisnickiNalogId" }, "IX_KupacNarudzbe_KupacId")
+                        .HasDatabaseName("IX_KupacNarudzbe_KupacId1");
 
                     b.ToTable("KupacNarudzbe");
                 });
@@ -708,13 +720,17 @@ namespace MoTechFull.API.Migrations
 
             modelBuilder.Entity("MoTechFull.Database.Korpa", b =>
                 {
-                    b.HasOne("MoTechFull.Database.Kupac", "Kupac")
+                    b.HasOne("MoTechFull.Database.KorisnickiNalog", "KorisnickiNalog")
                         .WithMany("Korpas")
-                        .HasForeignKey("KupacId")
+                        .HasForeignKey("KorisnickiNalogId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Kupac");
+                    b.HasOne("MoTechFull.Database.Kupac", null)
+                        .WithMany("Korpas")
+                        .HasForeignKey("KupacId");
+
+                    b.Navigation("KorisnickiNalog");
                 });
 
             modelBuilder.Entity("MoTechFull.Database.KorpaArtikli", b =>
@@ -761,14 +777,18 @@ namespace MoTechFull.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MoTechFull.Database.Kupac", "Kupac")
+                    b.HasOne("MoTechFull.Database.KorisnickiNalog", "KorisnickiNalog")
                         .WithMany("KupacNarudzbes")
-                        .HasForeignKey("KupacId")
+                        .HasForeignKey("KorisnickiNalogId")
                         .IsRequired();
+
+                    b.HasOne("MoTechFull.Database.Kupac", null)
+                        .WithMany("KupacNarudzbes")
+                        .HasForeignKey("KupacId");
 
                     b.Navigation("Grad");
 
-                    b.Navigation("Kupac");
+                    b.Navigation("KorisnickiNalog");
                 });
 
             modelBuilder.Entity("MoTechFull.Database.NarudzbaStavke", b =>
@@ -900,6 +920,10 @@ namespace MoTechFull.API.Migrations
             modelBuilder.Entity("MoTechFull.Database.KorisnickiNalog", b =>
                 {
                     b.Navigation("AutorizacijskiTokens");
+
+                    b.Navigation("Korpas");
+
+                    b.Navigation("KupacNarudzbes");
 
                     b.Navigation("Kupacs");
 

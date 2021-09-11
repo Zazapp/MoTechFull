@@ -13,7 +13,7 @@ namespace MoTechFull.Database
         }
 
         public int KupacNarudzbeId { get; set; }
-        public int KupacId { get; set; }
+        public int KorisnickiNalogId { get; set; }
         public int AdresaId { get; set; }
         public string AdresaDostave { get; set; }
         public int GradId { get; set; }
@@ -21,7 +21,7 @@ namespace MoTechFull.Database
         public bool IsIsporucena { get; set; }
 
         public virtual Grad Grad { get; set; }
-        public virtual Kupac Kupac { get; set; }
+        public virtual KorisnickiNalog KorisnickiNalog { get; set; }
         public virtual ICollection<NarudzbaStavke> NarudzbaStavkes { get; set; }
     }
 }

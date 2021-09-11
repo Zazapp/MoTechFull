@@ -13,11 +13,11 @@ namespace MoTechFull.Database
         }
 
         public int KorpaId { get; set; }
-        public int KupacId { get; set; }
+        public int KorisnickiNalogId { get; set; }
         public DateTime DatumDodavanja { get; set; }
         public string Opis { get; set; }
 
-        public virtual Kupac Kupac { get; set; }
+        public virtual KorisnickiNalog KorisnickiNalog { get; set; }
         public virtual ICollection<KorpaArtikli> KorpaArtiklis { get; set; }
     }
 }

@@ -177,11 +177,11 @@ namespace MoTechFull.Database
             {
                 entity.ToTable("Korpa");
 
-                entity.HasIndex(e => e.KupacId, "IX_Korpa_KupacId");
+                entity.HasIndex(e => e.KorisnickiNalogId, "IX_Korpa_KupacId");
 
-                entity.HasOne(d => d.Kupac)
+                entity.HasOne(d => d.KorisnickiNalog)
                     .WithMany(p => p.Korpas)
-                    .HasForeignKey(d => d.KupacId);
+                    .HasForeignKey(d => d.KorisnickiNalogId);
             });
 
             modelBuilder.Entity<KorpaArtikli>(entity =>
@@ -224,15 +224,15 @@ namespace MoTechFull.Database
 
                 entity.HasIndex(e => e.GradId, "IX_KupacNarudzbe_GradId");
 
-                entity.HasIndex(e => e.KupacId, "IX_KupacNarudzbe_KupacId");
+                entity.HasIndex(e => e.KorisnickiNalogId, "IX_KupacNarudzbe_KupacId");
 
                 entity.HasOne(d => d.Grad)
                     .WithMany(p => p.KupacNarudzbes)
                     .HasForeignKey(d => d.GradId);
 
-                entity.HasOne(d => d.Kupac)
+                entity.HasOne(d => d.KorisnickiNalog)
                     .WithMany(p => p.KupacNarudzbes)
-                    .HasForeignKey(d => d.KupacId)
+                    .HasForeignKey(d => d.KorisnickiNalogId)
                     .OnDelete(DeleteBehavior.ClientSetNull);
             });
 

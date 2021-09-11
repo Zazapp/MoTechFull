@@ -20,6 +20,8 @@ namespace MoTechFull.Database
         public int Tip { get; set; }
         // 1=admin 2=prodavac 3=klijent
 
+        public virtual ICollection<Korpa> Korpas { get; set; }
+        public virtual ICollection<KupacNarudzbe> KupacNarudzbes { get; set; }
         public virtual ICollection<AutorizacijskiToken> AutorizacijskiTokens { get; set; }
         public virtual ICollection<Kupac> Kupacs { get; set; }
         public virtual ICollection<Uposlenik> Uposleniks { get; set; }
