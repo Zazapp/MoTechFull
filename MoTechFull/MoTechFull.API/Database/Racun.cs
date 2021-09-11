@@ -13,11 +13,9 @@ namespace MoTechFull.Database
         }
 
         public int RacunId { get; set; }
-        public int UposlenikId { get; set; }
         public DateTime DatumIzdavanja { get; set; }
         public double Iznos { get; set; }
 
-        public virtual Uposlenik Uposlenik { get; set; }
         public virtual ICollection<NarudzbaStavke> NarudzbaStavkes { get; set; }
     }
 }

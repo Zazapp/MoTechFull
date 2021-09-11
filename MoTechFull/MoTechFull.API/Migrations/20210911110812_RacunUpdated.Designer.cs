@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MoTechFull.Database;
 
 namespace MoTechFull.API.Migrations
 {
     [DbContext(typeof(MoTechContext))]
-    partial class MoTechContextModelSnapshot : ModelSnapshot
+    [Migration("20210911110812_RacunUpdated")]
+    partial class RacunUpdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -469,6 +471,8 @@ namespace MoTechFull.API.Migrations
 
                     b.HasKey("NovostiId");
 
+                    b.HasIndex(new[] { "UposlenikId" }, "IX_Novosti_UposlenikId");
+
                     b.ToTable("Novosti");
                 });
 
@@ -515,7 +519,12 @@ namespace MoTechFull.API.Migrations
                     b.Property<double>("Iznos")
                         .HasColumnType("float");
 
+                    b.Property<int?>("UposlenikId")
+                        .HasColumnType("int");
+
                     b.HasKey("RacunId");
+
+                    b.HasIndex("UposlenikId");
 
                     b.ToTable("Racun");
                 });
@@ -546,6 +555,57 @@ namespace MoTechFull.API.Migrations
                     b.HasIndex(new[] { "KupacId" }, "IX_Recenzija_KupacId");
 
                     b.ToTable("Recenzija");
+                });
+
+            modelBuilder.Entity("MoTechFull.Database.Uposlenik", b =>
+                {
+                    b.Property<int>("UposlenikId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Adresa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DatumRodjenja")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DatumZaposlenja")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("GradId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Ime")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsAktivan")
+                        .HasColumnType("bit")
+                        .HasColumnName("isAktivan");
+
+                    b.Property<double>("IznosPlate")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Jmbg")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("JMBG");
+
+                    b.Property<int?>("KorisnickiNalogId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Prezime")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UposlenikId");
+
+                    b.HasIndex(new[] { "GradId" }, "IX_Uposlenik_GradId");
+
+                    b.HasIndex(new[] { "KorisnickiNalogId" }, "IX_Uposlenik_KorisnickiNalogId");
+
+                    b.ToTable("Uposlenik");
                 });
 
             modelBuilder.Entity("MoTechFull.Database.Artikal", b =>
@@ -759,6 +819,24 @@ namespace MoTechFull.API.Migrations
                     b.Navigation("Racun");
                 });
 
+            modelBuilder.Entity("MoTechFull.Database.Novosti", b =>
+                {
+                    b.HasOne("MoTechFull.Database.Uposlenik", "Uposlenik")
+                        .WithMany("Novostis")
+                        .HasForeignKey("UposlenikId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Uposlenik");
+                });
+
+            modelBuilder.Entity("MoTechFull.Database.Racun", b =>
+                {
+                    b.HasOne("MoTechFull.Database.Uposlenik", null)
+                        .WithMany("Racuns")
+                        .HasForeignKey("UposlenikId");
+                });
+
             modelBuilder.Entity("MoTechFull.Database.Recenzija", b =>
                 {
                     b.HasOne("MoTechFull.Database.Artikal", "Artikal")
@@ -776,6 +854,21 @@ namespace MoTechFull.API.Migrations
                     b.Navigation("Artikal");
 
                     b.Navigation("Kupac");
+                });
+
+            modelBuilder.Entity("MoTechFull.Database.Uposlenik", b =>
+                {
+                    b.HasOne("MoTechFull.Database.Grad", "Grad")
+                        .WithMany("Uposleniks")
+                        .HasForeignKey("GradId");
+
+                    b.HasOne("MoTechFull.Database.KorisnickiNalog", "KorisnickiNalog")
+                        .WithMany("Uposleniks")
+                        .HasForeignKey("KorisnickiNalogId");
+
+                    b.Navigation("Grad");
+
+                    b.Navigation("KorisnickiNalog");
                 });
 
             modelBuilder.Entity("MoTechFull.Database.Artikal", b =>
@@ -808,6 +901,8 @@ namespace MoTechFull.API.Migrations
                     b.Navigation("KupacNarudzbes");
 
                     b.Navigation("Kupacs");
+
+                    b.Navigation("Uposleniks");
                 });
 
             modelBuilder.Entity("MoTechFull.Database.Kanton", b =>
@@ -829,6 +924,8 @@ namespace MoTechFull.API.Migrations
                     b.Navigation("KupacNarudzbes");
 
                     b.Navigation("Kupacs");
+
+                    b.Navigation("Uposleniks");
                 });
 
             modelBuilder.Entity("MoTechFull.Database.Korpa", b =>
@@ -868,6 +965,13 @@ namespace MoTechFull.API.Migrations
             modelBuilder.Entity("MoTechFull.Database.Racun", b =>
                 {
                     b.Navigation("NarudzbaStavkes");
+                });
+
+            modelBuilder.Entity("MoTechFull.Database.Uposlenik", b =>
+                {
+                    b.Navigation("Novostis");
+
+                    b.Navigation("Racuns");
                 });
 #pragma warning restore 612, 618
         }

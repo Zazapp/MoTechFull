@@ -11,7 +11,6 @@ namespace MoTechFull.Database
         {
             AutorizacijskiTokens = new HashSet<AutorizacijskiToken>();
             Kupacs = new HashSet<Kupac>();
-            Uposleniks = new HashSet<Uposlenik>();
         }
 
         public int KorisnickiNalogId { get; set; }
@@ -24,6 +23,5 @@ namespace MoTechFull.Database
         public virtual ICollection<KupacNarudzbe> KupacNarudzbes { get; set; }
         public virtual ICollection<AutorizacijskiToken> AutorizacijskiTokens { get; set; }
         public virtual ICollection<Kupac> Kupacs { get; set; }
-        public virtual ICollection<Uposlenik> Uposleniks { get; set; }
     }
 }

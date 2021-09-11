@@ -39,7 +39,6 @@ namespace MoTechFull.Database
         public virtual DbSet<Proizvodjac> Proizvodjacs { get; set; }
         public virtual DbSet<Racun> Racuns { get; set; }
         public virtual DbSet<Recenzija> Recenzijas { get; set; }
-        public virtual DbSet<Uposlenik> Uposleniks { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -264,11 +263,6 @@ namespace MoTechFull.Database
             {
                 entity.ToTable("Novosti");
 
-                entity.HasIndex(e => e.UposlenikId, "IX_Novosti_UposlenikId");
-
-                entity.HasOne(d => d.Uposlenik)
-                    .WithMany(p => p.Novostis)
-                    .HasForeignKey(d => d.UposlenikId);
             });
 
             modelBuilder.Entity<Ponudum>(entity =>
@@ -285,11 +279,6 @@ namespace MoTechFull.Database
             {
                 entity.ToTable("Racun");
 
-                entity.HasIndex(e => e.UposlenikId, "IX_Racun_UposlenikId");
-
-                entity.HasOne(d => d.Uposlenik)
-                    .WithMany(p => p.Racuns)
-                    .HasForeignKey(d => d.UposlenikId);
             });
 
             modelBuilder.Entity<Recenzija>(entity =>
@@ -308,30 +297,7 @@ namespace MoTechFull.Database
                     .WithMany(p => p.Recenzijas)
                     .HasForeignKey(d => d.KupacId);
             });
-
-            modelBuilder.Entity<Uposlenik>(entity =>
-            {
-                entity.ToTable("Uposlenik");
-
-                entity.HasIndex(e => e.GradId, "IX_Uposlenik_GradId");
-
-                entity.HasIndex(e => e.KorisnickiNalogId, "IX_Uposlenik_KorisnickiNalogId");
-
-                entity.Property(e => e.IsAktivan).HasColumnName("isAktivan");
-
-                entity.Property(e => e.Jmbg).HasColumnName("JMBG");
-
-                entity.HasOne(d => d.Grad)
-                    .WithMany(p => p.Uposleniks)
-                    .HasForeignKey(d => d.GradId);
-
-                entity.HasOne(d => d.KorisnickiNalog)
-                    .WithMany(p => p.Uposleniks)
-                    .HasForeignKey(d => d.KorisnickiNalogId);
-            });
-
-
-           
+        
 
             OnModelCreatingPartial(modelBuilder);
         }

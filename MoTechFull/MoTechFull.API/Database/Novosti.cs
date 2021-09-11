@@ -11,6 +11,5 @@ namespace MoTechFull.Database
         public string Sadrzaj { get; set; }
         public int UposlenikId { get; set; }
 
-        public virtual Uposlenik Uposlenik { get; set; }
     }
 }

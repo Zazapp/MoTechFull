@@ -12,7 +12,6 @@ namespace MoTechFull.Database
             Dobavljacs = new HashSet<Dobavljac>();
             KupacNarudzbes = new HashSet<KupacNarudzbe>();
             Kupacs = new HashSet<Kupac>();
-            Uposleniks = new HashSet<Uposlenik>();
         }
 
         public int GradId { get; set; }
@@ -24,6 +23,5 @@ namespace MoTechFull.Database
         public virtual ICollection<Dobavljac> Dobavljacs { get; set; }
         public virtual ICollection<KupacNarudzbe> KupacNarudzbes { get; set; }
         public virtual ICollection<Kupac> Kupacs { get; set; }
-        public virtual ICollection<Uposlenik> Uposleniks { get; set; }
     }
 }
