@@ -43,3 +43,5 @@ C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\o
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Kategorije.frmKategorijePrikazi.resources
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Proizvodjaci.frmProizvodjaciDodajUredi.resources
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Proizvodjaci.frmProizvodjaciPrikazi.resources
+C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Kantoni.frmKantoniPregled.resources
+C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Kantoni.frmKantoniDodajUredi.resources

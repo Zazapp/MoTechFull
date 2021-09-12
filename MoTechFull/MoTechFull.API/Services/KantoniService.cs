@@ -25,6 +25,10 @@ namespace MoTechFull.Services
                 entity = entity.Where(x => x.Naziv.Contains(search.Naziv));
             }
 
+            if (!string.IsNullOrWhiteSpace(search?.Oznaka) && search?.Oznaka!="---")
+            {
+                entity = entity.Where(x => x.Oznaka.Contains(search.Oznaka));
+            }
 
             var list = entity.ToList();
 

@@ -105,6 +105,18 @@
     <Compile Include="frmPočetna.Designer.cs">
       <DependentUpon>frmPočetna.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kantoni\frmKantoniDodajUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kantoni\frmKantoniDodajUredi.Designer.cs">
+      <DependentUpon>frmKantoniDodajUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kantoni\frmKantoniPregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kantoni\frmKantoniPregled.Designer.cs">
+      <DependentUpon>frmKantoniPregled.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kategorije\frmKategorijeDodajUredi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPočetna.resx">
       <DependentUpon>frmPočetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kantoni\frmKantoniDodajUredi.resx">
+      <DependentUpon>frmKantoniDodajUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kantoni\frmKantoniPregled.resx">
+      <DependentUpon>frmKantoniPregled.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kategorije\frmKategorijeDodajUredi.resx">
       <DependentUpon>frmKategorijeDodajUredi.cs</DependentUpon>

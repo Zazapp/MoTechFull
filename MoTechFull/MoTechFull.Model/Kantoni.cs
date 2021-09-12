@@ -8,5 +8,6 @@ namespace MoTechFull.Model
     {
         public int KantonId { get; set; }
         public string Naziv { get; set; }
+        public string Oznaka { get; set; }
     }
 }

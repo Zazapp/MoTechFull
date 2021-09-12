@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MoTechFull.WinUI.Artikli;
+using MoTechFull.WinUI.Kantoni;
 using MoTechFull.WinUI.Kategorije;
 using MoTechFull.WinUI.KorisnickiNalozi;
 using MoTechFull.WinUI.Proizvodjaci;
@@ -160,6 +161,20 @@ namespace MoTechFull.WinUI
         private void dodajUrediProizvodjacaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmProizvodjaciDodajUredi frm = new frmProizvodjaciDodajUredi();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void pregledKantonaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKantoniPregled frm = new frmKantoniPregled();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void dodajUrediKantonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKantoniDodajUredi frm = new frmKantoniDodajUredi();
             frm.MdiParent = this;
             frm.Show();
         }
