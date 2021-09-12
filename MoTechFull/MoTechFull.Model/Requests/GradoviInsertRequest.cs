@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MoTechFull.Model.Requests
 {
-    public class GradoviInsertUpdateRequest
+    public class GradoviInsertRequest
     {
         public int Id { get; set; }
         [Required(AllowEmptyStrings = false)]

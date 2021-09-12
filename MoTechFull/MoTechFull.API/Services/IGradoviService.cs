@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MoTechFull.Services
 {
-    public interface IGradoviService : ICRUDService<Model.Gradovi, GradoviSearchObject, GradoviInsertUpdateRequest, GradoviInsertUpdateRequest>
+    public interface IGradoviService : ICRUDService<Model.Gradovi, GradoviSearchObject, GradoviInsertRequest, GradoviUpdateRequest>
     {
 
     }

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace MoTechFull.Controllers
 {
 
-    public class GradController : BaseCRUDController<Model.Gradovi, GradoviSearchObject, GradoviInsertUpdateRequest,GradoviInsertUpdateRequest>
+    public class GradController : BaseCRUDController<Model.Gradovi, GradoviSearchObject, GradoviInsertRequest,GradoviUpdateRequest>
     {
 
         public GradController(IGradoviService service):base(service)

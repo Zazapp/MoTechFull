@@ -21,7 +21,8 @@ namespace MoTechFull.Mapping
             CreateMap<ArtikliInsertRequest, Database.Artikal>().ReverseMap();
             CreateMap<ArtikliUpdateRequest, Database.Artikal>().ReverseMap();
             CreateMap<Database.Grad, Model.Gradovi>().ReverseMap();
-            CreateMap<GradoviInsertUpdateRequest, Database.Grad>().ReverseMap();
+            CreateMap<GradoviInsertRequest, Database.Grad>().ReverseMap();
+            CreateMap<GradoviUpdateRequest, Database.Grad>().ReverseMap();
             CreateMap<Database.Kanton, Model.Kantoni>().ReverseMap();
             CreateMap<KantoniInsertUpdateRequest, Database.Kanton>().ReverseMap();
             CreateMap<Database.Racun, Model.Racuni>().ReverseMap();

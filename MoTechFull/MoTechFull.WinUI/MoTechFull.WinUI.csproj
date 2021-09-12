@@ -93,6 +93,18 @@
     <Compile Include="Artikli\frmArtikliPrikaz.Designer.cs">
       <DependentUpon>frmArtikliPrikaz.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gradovi\frmGradoviDodajUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gradovi\frmGradoviDodajUredi.Designer.cs">
+      <DependentUpon>frmGradoviDodajUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gradovi\frmGradoviPregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gradovi\frmGradoviPregled.Designer.cs">
+      <DependentUpon>frmGradoviPregled.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper\frmUspjehDodajUredi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +178,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Artikli\frmArtikliPrikaz.resx">
       <DependentUpon>frmArtikliPrikaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gradovi\frmGradoviDodajUredi.resx">
+      <DependentUpon>frmGradoviDodajUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gradovi\frmGradoviPregled.resx">
+      <DependentUpon>frmGradoviPregled.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Helper\frmUspjehDodajUredi.resx">
       <DependentUpon>frmUspjehDodajUredi.cs</DependentUpon>

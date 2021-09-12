@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MoTechFull.Services
 {
-    public class GradoviService : BaseCRUDService<Model.Gradovi, Database.Grad, GradoviSearchObject, GradoviInsertUpdateRequest, GradoviInsertUpdateRequest>, IGradoviService
+    public class GradoviService : BaseCRUDService<Model.Gradovi, Database.Grad, GradoviSearchObject, GradoviInsertRequest, GradoviUpdateRequest>, IGradoviService
     {
         public GradoviService(MoTechContext context, IMapper mapper) : base(context, mapper) { }
 
@@ -25,6 +25,10 @@ namespace MoTechFull.Services
                 entity = entity.Where(x => x.Naziv.Contains(search.Naziv));
             }
 
+            if (!string.IsNullOrWhiteSpace(search?.KantonNaziv) && search.KantonNaziv!="---")
+            {
+                entity = entity.Where(x => x.Kanton.Naziv.Contains(search.KantonNaziv));
+            }
 
             var list = entity.ToList();
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MoTechFull.WinUI.Artikli;
+using MoTechFull.WinUI.Gradovi;
 using MoTechFull.WinUI.Kantoni;
 using MoTechFull.WinUI.Kategorije;
 using MoTechFull.WinUI.KorisnickiNalozi;
@@ -175,6 +176,20 @@ namespace MoTechFull.WinUI
         private void dodajUrediKantonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmKantoniDodajUredi frm = new frmKantoniDodajUredi();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void pregledGradovaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGradoviPregled frm = new frmGradoviPregled();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void dodajUrediGradToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGradoviDodajUredi frm = new frmGradoviDodajUredi();
             frm.MdiParent = this;
             frm.Show();
         }
