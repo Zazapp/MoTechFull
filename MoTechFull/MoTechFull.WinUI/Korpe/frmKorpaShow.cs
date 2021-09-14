@@ -1,4 +1,5 @@
 ﻿using MoTechFull.Model;
+using MoTechFull.Model.Requests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MoTechFull.WinUI.Racun;
 
 namespace MoTechFull.WinUI.Korpe
 {
@@ -18,6 +20,8 @@ namespace MoTechFull.WinUI.Korpe
         APIService _korpeArtikli = new APIService("KorpeArtikli");
         APIService _artikli = new APIService("Artikal");
 
+
+        double ukupno = 0;
         Model.Korpe _korpa;
         public frmKorpaShow(Model.Korpe korpa)
         {
@@ -51,7 +55,7 @@ namespace MoTechFull.WinUI.Korpe
             dgvKorpa.Columns["Artikal"].Visible = false;
             dgvKorpa.Columns["Korpa"].Visible = false;
 
-            double ukupno=0;
+            
             double jedna;
 
             foreach(var stavka in list) 
@@ -62,6 +66,21 @@ namespace MoTechFull.WinUI.Korpe
 
             txtUkupno.Text = ukupno.ToString();
 
+        }
+
+        private  void btnRacun_Click(object sender, EventArgs e)
+        {
+            frmShipping frm = new frmShipping(_korpa as Model.Korpe,ukupno);
+            frm.ShowDialog();
+
+        }
+
+        private async void dgvKorpa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Model.KorpeArtikli korpaArtikal =(Model.KorpeArtikli)dgvKorpa.SelectedRows[0].DataBoundItem;
+            
+
+            await _korpeArtikli.Update<Model.KorpeArtikli>(korpaArtikal.KorpaArtikliId,new KorpeArtikliUpdateRequest() { Kolicina = 0 });
         }
     }
 }

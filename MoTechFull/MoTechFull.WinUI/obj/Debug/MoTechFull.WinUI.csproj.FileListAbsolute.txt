@@ -50,3 +50,5 @@ C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\o
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Korpe.frmKorpaDodaj.resources
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Korpe.frmKorpaShow.resources
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Shop.frmShop.resources
+C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Racun.frmRacun.resources
+C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Racun.frmShipping.resources

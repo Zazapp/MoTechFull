@@ -72,6 +72,7 @@ namespace MoTechFull.WinUI.Korpe
             this.dgvKorpa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKorpa.Size = new System.Drawing.Size(386, 281);
             this.dgvKorpa.TabIndex = 0;
+            this.dgvKorpa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKorpa_CellContentClick);
             // 
             // label1
             // 
@@ -100,6 +101,7 @@ namespace MoTechFull.WinUI.Korpe
             this.btnRacun.TabIndex = 4;
             this.btnRacun.Text = "Check out";
             this.btnRacun.UseVisualStyleBackColor = true;
+            this.btnRacun.Click += new System.EventHandler(this.btnRacun_Click);
             // 
             // frmKorpaShow
             // 

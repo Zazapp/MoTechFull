@@ -27,6 +27,12 @@ namespace MoTechFull.Services
                 entity = entity.Where(x => x.NarudzbaStavkeId == search.NarudzbaStavkeId);
             }
 
+
+            if (search.RacunId.HasValue)
+            {
+                entity = entity.Where(x => x.RacunId == search.RacunId);
+            }
+
             if (search.KupacNarudzbeId.HasValue)
             {
                 entity = entity.Where(x => x.KupacNarudzbeId == search.KupacNarudzbeId);

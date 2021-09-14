@@ -85,7 +85,10 @@ namespace MoTechFull.Services
 
             if (request.Kolicina == 0) 
             {
-                set.Remove(entity);
+                if (entity != null) 
+                {
+                    set.Remove(entity);
+                }
                 Context.SaveChanges();
                 return _mapper.Map<Model.KorpeArtikli>(entity);
             }
