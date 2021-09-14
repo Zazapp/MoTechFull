@@ -10,6 +10,8 @@ namespace MoTechFull.Model
         public int KorisnickiNalogId { get; set; }
         public DateTime DatumDodavanja { get; set; }
 
+
+
         public virtual KorisnickiNalozi KorisnickiNalog { get; set; }
     }
 }

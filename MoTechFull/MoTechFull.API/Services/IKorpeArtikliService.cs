@@ -10,6 +10,6 @@ namespace MoTechFull.Services
 {
     public interface IKorpeArtikliService: ICRUDService<Model.KorpeArtikli, KorpeArtikliSearchObject, KorpeArtikliInsertRequest, KorpeArtikliUpdateRequest>
     {
-
+        
     }
 }

@@ -13,6 +13,7 @@ using MoTechFull.WinUI.Kantoni;
 using MoTechFull.WinUI.Kategorije;
 using MoTechFull.WinUI.KorisnickiNalozi;
 using MoTechFull.WinUI.Proizvodjaci;
+using MoTechFull.WinUI.Shop;
 
 namespace MoTechFull.WinUI
 {
@@ -190,6 +191,13 @@ namespace MoTechFull.WinUI
         private void dodajUrediGradToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmGradoviDodajUredi frm = new frmGradoviDodajUredi();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void sHOPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShop frm = new frmShop();
             frm.MdiParent = this;
             frm.Show();
         }

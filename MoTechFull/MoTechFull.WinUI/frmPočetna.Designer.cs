@@ -43,15 +43,16 @@ namespace MoTechFull.WinUI
             this.proizvodjaciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledProizvodjacaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajUrediProizvodjacaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.kantoniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledKantonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajUrediKantonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledGradovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajUrediGradToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.sHOPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +65,8 @@ namespace MoTechFull.WinUI
             this.kategorijeToolStripMenuItem,
             this.proizvodjaciToolStripMenuItem,
             this.kantoniToolStripMenuItem,
-            this.gradoviToolStripMenuItem});
+            this.gradoviToolStripMenuItem,
+            this.sHOPToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(632, 24);
@@ -163,6 +165,52 @@ namespace MoTechFull.WinUI
             this.dodajUrediProizvodjacaToolStripMenuItem.Text = "Dodaj Uredi Proizvodjaca";
             this.dodajUrediProizvodjacaToolStripMenuItem.Click += new System.EventHandler(this.dodajUrediProizvodjacaToolStripMenuItem_Click);
             // 
+            // kantoniToolStripMenuItem
+            // 
+            this.kantoniToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pregledKantonaToolStripMenuItem,
+            this.dodajUrediKantonToolStripMenuItem});
+            this.kantoniToolStripMenuItem.Name = "kantoniToolStripMenuItem";
+            this.kantoniToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.kantoniToolStripMenuItem.Text = "Kantoni";
+            // 
+            // pregledKantonaToolStripMenuItem
+            // 
+            this.pregledKantonaToolStripMenuItem.Name = "pregledKantonaToolStripMenuItem";
+            this.pregledKantonaToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.pregledKantonaToolStripMenuItem.Text = "Pregled Kantona";
+            this.pregledKantonaToolStripMenuItem.Click += new System.EventHandler(this.pregledKantonaToolStripMenuItem_Click);
+            // 
+            // dodajUrediKantonToolStripMenuItem
+            // 
+            this.dodajUrediKantonToolStripMenuItem.Name = "dodajUrediKantonToolStripMenuItem";
+            this.dodajUrediKantonToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.dodajUrediKantonToolStripMenuItem.Text = "Dodaj Uredi Kanton";
+            this.dodajUrediKantonToolStripMenuItem.Click += new System.EventHandler(this.dodajUrediKantonToolStripMenuItem_Click);
+            // 
+            // gradoviToolStripMenuItem
+            // 
+            this.gradoviToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pregledGradovaToolStripMenuItem,
+            this.dodajUrediGradToolStripMenuItem});
+            this.gradoviToolStripMenuItem.Name = "gradoviToolStripMenuItem";
+            this.gradoviToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.gradoviToolStripMenuItem.Text = "Gradovi";
+            // 
+            // pregledGradovaToolStripMenuItem
+            // 
+            this.pregledGradovaToolStripMenuItem.Name = "pregledGradovaToolStripMenuItem";
+            this.pregledGradovaToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.pregledGradovaToolStripMenuItem.Text = "Pregled Gradova";
+            this.pregledGradovaToolStripMenuItem.Click += new System.EventHandler(this.pregledGradovaToolStripMenuItem_Click);
+            // 
+            // dodajUrediGradToolStripMenuItem
+            // 
+            this.dodajUrediGradToolStripMenuItem.Name = "dodajUrediGradToolStripMenuItem";
+            this.dodajUrediGradToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.dodajUrediGradToolStripMenuItem.Text = "Dodaj Uredi Grad";
+            this.dodajUrediGradToolStripMenuItem.Click += new System.EventHandler(this.dodajUrediGradToolStripMenuItem_Click);
+            // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -179,51 +227,12 @@ namespace MoTechFull.WinUI
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // kantoniToolStripMenuItem
+            // sHOPToolStripMenuItem
             // 
-            this.kantoniToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pregledKantonaToolStripMenuItem,
-            this.dodajUrediKantonToolStripMenuItem});
-            this.kantoniToolStripMenuItem.Name = "kantoniToolStripMenuItem";
-            this.kantoniToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.kantoniToolStripMenuItem.Text = "Kantoni";
-            // 
-            // pregledKantonaToolStripMenuItem
-            // 
-            this.pregledKantonaToolStripMenuItem.Name = "pregledKantonaToolStripMenuItem";
-            this.pregledKantonaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pregledKantonaToolStripMenuItem.Text = "Pregled Kantona";
-            this.pregledKantonaToolStripMenuItem.Click += new System.EventHandler(this.pregledKantonaToolStripMenuItem_Click);
-            // 
-            // dodajUrediKantonToolStripMenuItem
-            // 
-            this.dodajUrediKantonToolStripMenuItem.Name = "dodajUrediKantonToolStripMenuItem";
-            this.dodajUrediKantonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dodajUrediKantonToolStripMenuItem.Text = "Dodaj Uredi Kanton";
-            this.dodajUrediKantonToolStripMenuItem.Click += new System.EventHandler(this.dodajUrediKantonToolStripMenuItem_Click);
-            // 
-            // gradoviToolStripMenuItem
-            // 
-            this.gradoviToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pregledGradovaToolStripMenuItem,
-            this.dodajUrediGradToolStripMenuItem});
-            this.gradoviToolStripMenuItem.Name = "gradoviToolStripMenuItem";
-            this.gradoviToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.gradoviToolStripMenuItem.Text = "Gradovi";
-            // 
-            // pregledGradovaToolStripMenuItem
-            // 
-            this.pregledGradovaToolStripMenuItem.Name = "pregledGradovaToolStripMenuItem";
-            this.pregledGradovaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pregledGradovaToolStripMenuItem.Text = "Pregled Gradova";
-            this.pregledGradovaToolStripMenuItem.Click += new System.EventHandler(this.pregledGradovaToolStripMenuItem_Click);
-            // 
-            // dodajUrediGradToolStripMenuItem
-            // 
-            this.dodajUrediGradToolStripMenuItem.Name = "dodajUrediGradToolStripMenuItem";
-            this.dodajUrediGradToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dodajUrediGradToolStripMenuItem.Text = "Dodaj Uredi Grad";
-            this.dodajUrediGradToolStripMenuItem.Click += new System.EventHandler(this.dodajUrediGradToolStripMenuItem_Click);
+            this.sHOPToolStripMenuItem.Name = "sHOPToolStripMenuItem";
+            this.sHOPToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.sHOPToolStripMenuItem.Text = "SHOP";
+            this.sHOPToolStripMenuItem.Click += new System.EventHandler(this.sHOPToolStripMenuItem_Click);
             // 
             // frmPocetna
             // 
@@ -269,6 +278,7 @@ namespace MoTechFull.WinUI
         private System.Windows.Forms.ToolStripMenuItem gradoviToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pregledGradovaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajUrediGradToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sHOPToolStripMenuItem;
     }
 }
 

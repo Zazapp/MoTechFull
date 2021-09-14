@@ -153,6 +153,18 @@
     <Compile Include="KorisnickiNalozi\frmKorisnickiNaloziPrikazi.Designer.cs">
       <DependentUpon>frmKorisnickiNaloziPrikazi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Korpe\frmKorpaDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korpe\frmKorpaDodaj.Designer.cs">
+      <DependentUpon>frmKorpaDodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korpe\frmKorpaShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korpe\frmKorpaShow.Designer.cs">
+      <DependentUpon>frmKorpaShow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +185,12 @@
       <DependentUpon>frmProizvodjaciPrikazi.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shop\frmShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\frmShop.Designer.cs">
+      <DependentUpon>frmShop.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Artikli\frmArtikliDodajUredi.resx">
       <DependentUpon>frmArtikliDodajUredi.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +227,12 @@
     <EmbeddedResource Include="KorisnickiNalozi\frmKorisnickiNaloziPrikazi.resx">
       <DependentUpon>frmKorisnickiNaloziPrikazi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Korpe\frmKorpaDodaj.resx">
+      <DependentUpon>frmKorpaDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korpe\frmKorpaShow.resx">
+      <DependentUpon>frmKorpaShow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +251,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Shop\frmShop.resx">
+      <DependentUpon>frmShop.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

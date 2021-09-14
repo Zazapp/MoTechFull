@@ -9,7 +9,12 @@ namespace MoTechFull.Model
         public int KorpaArtikliId { get; set; }
         public int KorpaId { get; set; }
         public int ArtikalId { get; set; }
+        public string Naziv { get; set; }
         public int Kolicina { get; set; }
+        public double Cijena { get; set; }
+
+
+        public string ArtikalIdNaziv => $"{Artikal?.ArtikalId} - {Artikal?.Naziv}";
 
         public virtual Artikli Artikal { get; set; }
         public virtual Korpe Korpa { get; set; }

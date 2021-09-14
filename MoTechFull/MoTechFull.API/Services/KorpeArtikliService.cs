@@ -51,5 +51,53 @@ namespace MoTechFull.Services
 
             return _mapper.Map<List<Model.KorpeArtikli>>(list);
         }
+
+        public override Model.KorpeArtikli Insert(KorpeArtikliInsertRequest request) 
+        {
+            //var set = Context.Set<TDb>();
+            //TDb entity = _mapper.Map<TDb>(request);
+            //set.Add(entity);
+            //Context.SaveChanges();
+
+            //return _mapper.Map<T>(entity);
+
+            var set = Context.Set<KorpaArtikli>();
+            KorpaArtikli entity = _mapper.Map<KorpaArtikli>(request);
+            entity.Artikal = Context.Artikals.Find(request.ArtikalId);
+            entity.Korpa = Context.Korpas.Find(request.KorpaId);
+            set.Add(entity);
+            Context.SaveChanges();
+
+            return _mapper.Map<KorpeArtikli>(entity);
+        }
+
+        public override Model.KorpeArtikli Update(int korpeArtikliId, KorpeArtikliUpdateRequest request)
+        {
+            //var set = Context.Set<TDb>();
+            //var entity = set.Find(id);
+            //_mapper.Map(request, entity);
+            //Context.SaveChanges();
+
+            //return _mapper.Map<T>(entity);
+
+            var set = Context.Set<KorpaArtikli>();
+            var entity = set.Find(korpeArtikliId);
+
+            if (request.Kolicina == 0) 
+            {
+                set.Remove(entity);
+                Context.SaveChanges();
+                return _mapper.Map<Model.KorpeArtikli>(entity);
+            }
+
+            
+            set.Find(korpeArtikliId).Kolicina = request.Kolicina;
+            Context.SaveChanges();
+
+            return _mapper.Map<Model.KorpeArtikli>(entity);
+        }
     }
 }
+
+    
+
