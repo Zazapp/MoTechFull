@@ -95,8 +95,7 @@ namespace MoTechFull.WinUI.Korpe
                 {
                     ArtikalId = _artikal.ArtikalId,
                     KorpaId = _korpa.KorpaId,
-                    Kolicina = kolicina,
-                    Cijena=_artikal.Cijena
+                    Kolicina = kolicina
                 };
 
                 await _korpeArtikli.Insert<Model.KorpeArtikli>(request);

@@ -12,6 +12,7 @@ namespace MoTechFull.Database
         public int ArtikalId { get; set; }
         public int Kolicina { get; set; }
 
+
         public virtual Artikal Artikal { get; set; }
         public virtual Korpa Korpa { get; set; }
     }

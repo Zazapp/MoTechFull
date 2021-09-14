@@ -29,12 +29,12 @@ namespace MoTechFull.Services
                 entity = entity.Where(x => x.Naziv.Contains(search.Naziv));
             }
 
-            if (search.KategorijaId.HasValue)
+            if (search.KategorijaId.HasValue && search.KategorijaId!=0)
             {
                 entity = entity.Where(x => x.KategorijaId == search.KategorijaId);
             }
 
-            if (search.ProizvodjacId.HasValue)
+            if (search.ProizvodjacId.HasValue && search.KategorijaId != 0)
             {
                 entity = entity.Where(x => x.ProizvodjacId == search.ProizvodjacId);
             }

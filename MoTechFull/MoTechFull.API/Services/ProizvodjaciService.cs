@@ -20,7 +20,7 @@ namespace MoTechFull.Services
 
             //WARNING: NEVER DO THIS. EXECUTES QUERY ON DB
             //entity = entity.ToList();
-            if (!string.IsNullOrWhiteSpace(search?.Naziv))
+            if (!string.IsNullOrWhiteSpace(search?.Naziv) && search.Naziv != "---")
             {
                 entity = entity.Where(x => x.Naziv.Contains(search.Naziv));
             }

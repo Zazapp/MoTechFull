@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoTechFull.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace MoTechFull.WinUI.Korpe
 
         APIService _korpe = new APIService("Korpa");
         APIService _korpeArtikli = new APIService("KorpeArtikli");
+        APIService _artikli = new APIService("Artikal");
 
         Model.Korpe _korpa;
         public frmKorpaShow(Model.Korpe korpa)
@@ -30,21 +32,31 @@ namespace MoTechFull.WinUI.Korpe
 
         private async void frmKorpaShow_Load(object sender, EventArgs e)
         {
-            var list = await _korpeArtikli.Get<List<Model.KorpeArtikli>>();
 
-            var listItema = list.Where(q => q.KorpaId == _korpa.KorpaId).ToList();
+            KorpeArtikliSearchObject search = new KorpeArtikliSearchObject()
+            {
+                IncludeListArtikal = true,
+                IncludeListKorpa = true,
+                KorpaId = _korpa.KorpaId
+            };
+            var list = await _korpeArtikli.Get<List<Model.KorpeArtikli>>(search);
 
-            dgvKorpa.DataSource = listItema;
+            //var listItema = list.Where(q => q.KorpaId == _korpa.KorpaId).ToList();
+            
+
+            dgvKorpa.DataSource = list;
             dgvKorpa.Columns["KorpaArtikliId"].Visible = false;
             dgvKorpa.Columns["KorpaId"].Visible = false;
             dgvKorpa.Columns["ArtikalId"].Visible = false;
+            dgvKorpa.Columns["Artikal"].Visible = false;
+            dgvKorpa.Columns["Korpa"].Visible = false;
 
             double ukupno=0;
             double jedna;
 
-            foreach(var stavka in listItema) 
+            foreach(var stavka in list) 
             {
-                jedna = stavka.Kolicina * stavka.Cijena;
+                jedna = stavka.Kolicina * stavka.Artikal.Cijena;
                 ukupno += jedna;
             }
 

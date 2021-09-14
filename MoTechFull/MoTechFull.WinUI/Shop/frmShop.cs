@@ -59,7 +59,7 @@ namespace MoTechFull.WinUI.Shop
         public async Task LoadKategorije() 
         {
             var result = await _kategorije.Get<List<Model.Kategorije>>();
-            result.Insert(0, new Model.Kategorije() { Naziv="---"});
+            result.Insert(0, new Model.Kategorije { Naziv = "---", KategorijaId = 0 });
             cmbKategorija.DisplayMember = "Naziv";
             cmbKategorija.ValueMember = "KategorijaId";
             cmbKategorija.DataSource = result;
@@ -68,7 +68,7 @@ namespace MoTechFull.WinUI.Shop
         private async Task LoadProizvodjaci()
         {
             var result = await _proizvodjaci.Get<List<Model.Proizvodjaci>>();
-            result.Insert(0, new Model.Proizvodjaci() { Naziv = "---" });
+            result.Insert(0, new Model.Proizvodjaci { Naziv = "---", ProizvodjacId = 0 });
             cmbProizvodjac.DisplayMember = "Naziv";
             cmbProizvodjac.ValueMember = "ProizvodjacId";
             cmbProizvodjac.DataSource = result;
@@ -76,6 +76,9 @@ namespace MoTechFull.WinUI.Shop
 
         private async void btnPretraga_Click(object sender, EventArgs e)
         {
+
+           
+
             ArtikliSearchObject searchRequest = new ArtikliSearchObject()
             {
                 Naziv = txtNaziv.Text,
