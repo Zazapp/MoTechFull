@@ -35,6 +35,13 @@ namespace MoTechFull.WinUI
             return result;
         }
 
+        public async Task<T> Recommend<T>(object id)
+        {
+            var url = $"{Properties.Settings.Default.ApiURL}{_route}/Recommend/{id}";
+            var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+            return result;
+        }
+
         public async Task<T> Insert<T>(object request)
         {
             var url = $"{Properties.Settings.Default.ApiURL}{_route}";

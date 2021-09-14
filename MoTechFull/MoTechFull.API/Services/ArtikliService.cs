@@ -86,8 +86,9 @@ namespace MoTechFull.Services
                         });
                     }
                 }
-
-                var traindata = mlContext.Data.LoadFromEnumerable(data);
+               
+                    var traindata = mlContext.Data.LoadFromEnumerable(data);
+       
 
 
                 //STEP 3: Your data is already encoded so all you need to do is specify options for MatrxiFactorizationTrainer with a few extra hyperparameters
@@ -107,6 +108,7 @@ namespace MoTechFull.Services
                 var est = mlContext.Recommendation().Trainers.MatrixFactorization(options);
 
                 model = est.Fit(traindata);
+
             }
 
             var allItems = Context.Artikals.Where(x => x.ArtikalId != id);

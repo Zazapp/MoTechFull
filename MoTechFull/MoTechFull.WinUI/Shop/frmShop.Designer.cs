@@ -39,8 +39,12 @@ namespace MoTechFull.WinUI.Shop
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvShop = new System.Windows.Forms.DataGridView();
             this.btnKorpa = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvRecommended = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShop)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecommended)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNaziv
@@ -129,19 +133,44 @@ namespace MoTechFull.WinUI.Shop
             // 
             // btnKorpa
             // 
-            this.btnKorpa.Location = new System.Drawing.Point(729, 410);
+            this.btnKorpa.Location = new System.Drawing.Point(714, 539);
             this.btnKorpa.Name = "btnKorpa";
-            this.btnKorpa.Size = new System.Drawing.Size(56, 36);
+            this.btnKorpa.Size = new System.Drawing.Size(79, 43);
             this.btnKorpa.TabIndex = 8;
             this.btnKorpa.Text = "Moja Korpa";
             this.btnKorpa.UseVisualStyleBackColor = true;
             this.btnKorpa.Click += new System.EventHandler(this.btnKorpa_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvRecommended);
+            this.groupBox2.Location = new System.Drawing.Point(7, 438);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(668, 144);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "FOR YOU";
+            // 
+            // dgvRecommended
+            // 
+            this.dgvRecommended.AllowUserToAddRows = false;
+            this.dgvRecommended.AllowUserToDeleteRows = false;
+            this.dgvRecommended.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvRecommended.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecommended.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRecommended.Location = new System.Drawing.Point(3, 16);
+            this.dgvRecommended.Name = "dgvRecommended";
+            this.dgvRecommended.ReadOnly = true;
+            this.dgvRecommended.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRecommended.Size = new System.Drawing.Size(662, 125);
+            this.dgvRecommended.TabIndex = 0;
+            // 
             // frmShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(805, 594);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnKorpa);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnPretraga);
@@ -156,6 +185,8 @@ namespace MoTechFull.WinUI.Shop
             this.Load += new System.EventHandler(this.frmShop_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShop)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecommended)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +204,7 @@ namespace MoTechFull.WinUI.Shop
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvShop;
         private System.Windows.Forms.Button btnKorpa;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dgvRecommended;
     }
 }

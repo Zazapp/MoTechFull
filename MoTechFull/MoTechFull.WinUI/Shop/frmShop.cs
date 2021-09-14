@@ -24,6 +24,7 @@ namespace MoTechFull.WinUI.Shop
         APIService _korpeArtikli = new APIService("KorpeArtikli");
 
         Model.Korpe _korpa;
+        int firstItemId=0;
         public frmShop()
         {
             InitializeComponent();
@@ -54,6 +55,7 @@ namespace MoTechFull.WinUI.Shop
         {
             await LoadKategorije();
             await LoadProizvodjaci();
+            await LoadRecommended();
         }
 
         public async Task LoadKategorije() 
@@ -72,6 +74,21 @@ namespace MoTechFull.WinUI.Shop
             cmbProizvodjac.DisplayMember = "Naziv";
             cmbProizvodjac.ValueMember = "ProizvodjacId";
             cmbProizvodjac.DataSource = result;
+        }
+
+        private async Task LoadRecommended() 
+        {          
+            if (firstItemId != 0) 
+            {
+                try 
+                {
+                    var result = await _artikli.Recommend<Model.Artikli>(firstItemId);
+                    dgvRecommended.DataSource = result;
+                }
+                catch 
+                {
+                }
+            }
         }
 
         private async void btnPretraga_Click(object sender, EventArgs e)
@@ -95,6 +112,11 @@ namespace MoTechFull.WinUI.Shop
             dgvShop.Columns["Proizvodjac"].Visible = false;
             dgvShop.Columns["KategorijaId"].Visible = false;
             dgvShop.Columns["ProizvodjacId"].Visible = false;
+
+            var item = list.First();
+            firstItemId = item.ArtikalId;
+
+            await LoadRecommended();
         }
 
         private async void dgvShop_CellContentClick(object sender, DataGridViewCellEventArgs e)

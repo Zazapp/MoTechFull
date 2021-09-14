@@ -151,7 +151,7 @@ namespace MoTechFull.WinUI.Korpe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 231);
+            this.ClientSize = new System.Drawing.Size(411, 226);
             this.Controls.Add(this.btnOduzmi);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.txtKolicina);
