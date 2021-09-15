@@ -13,10 +13,10 @@ namespace MoTechFull.Mob.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RacunShowPage : ContentPage
     {
-        public RacunShowPage(Gradovi grad, string adresa)
+        public RacunShowPage()
         {
             InitializeComponent();
-            App.Current.MainPage.DisplayAlert(adresa, grad.Naziv, "OK");
+            
         }
     }
 }

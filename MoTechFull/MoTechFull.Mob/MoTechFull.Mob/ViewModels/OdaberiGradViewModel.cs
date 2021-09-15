@@ -13,20 +13,30 @@ namespace MoTechFull.Mob.ViewModels
     {
 
         private readonly APIService _gradoviService = new APIService("Grad");
-        public OdaberiGradViewModel() 
+        public string AAdresa;
+        public Gradovi GGrad;
+        public OdaberiGradViewModel()
         {
             InitCommand = new Command(async () => await Init());
+            AAdresa = APIService.Adresa;
+            GGrad = APIService.Grad;
+            UpdateAdresa = new Command(UpdateGrad);
         }
-        public ObservableCollection<Gradovi> GradoviList { get; set; } = new ObservableCollection<Gradovi>();
-        Gradovi _selectedGrad = null;
 
-        string adress;
+        private void UpdateGrad()
+        {
+            APIService.Adresa = Adresa;
+            APIService.Grad = SelectedGrad;
+        }
+
+        public ObservableCollection<Gradovi> GradoviList { get; set; } = new ObservableCollection<Gradovi>();
+
         public string Adresa
         {
-            get { return adress; }
+            get { return AAdresa; }
             set
             {
-                SetProperty(ref adress, value);
+                SetProperty(ref AAdresa, value);
                 if (value != null)
                 {
                     InitCommand.Execute(null);
@@ -37,10 +47,10 @@ namespace MoTechFull.Mob.ViewModels
 
         public Gradovi SelectedGrad
         {
-            get { return _selectedGrad; }
+            get { return GGrad; }
             set
             {
-                SetProperty(ref _selectedGrad, value);
+                SetProperty(ref GGrad, value);
                 if (value != null)
                 {
                     InitCommand.Execute(null);
@@ -64,7 +74,9 @@ namespace MoTechFull.Mob.ViewModels
             }
         }
 
-
+        public Command UpdateAdresa { get; }
         public Command InitCommand { get; }
+
+        
     }
 }

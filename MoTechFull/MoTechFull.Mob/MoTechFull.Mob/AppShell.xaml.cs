@@ -15,6 +15,8 @@ namespace MoTechFull.Mob
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(ArtikliPage), typeof(ArtikliPage));
             Routing.RegisterRoute(nameof(KorpaShowPage), typeof(KorpaShowPage));
+            Routing.RegisterRoute(nameof(OdaberiGradPage), typeof(OdaberiGradPage));
+
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

@@ -30,7 +30,7 @@ namespace MoTechFull.Mob.Views
         private async void Button_Clicked(object sender, EventArgs e)
         {
 
-            await Navigation.PushAsync(new RacunShowPage(model.SelectedGrad,model.Adresa));
+            await Navigation.PushAsync(new RacunShowPage());
         }
     }
 }

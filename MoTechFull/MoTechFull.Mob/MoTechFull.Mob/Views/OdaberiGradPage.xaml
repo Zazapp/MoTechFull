@@ -16,7 +16,7 @@
                 HorizontalOptions="CenterAndExpand" />
             <StackLayout HeightRequest="100" WidthRequest="100" Orientation="Vertical">
                 <Label Text="Odaberite Grad: "></Label>
-            <Picker ItemsSource="{Binding GradoviList}" SelectedItem="{Binding SelectedGrad}"
+            <Picker ItemsSource="{Binding GradoviList}" SelectedItem="{Binding GGrad}"
                     ItemDisplayBinding="{Binding Naziv}"></Picker>
             </StackLayout>
             <StackLayout Orientation="Vertical" HeightRequest="100" WidthRequest="100">
@@ -26,6 +26,7 @@
 
 
             <Button Margin="0,10,0,0" Text="Račun"
+                    Command="{Binding UpdateAdresa}"
                         Clicked="Button_Clicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />

@@ -12,6 +12,8 @@ namespace MoTechFull.Mob.Services
     {
         public static string Username { get; set; }
         public static string Password { get; set; }
+        public static string Adresa { get; set; }
+        public static Gradovi Grad { get; set; }
 
         private readonly string _route;
 

@@ -1,12 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:MoTechFull.Mob.ViewModels"
              x:Class="MoTechFull.Mob.Views.RacunShowPage">
+
+    <ContentPage.BindingContext>
+        <vm:RacunShowViewModel />
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Racun"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Vertical">
+                <StackLayout>
+                    <Entry Text="{Binding Adress}" IsReadOnly="True"></Entry>
+                </StackLayout>
+                <StackLayout>
+                    <Entry Text="{Binding Grad.Naziv}" IsReadOnly="True"></Entry>
+                </StackLayout>
+
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
