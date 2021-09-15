@@ -1,4 +1,5 @@
 ﻿using MoTechFull.Mob.ViewModels;
+using MoTechFull.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,9 +26,12 @@ namespace MoTechFull.Mob.Views
             await model.Init();
         }
 
-        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            return;
+            var item = e.SelectedItem as KorpeArtikli;
+
+            
+            await Navigation.PushAsync(new ArtikliDetailPage(item.Artikal));
         }
     }
 }

@@ -75,6 +75,11 @@ namespace MoTechFull.Mob.ViewModels
             {
                 int idKart = kartikli.First().KorpaArtikliId;
                 int oKolicina = kartikli.First().Kolicina;
+                if (Kolicina == 0) 
+                {
+                    Kolicina = -1 * oKolicina;
+                    await App.Current.MainPage.DisplayAlert("Izbrisano", "Izbačen iz korpe", "OK");
+                }
                 KorpeArtikliUpdateRequest kartUpdate = new KorpeArtikliUpdateRequest {Kolicina = (int)Kolicina+oKolicina};
                 await _korpeArtikliService.Update<Model.KorpeArtikli>(idKart, kartUpdate);
             }
@@ -89,7 +94,11 @@ namespace MoTechFull.Mob.ViewModels
 
                 await _korpeArtikliService.Insert<KorpeArtikli>(kartikal);
             }
-            await App.Current.MainPage.DisplayAlert("Uspjeh", "Dodano u korpu", "OK");
+            if (Kolicina < 0) { }
+            else 
+            {
+                await App.Current.MainPage.DisplayAlert("Uspjeh", "Dodano u korpu", "OK");
+            }
         }
         private void Smanji()
         {

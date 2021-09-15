@@ -84,6 +84,9 @@
     <FlyoutItem Title="Artikli" Icon="icon_feed.png">
         <ShellContent Route="ArtikliPage" ContentTemplate="{DataTemplate local:ArtikliPage}" />
     </FlyoutItem>
+    <FlyoutItem Title="Korpa" Icon="icon_feed.png">
+        <ShellContent Route="KorpaPage" ContentTemplate="{DataTemplate local:KorpaShowPage}" />
+    </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
