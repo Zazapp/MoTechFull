@@ -1,6 +1,7 @@
 ﻿using MoTechFull.Mob.ViewModels;
 using System;
 using System.ComponentModel;
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,6 +20,13 @@ namespace MoTechFull.Mob.Views
         {
             base.OnAppearing();
         }
+
+
+        private async void NavigateButton_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new KorpaShowPage());
+        }
+
 
 
     }

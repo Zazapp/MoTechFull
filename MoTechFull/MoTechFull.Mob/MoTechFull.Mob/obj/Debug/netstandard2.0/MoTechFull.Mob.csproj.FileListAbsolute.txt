@@ -8,8 +8,11 @@ C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoT
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\Views\ArtikliDetailPage.xaml.g.cs
+C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\Views\ArtikliPage.xaml.g.cs
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\Views\KorpaShowPage.xaml.g.cs
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\MoTechFull.Mob.AssemblyInfoInputs.cache
@@ -20,5 +23,3 @@ C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoT
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\MoTechFull.Mob.dll
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\ref\MoTechFull.Mob.dll
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\MoTechFull.Mob.pdb
-C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\Views\ArtikliDetailPage.xaml.g.cs
-C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\obj\Debug\netstandard2.0\Views\ArtikliPage.xaml.g.cs
