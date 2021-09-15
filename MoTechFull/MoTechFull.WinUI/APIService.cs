@@ -17,7 +17,7 @@ namespace MoTechFull.WinUI
         public static string Password { get; set; }
         public async Task<T> Get<T>(object request = null)
         {
-            var url = $"{Properties.Settings.Default.ApiURL}{_route}";
+            var url = $"{Properties.Settings.Default.DockerAPI}{_route}";
             if (request != null)
             {
                 url += "?";
@@ -30,28 +30,28 @@ namespace MoTechFull.WinUI
 
         public async Task<T> GetById<T>(object id)
         {
-            var url = $"{Properties.Settings.Default.ApiURL}{_route}/{id}";
+            var url = $"{Properties.Settings.Default.DockerAPI}{_route}/{id}";
             var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
             return result;
         }
 
         public async Task<T> Recommend<T>(object id)
         {
-            var url = $"{Properties.Settings.Default.ApiURL}{_route}/Recommend/{id}";
+            var url = $"{Properties.Settings.Default.DockerAPI}{_route}/Recommend/{id}";
             var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
             return result;
         }
 
         public async Task<T> Insert<T>(object request)
         {
-            var url = $"{Properties.Settings.Default.ApiURL}{_route}";
+            var url = $"{Properties.Settings.Default.DockerAPI}{_route}";
             var result = await url.WithBasicAuth(Username, Password).PostJsonAsync(request).ReceiveJson<T>();
             return result;
         }
 
         public async Task<T> Update<T>(object id, object request)
         {
-            var url = $"{Properties.Settings.Default.ApiURL}{_route}/{id}";
+            var url = $"{Properties.Settings.Default.DockerAPI}{_route}/{id}";
             var result = await url.WithBasicAuth(Username, Password).PutJsonAsync(request).ReceiveJson<T>();
             return result;
         }

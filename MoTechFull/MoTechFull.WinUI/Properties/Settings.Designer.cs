@@ -34,5 +34,17 @@ namespace MoTechFull.WinUI.Properties {
                 this["ApiURL"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5010/api/")]
+        public string DockerAPI {
+            get {
+                return ((string)(this["DockerAPI"]));
+            }
+            set {
+                this["DockerAPI"] = value;
+            }
+        }
     }
 }
