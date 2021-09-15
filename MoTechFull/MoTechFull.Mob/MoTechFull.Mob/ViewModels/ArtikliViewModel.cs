@@ -45,9 +45,9 @@ namespace MoTechFull.Mob.ViewModels
         {
             if (KategorijeList.Count == 0)
             {
-                var kategorijeList = await _kategorijeService.Get<List<Kategorije>>(null);
+                var kategorijeL= await _kategorijeService.Get<List<Kategorije>>(null);
 
-                foreach (var kategorije in KategorijeList)
+                foreach (var kategorije in kategorijeL)
                 {
                     KategorijeList.Add(kategorije);
                 }
