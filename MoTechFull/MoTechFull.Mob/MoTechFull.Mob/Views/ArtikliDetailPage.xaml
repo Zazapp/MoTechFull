@@ -1,18 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:vm="clr-namespace:MoTechFull.Mob.ViewModels"
+             xmlns:vm="clr-namespace:MoTechFull.Mob.ViewModels" 
+             xmlns:converters="clr-namespace:MoTechFull.Mob.Converters"
              x:Class="MoTechFull.Mob.Views.ArtikliDetailPage">
 
     <ContentPage.BindingContext>
         <vm:ArtikliDetailViewModel></vm:ArtikliDetailViewModel>
     </ContentPage.BindingContext>
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="500"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ScrollView>
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Naziv: "></Label>
+                        <Label Text="{Binding Artikal.Naziv}"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Cijena: " FontAttributes="Bold"></Label>
+                        <Label Text="{Binding Artikal.Cijena}" FontAttributes="Bold"></Label>
+                        <Label Text=" KM" FontAttributes="Bold"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="-1" Command="{Binding SmanjiKolicinuCommand}"></Button>
+                        <Entry Text="{Binding Kolicina}" Keyboard="Numeric"></Entry>
+                        <Button Text="+1" Command="{Binding PovecajKolicinuCommand}"></Button>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Source="{Binding Artikal.Image, Converter={StaticResource imgConv}}"  WidthRequest="100" HeightRequest="100"></Image>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+
+            <StackLayout Grid.Row="1" Grid.Column="0">
+                <Image Source="cart.png" WidthRequest="100" HeightRequest="100">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding DodajUKorpu}"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

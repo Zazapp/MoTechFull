@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T13:50:43.305</Modified>
+      <Modified>2021-09-15T16:13:43.334</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\MoTechFull.Mob.UWP.exe">
       <PackagePath>entrypoint\MoTechFull.Mob.UWP.exe</PackagePath>
-      <Modified>2021-09-15T13:50:41.968</Modified>
+      <Modified>2021-09-15T16:13:42.353</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\.nuget\packages\flurl\3.0.2\lib\netstandard2.0\Flurl.dll">
       <PackagePath>Flurl.dll</PackagePath>
@@ -84,11 +84,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\bin\Debug\netstandard2.0\MoTechFull.Mob.dll">
       <PackagePath>MoTechFull.Mob.dll</PackagePath>
-      <Modified>2021-09-15T13:50:05.433</Modified>
+      <Modified>2021-09-15T16:26:38.202</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\bin\Debug\netstandard2.0\MoTechFull.Model.dll">
       <PackagePath>MoTechFull.Model.dll</PackagePath>
-      <Modified>2021-09-15T13:08:46.107</Modified>
+      <Modified>2021-09-15T16:07:48.325</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -101,6 +101,10 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft\Xamarin\NuGet\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
       <Modified>2021-02-12T02:08:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\cart.png">
+      <PackagePath>cart.png</PackagePath>
+      <Modified>2021-09-15T14:59:32.270</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\motech_logo.png">
       <PackagePath>motech_logo.png</PackagePath>
@@ -263,11 +267,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-09-15T13:50:41.895</Modified>
+      <Modified>2021-09-15T16:13:42.285</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-09-15T13:50:41.895</Modified>
+      <Modified>2021-09-15T16:13:42.285</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -283,11 +287,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-09-15T13:50:42.438</Modified>
+      <Modified>2021-09-15T16:11:39.673</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\Core\MoTechFull.Mob.UWP.exe">
       <PackagePath>MoTechFull.Mob.UWP.exe</PackagePath>
-      <Modified>2021-09-15T13:50:43.297</Modified>
+      <Modified>2021-09-15T16:13:43.327</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
