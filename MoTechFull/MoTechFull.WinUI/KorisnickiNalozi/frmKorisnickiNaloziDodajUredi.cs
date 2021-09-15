@@ -72,7 +72,7 @@ namespace MoTechFull.WinUI.KorisnickiNalozi
         {
             string a1 = "Administrator";
             string b1 = "Prodavac";
-            string c1 = "Referent";
+            string c1 = "Klijent";
             cmbTip.Items.Add(a1);
             cmbTip.Items.Add(b1);
             cmbTip.Items.Add(c1);

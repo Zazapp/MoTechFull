@@ -22,7 +22,7 @@ namespace MoTechFull.WinUI.KorisnickiNalozi
 
             string a1 = "Administrator";
             string b1 = "Prodavac";
-            string c1 = "klijent";
+            string c1 = "Klijent";
             string d1 = "---";
             cmbTip.Items.Add(d1);
             cmbTip.Items.Add(a1);

@@ -164,6 +164,7 @@ namespace MoTechFull.WinUI.Shop
             this.dgvRecommended.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRecommended.Size = new System.Drawing.Size(662, 125);
             this.dgvRecommended.TabIndex = 0;
+            this.dgvRecommended.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecommended_CellContentClick);
             // 
             // frmShop
             // 
