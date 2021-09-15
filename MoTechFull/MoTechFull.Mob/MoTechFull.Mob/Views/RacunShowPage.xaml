@@ -23,6 +23,11 @@
                     <Entry Text="{Binding Adress}" IsReadOnly="True"></Entry>
                 </StackLayout>
 
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Ukupno: " FontSize="18" FontAttributes="Bold"></Label>
+                    <Entry Text="{Binding Ukupno}" IsReadOnly="True" FontAttributes="Bold" FontSize="18"></Entry>
+                </StackLayout>
+
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

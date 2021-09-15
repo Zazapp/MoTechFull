@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MoTechFull.Services
 {
-    public class RacuniService : BaseCRUDService<Model.Racuni, Database.Racun, RacuniSearchObject, RacuniInsertRequest, object>, IRacuniService
+    public class RacuniService : BaseCRUDService<Model.Racuni, Database.Racun, RacuniSearchObject, RacuniInsertRequest, RacuniUpdateRequest>, IRacuniService
     {
         public RacuniService(MoTechContext context, IMapper mapper) : base(context, mapper) { }
 
@@ -25,6 +25,23 @@ namespace MoTechFull.Services
             var list = entity.ToList();
 
             return _mapper.Map<List<Model.Racuni>>(list);
+        }
+
+        public override Model.Racuni Update(int id,RacuniUpdateRequest request) 
+        {
+            //var set = Context.Set<TDb>();
+            //var entity = set.Find(id);
+            //_mapper.Map(request, entity);
+            //Context.SaveChanges();
+
+            //return _mapper.Map<T>(entity);
+
+            var set = Context.Set<Racun>();
+            var entity = set.Find(id);
+            entity.Iznos = request.Iznos;
+            Context.SaveChanges();
+
+            return _mapper.Map<Model.Racuni>(entity);
         }
     }
 }

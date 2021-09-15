@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MoTechFull.Services
 {
-    public interface IRacuniService : ICRUDService<Model.Racuni, RacuniSearchObject, RacuniInsertRequest, object>
+    public interface IRacuniService : ICRUDService<Model.Racuni, RacuniSearchObject, RacuniInsertRequest, RacuniUpdateRequest>
     {
 
     }

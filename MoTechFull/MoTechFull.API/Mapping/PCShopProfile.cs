@@ -27,6 +27,7 @@ namespace MoTechFull.Mapping
             CreateMap<KantoniInsertUpdateRequest, Database.Kanton>().ReverseMap();
             CreateMap<Database.Racun, Model.Racuni>().ReverseMap();
             CreateMap<RacuniInsertRequest, Database.Racun>().ReverseMap();
+            CreateMap<RacuniUpdateRequest, Database.Racun>().ReverseMap();
             CreateMap<Database.Korpa, Model.Korpe>().ReverseMap();
             CreateMap<KorpeInsertRequest, Database.Korpa>().ReverseMap();
             CreateMap<KorpeUpdateRequest, Database.Korpa>().ReverseMap();
