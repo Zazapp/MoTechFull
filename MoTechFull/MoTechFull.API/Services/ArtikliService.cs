@@ -62,6 +62,8 @@ namespace MoTechFull.Services
         {
             if (mlContext == null) 
             {
+                mlContext = new MLContext();
+
                 var tmpData = Context.Racuns.Include("NarudzbaStavkes").ToList();
                 var data = new List<ProductEntry>();
 
@@ -87,7 +89,7 @@ namespace MoTechFull.Services
                     }
                 }
                
-                    var traindata = mlContext.Data.LoadFromEnumerable(data);
+                var traindata = mlContext.Data.LoadFromEnumerable(data);
        
 
 

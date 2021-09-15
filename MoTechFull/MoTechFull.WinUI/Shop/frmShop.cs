@@ -32,13 +32,12 @@ namespace MoTechFull.WinUI.Shop
         }
 
         private async void frmShop_Load(object sender, EventArgs e)
-        {
-            await LoadData();
+        {          
 
-            var list = await _korpe.Get<List<Model.Korpe>>();
             int korisnikId;
             var sviKorisnici = await _korisnici.Get<List<Model.KorisnickiNalozi>>();
             korisnikId = sviKorisnici.Where(w => w.KorisnickoIme == APIService.Username && w.Lozinka == APIService.Password).Select(x => x.KorisnickiNalogId).FirstOrDefault();
+            var list = await _korpe.Get<List<Model.Korpe>>(new KorpeSearchObject() {KorisnickiNalogId=korisnikId });
             if (!list.Any())
             {
                 KorpeInsertRequest nova = new KorpeInsertRequest
@@ -47,8 +46,10 @@ namespace MoTechFull.WinUI.Shop
                     KorisnickiNalogId = korisnikId
                 };
 
-                await _korpe.Insert<Model.Korpe>(nova);
+                var result=await _korpe.Insert<Model.Korpe>(nova);
+                _korpa = result;
             }
+            await LoadData();
         }
 
         public async Task LoadData() 
@@ -82,12 +83,26 @@ namespace MoTechFull.WinUI.Shop
             {
                 try 
                 {
-                    var result = await _artikli.Recommend<Model.Artikli>(firstItemId);
+                    var result = await _artikli.Recommend<List<Model.Artikli>>(firstItemId);
+                    //var result2 = await _artikli.Get<List<Model.Artikli>>(new ArtikliSearchObject()
+                    //{
+                    //    IncludeListKategorija = true,
+                    //    IncludeListProizvodjac=true
+                        
+                    //});
                     dgvRecommended.DataSource = result;
+                    dgvRecommended.Columns["Kategorija"].Visible = false;
+                    dgvRecommended.Columns["Proizvodjac"].Visible = false;
+                    dgvRecommended.Columns["KategorijaId"].Visible = false;
+                    dgvRecommended.Columns["ProizvodjacId"].Visible = false;
+                    dgvRecommended.Columns["KategorijaIdNaziv"].Visible = false;
+                    dgvRecommended.Columns["ProizvodjacIdNaziv"].Visible = false;
+                    //dgvRecommended.Columns["ArtikalId"].Visible = false;
+
+
                 }
-                catch 
-                {
-                }
+                catch { }
+
             }
         }
 
@@ -113,8 +128,11 @@ namespace MoTechFull.WinUI.Shop
             dgvShop.Columns["KategorijaId"].Visible = false;
             dgvShop.Columns["ProizvodjacId"].Visible = false;
 
-            var item = list.First();
-            firstItemId = item.ArtikalId;
+            if (list.Any()) 
+            {
+                var item = list.First();
+                firstItemId = item.ArtikalId;
+            }
 
             await LoadRecommended();
         }
@@ -150,6 +168,18 @@ namespace MoTechFull.WinUI.Shop
             _korpa= list.Where(w => w.KorisnickiNalogId == korisnikId).FirstOrDefault();
 
             frmKorpaShow frm = new frmKorpaShow(_korpa as MoTechFull.Model.Korpe);
+            frm.ShowDialog();
+        }
+
+        private async void dgvRecommended_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var list = await _korpe.Get<List<Model.Korpe>>();
+            var sviKorisnici = await _korisnici.Get<List<Model.KorisnickiNalozi>>();
+            int korisnikId = sviKorisnici.Where(w => w.KorisnickoIme == APIService.Username && w.Lozinka == APIService.Password).Select(x => x.KorisnickiNalogId).FirstOrDefault();
+            _korpa = list.Where(w => w.KorisnickiNalogId == korisnikId).FirstOrDefault();
+
+            var _artikal = dgvRecommended.SelectedRows[0].DataBoundItem;
+            frmKorpaDodaj frm = new frmKorpaDodaj(_artikal as MoTechFull.Model.Artikli, _korpa as MoTechFull.Model.Korpe);
             frm.ShowDialog();
         }
     }
