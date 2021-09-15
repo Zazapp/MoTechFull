@@ -1,0 +1,33 @@
+version: '3'
+services:
+#mssql docker
+  motechfinal-sql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=QWEasd321!
+      - MSSQL_PID=Developer
+    ports:
+      - 1401:1433
+    networks:
+      - motechnet
+
+  motechfull-api:
+    restart: unless-stopped
+    build:
+      context: .
+    environment:
+      - ConnectionStrings:DefaultConnection=Server=motechfinal-sql,1433;Database=MoTechFinal;User=sa;Password=QWEasd321!;ConnectRetryCount=0
+    ports:
+      - 5010:5010
+    networks:
+      - motechnet
+    links:
+      - motechfinal-sql
+    depends_on:
+      - motechfinal-sql
+      
+networks:
+  motechnet:
+    driver: bridge      
