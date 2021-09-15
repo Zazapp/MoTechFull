@@ -17,16 +17,18 @@ namespace MoTechFull.Mob.ViewModels
         public Gradovi GGrad;
         public OdaberiGradViewModel()
         {
-            InitCommand = new Command(async () => await Init());
             AAdresa = APIService.Adresa;
             GGrad = APIService.Grad;
             UpdateAdresa = new Command(UpdateGrad);
+            InitCommand = new Command(async () => await Init());
         }
 
-        private void UpdateGrad()
+        private async void UpdateGrad()
         {
             APIService.Adresa = Adresa;
             APIService.Grad = SelectedGrad;
+
+            await App.Current.MainPage.DisplayAlert("Uspjeh", "Lokacija postavljena", "OK");
         }
 
         public ObservableCollection<Gradovi> GradoviList { get; set; } = new ObservableCollection<Gradovi>();
@@ -51,7 +53,7 @@ namespace MoTechFull.Mob.ViewModels
             set
             {
                 SetProperty(ref GGrad, value);
-                if (value != null)
+                if (value == null)
                 {
                     InitCommand.Execute(null);
                 }

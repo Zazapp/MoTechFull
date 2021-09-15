@@ -82,7 +82,7 @@
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Lokacija" Icon="icon_about.png">
-        <ShellContent Route="OdaberiGradPage" ContentTemplate="{DataTemplate local:OdaberiGradPage}" />
+        <ShellContent Route="OdaberiLokacijuPage" ContentTemplate="{DataTemplate local:OdaberiLokacijuPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Artikli" Icon="icon_feed.png">
         <ShellContent Route="ArtikliPage" ContentTemplate="{DataTemplate local:ArtikliPage}" />

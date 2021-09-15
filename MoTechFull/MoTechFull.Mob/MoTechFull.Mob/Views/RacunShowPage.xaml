@@ -15,10 +15,12 @@
                 HorizontalOptions="CenterAndExpand" />
             <StackLayout Orientation="Vertical">
                 <StackLayout>
-                    <Entry Text="{Binding Adress}" IsReadOnly="True"></Entry>
+                    <Label Text="Grad "></Label>
+                    <Entry Text="{Binding Grad.Naziv}" IsReadOnly="True"></Entry>
                 </StackLayout>
                 <StackLayout>
-                    <Entry Text="{Binding Grad.Naziv}" IsReadOnly="True"></Entry>
+                    <Label Text="Adresa "></Label>
+                    <Entry Text="{Binding Adress}" IsReadOnly="True"></Entry>
                 </StackLayout>
 
             </StackLayout>

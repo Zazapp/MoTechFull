@@ -16,6 +16,7 @@ namespace MoTechFull.Mob
             Routing.RegisterRoute(nameof(ArtikliPage), typeof(ArtikliPage));
             Routing.RegisterRoute(nameof(KorpaShowPage), typeof(KorpaShowPage));
             Routing.RegisterRoute(nameof(OdaberiGradPage), typeof(OdaberiGradPage));
+            Routing.RegisterRoute(nameof(OdaberiLokacijuPage), typeof(OdaberiLokacijuPage));
 
         }
 
