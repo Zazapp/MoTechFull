@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:MoTechFull.Mob.ViewModels"
+             x:Class="MoTechFull.Mob.Views.OdaberiGradPage">
+
+    <ContentPage.BindingContext>
+        <vm:OdaberiGradViewModel />
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Odaberi Grad i Unesi adresu"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout HeightRequest="100" WidthRequest="100" Orientation="Vertical">
+                <Label Text="Odaberite Grad: "></Label>
+            <Picker ItemsSource="{Binding GradoviList}" SelectedItem="{Binding SelectedGrad}"
+                    ItemDisplayBinding="{Binding Naziv}"></Picker>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HeightRequest="100" WidthRequest="100">
+                <Label Text="Unesite Adresu: "></Label>
+                <Entry Text="{Binding Adresa}"></Entry> 
+            </StackLayout>
+
+
+            <Button Margin="0,10,0,0" Text="Račun"
+                        Clicked="Button_Clicked"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

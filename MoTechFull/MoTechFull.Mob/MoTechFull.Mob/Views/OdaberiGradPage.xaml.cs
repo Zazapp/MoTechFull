@@ -1,5 +1,4 @@
 ﻿using MoTechFull.Mob.ViewModels;
-using MoTechFull.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,31 +11,26 @@ using Xamarin.Forms.Xaml;
 namespace MoTechFull.Mob.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class KorpaShowPage : ContentPage
+    public partial class OdaberiGradPage : ContentPage
     {
-        private KorpaShowViewModel model = null;
-        public KorpaShowPage()
+        OdaberiGradViewModel model = null;
+        
+        public OdaberiGradPage()
         {
             InitializeComponent();
-            BindingContext = model = new KorpaShowViewModel();
+            BindingContext = model = new OdaberiGradViewModel();
         }
+
         protected async override void OnAppearing()
         {
             base.OnAppearing();
             await model.Init();
         }
 
-        private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var item = e.SelectedItem as KorpeArtikli;
-
-            
-            await Navigation.PushAsync(new ArtikliDetailPage(item.Artikal));
-        }
-
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new OdaberiGradPage());
+
+            await Navigation.PushAsync(new RacunShowPage(model.SelectedGrad,model.Adresa));
         }
     }
 }
