@@ -27,7 +27,7 @@
 
             <Button Margin="0,10,0,0" Text="Račun"
                     Command="{Binding UpdateAdresa}"
-                        Clicked="Button_Clicked"
+                        Clicked="Button_Clicked1"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
         </StackLayout>

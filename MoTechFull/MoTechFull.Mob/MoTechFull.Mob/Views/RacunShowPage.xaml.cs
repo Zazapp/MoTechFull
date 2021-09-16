@@ -21,10 +21,10 @@ namespace MoTechFull.Mob.Views
             BindingContext = model = new RacunShowViewModel();
 
         }
-        protected async override void OnAppearing()
+        protected  override void OnAppearing()
         {
             base.OnAppearing();
-            await model.Init();
+            model.PrikaziRacun();
         }
     }
 }

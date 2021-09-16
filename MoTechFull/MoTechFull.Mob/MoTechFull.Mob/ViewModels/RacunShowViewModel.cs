@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace MoTechFull.Mob.ViewModels
@@ -24,13 +25,16 @@ namespace MoTechFull.Mob.ViewModels
         public string aadresa;
         public RacunShowViewModel() 
         {
-           InitCommand = new Command(async () => await Init());
             ggrad = APIService.Grad;
             aadresa = APIService.Adresa;
+            PrikaziRacunC = new Command(PrikaziRacun);
+            InitCommand = new Command(Init);
+            Ok = new Command(PerformOk);
         }
 
         public ObservableCollection<NarudzbeStavke> narudzbaStavke { get; set; } = new ObservableCollection<NarudzbeStavke>();
 
+        bool racun = false;
         int korisnikId = 0;
         int korpaId = 0;
         double _ukupno = 0;
@@ -75,7 +79,12 @@ namespace MoTechFull.Mob.ViewModels
             }
         }
         public Command InitCommand { get; }
-        public async Task Init()
+        public Command PrikaziRacunC { get; }
+
+        public Command Ok { get; }
+
+        public void Init() { return; }
+        public async void PrikaziRacun()
         {
             var listKorisnika = await _korisniciService.Get<List<Model.KorisnickiNalozi>>();
             korisnikId = listKorisnika.Where(q => q.KorisnickoIme == APIService.Username && q.Lozinka == APIService.Password).Select(w => w.KorisnickiNalogId).FirstOrDefault();
@@ -94,9 +103,15 @@ namespace MoTechFull.Mob.ViewModels
 
             RacuniInsertRequest racunIR = new RacuniInsertRequest { DatumIzdavanja = DateTime.Now };
 
-            var racunRezultat = await _racuniService.Insert<Model.Racuni>(racunIR);
 
-            foreach(var kArt in listaKorpaArtikli) 
+            await _racuniService.Insert<Racuni>(racunIR);
+            var racunRezultati = await _racuniService.Get<List<Racuni>>();
+            var racunRezultat = racunRezultati.Last();
+            var racunId = racunRezultat.RacunId;
+                racun = true;
+            
+            
+            foreach (var kArt in listaKorpaArtikli) 
             {
                 KupciNarudzbeInsertRequest kupciNarudzbeIR = new KupciNarudzbeInsertRequest
                 {
@@ -107,7 +122,8 @@ namespace MoTechFull.Mob.ViewModels
                     KorisnickiNalogId = korisnikId
                 };
 
-                var kupciNarudzbeRezultat = await _kupciNarudzbeService.Insert<Model.KupciNarudzbe>(kupciNarudzbeIR);
+                var kupciNarudzbeRezultat =  await _kupciNarudzbeService.Insert<Model.KupciNarudzbe>(kupciNarudzbeIR);
+                int kupciNarudzbeId = kupciNarudzbeRezultat.KupacNarudzbeId;
 
                 NarudzbeStavkeInsertRequest narudbeStavkeIR = new NarudzbeStavkeInsertRequest
                 {
@@ -115,8 +131,8 @@ namespace MoTechFull.Mob.ViewModels
                     Kolicina = kArt.Kolicina,
                     Popust = 0,
                     UnitCijena = kArt.Artikal.Cijena,
-                    RacunId = racunRezultat.RacunId,
-                    KupacNarudzbeId = kupciNarudzbeRezultat.KupacNarudzbeId
+                    RacunId = racunId,
+                    KupacNarudzbeId = kupciNarudzbeId
                 };
                 _ukupno += kArt.Kolicina * kArt.Artikal.Cijena;
 
@@ -129,11 +145,11 @@ namespace MoTechFull.Mob.ViewModels
             }
 
 
-            await _racuniService.Update<Model.Racuni>(racunRezultat.RacunId, new RacuniUpdateRequest() { Iznos = _ukupno });
+            await _racuniService.Update<Model.Racuni>(racunId, new RacuniUpdateRequest() { Iznos = _ukupno });
 
             var listaStavki = await _narudzbeStavkeService.Get<List<Model.NarudzbeStavke>>(new NarudzbeStavkeSearchObject
             {
-                RacunId = racunRezultat.RacunId
+                RacunId = racunId
             });
 
             foreach(var stavka in listaStavki) 
@@ -142,5 +158,12 @@ namespace MoTechFull.Mob.ViewModels
             }
         }
 
+
+
+
+        private void PerformOk()
+        {
+            
+        }
     }
 }

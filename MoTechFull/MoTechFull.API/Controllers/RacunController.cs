@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace MoTechFull.Controllers
 {
 
-    public class RacunController : BaseCRUDController<Model.Racuni, RacuniSearchObject, RacuniInsertRequest, object>
+    public class RacunController : BaseCRUDController<Model.Racuni, RacuniSearchObject, RacuniInsertRequest, RacuniUpdateRequest>
     {
 
         public RacunController(IRacuniService service):base(service)

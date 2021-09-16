@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoTechFull.Mob.Android", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoTechFull.Mob.iOS", "MoTechFull.Mob\MoTechFull.Mob.iOS\MoTechFull.Mob.iOS.csproj", "{D2586CC6-E361-481F-AED0-F1D871648462}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoTechFull.Mob", "MoTechFull.Mob\MoTechFull.Mob\MoTechFull.Mob.csproj", "{C8FFD3F7-29A6-4C8C-99F0-9193E9E06A08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoTechFull.Mob", "MoTechFull.Mob\MoTechFull.Mob\MoTechFull.Mob.csproj", "{C8FFD3F7-29A6-4C8C-99F0-9193E9E06A08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -134,8 +134,6 @@ Global
 		{2E0FAA32-E7F9-477A-AC4B-BC1EFC226B29}.Release|x86.Build.0 = Release|x86
 		{2E0FAA32-E7F9-477A-AC4B-BC1EFC226B29}.Release|x86.Deploy.0 = Release|x86
 		{03F98599-3CE2-4BD6-AEA0-F6DF94DAACD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03F98599-3CE2-4BD6-AEA0-F6DF94DAACD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03F98599-3CE2-4BD6-AEA0-F6DF94DAACD7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{03F98599-3CE2-4BD6-AEA0-F6DF94DAACD7}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{03F98599-3CE2-4BD6-AEA0-F6DF94DAACD7}.Debug|ARM.Build.0 = Debug|Any CPU
 		{03F98599-3CE2-4BD6-AEA0-F6DF94DAACD7}.Debug|ARM.Deploy.0 = Debug|Any CPU
@@ -170,7 +168,6 @@ Global
 		{03F98599-3CE2-4BD6-AEA0-F6DF94DAACD7}.Release|x86.Build.0 = Release|Any CPU
 		{03F98599-3CE2-4BD6-AEA0-F6DF94DAACD7}.Release|x86.Deploy.0 = Release|Any CPU
 		{D2586CC6-E361-481F-AED0-F1D871648462}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{D2586CC6-E361-481F-AED0-F1D871648462}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{D2586CC6-E361-481F-AED0-F1D871648462}.Debug|ARM.ActiveCfg = Debug|iPhoneSimulator
 		{D2586CC6-E361-481F-AED0-F1D871648462}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{D2586CC6-E361-481F-AED0-F1D871648462}.Debug|iPhone.Build.0 = Debug|iPhone
