@@ -33,9 +33,9 @@ namespace MoTechFull.WinUI.Gradovi
             this.label2 = new System.Windows.Forms.Label();
             this.btnPregled = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvGradovi = new System.Windows.Forms.DataGridView();
             this.txtNaziv = new System.Windows.Forms.TextBox();
             this.cmbKanton = new System.Windows.Forms.ComboBox();
-            this.dgvGradovi = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGradovi)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,20 @@ namespace MoTechFull.WinUI.Gradovi
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gradovi";
             // 
+            // dgvGradovi
+            // 
+            this.dgvGradovi.AllowUserToAddRows = false;
+            this.dgvGradovi.AllowUserToDeleteRows = false;
+            this.dgvGradovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGradovi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvGradovi.Location = new System.Drawing.Point(3, 16);
+            this.dgvGradovi.Name = "dgvGradovi";
+            this.dgvGradovi.ReadOnly = true;
+            this.dgvGradovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvGradovi.Size = new System.Drawing.Size(350, 132);
+            this.dgvGradovi.TabIndex = 0;
+            this.dgvGradovi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGradovi_CellContentClick);
+            // 
             // txtNaziv
             // 
             this.txtNaziv.Location = new System.Drawing.Point(13, 40);
@@ -93,20 +107,6 @@ namespace MoTechFull.WinUI.Gradovi
             this.cmbKanton.Size = new System.Drawing.Size(160, 21);
             this.cmbKanton.TabIndex = 5;
             // 
-            // dgvGradovi
-            // 
-            this.dgvGradovi.AllowUserToAddRows = false;
-            this.dgvGradovi.AllowUserToDeleteRows = false;
-            this.dgvGradovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGradovi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvGradovi.Location = new System.Drawing.Point(3, 16);
-            this.dgvGradovi.Name = "dgvGradovi";
-            this.dgvGradovi.ReadOnly = true;
-            this.dgvGradovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGradovi.Size = new System.Drawing.Size(350, 132);
-            this.dgvGradovi.TabIndex = 0;
-            this.dgvGradovi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGradovi_CellContentClick);
-            // 
             // frmGradoviPregled
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,7 +119,7 @@ namespace MoTechFull.WinUI.Gradovi
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmGradoviPregled";
-            this.Text = "frmGradoviPregled";
+            this.Text = "Gradovi";
             this.Load += new System.EventHandler(this.frmGradoviPregled_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGradovi)).EndInit();

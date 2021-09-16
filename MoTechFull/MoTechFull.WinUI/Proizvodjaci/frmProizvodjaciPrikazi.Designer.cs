@@ -98,7 +98,7 @@ namespace MoTechFull.WinUI.Proizvodjaci
             this.Controls.Add(this.txtNaziv);
             this.Controls.Add(this.label1);
             this.Name = "frmProizvodjaciPrikazi";
-            this.Text = "frmProizvodjaciPrikazi";
+            this.Text = "Proizvodjaci";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodjaci)).EndInit();
             this.ResumeLayout(false);

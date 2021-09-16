@@ -61,7 +61,6 @@ namespace MoTechFull.WinUI.Helper
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.label1);
             this.Name = "frmUspjehDodajUredi";
-            this.Text = "frmUspjehDodajUredi";
             this.ResumeLayout(false);
             this.PerformLayout();
 

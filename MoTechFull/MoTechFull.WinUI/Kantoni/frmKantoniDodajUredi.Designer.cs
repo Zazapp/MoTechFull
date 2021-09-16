@@ -103,7 +103,7 @@ namespace MoTechFull.WinUI.Kantoni
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmKantoniDodajUredi";
-            this.Text = "frmKantoniDodajUredi";
+            this.Text = "Dodaj/Uredi Kanton";
             this.Load += new System.EventHandler(this.frmKantoniDodajUredi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

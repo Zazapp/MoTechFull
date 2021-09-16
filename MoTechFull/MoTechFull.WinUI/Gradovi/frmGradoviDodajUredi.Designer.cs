@@ -104,7 +104,7 @@ namespace MoTechFull.WinUI.Gradovi
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmGradoviDodajUredi";
-            this.Text = "frmGradoviDodajUredi";
+            this.Text = "Dodaj/Uredi Grad";
             this.Load += new System.EventHandler(this.frmGradoviDodajUredi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

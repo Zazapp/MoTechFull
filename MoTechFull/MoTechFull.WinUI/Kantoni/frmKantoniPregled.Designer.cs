@@ -121,7 +121,7 @@ namespace MoTechFull.WinUI.Kantoni
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblNaziv);
             this.Name = "frmKantoniPregled";
-            this.Text = "frmKantoniPregled";
+            this.Text = "Kantoni";
             this.Load += new System.EventHandler(this.frmKantoniPregled_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKantoni)).EndInit();

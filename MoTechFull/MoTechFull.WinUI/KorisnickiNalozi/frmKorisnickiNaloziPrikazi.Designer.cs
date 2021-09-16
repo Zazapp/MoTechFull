@@ -120,7 +120,7 @@ namespace MoTechFull.WinUI.KorisnickiNalozi
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmKorisnickiNaloziPrikazi";
-            this.Text = "frmKorisnickiNaloziPrikazi";
+            this.Text = "Korisnicki Nalozi";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).EndInit();
             this.ResumeLayout(false);

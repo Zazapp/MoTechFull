@@ -51,6 +51,7 @@ namespace MoTechFull.WinUI.Gradovi
 
             var list = await _gradovi.Get<List<Model.Gradovi>>(searchObject);
             dgvGradovi.DataSource = list;
+            dgvGradovi.Columns["Kanton"].Visible = false;
         }
 
         private void dgvGradovi_CellContentClick(object sender, DataGridViewCellEventArgs e)

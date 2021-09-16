@@ -35,6 +35,7 @@ namespace MoTechFull.WinUI.Kategorije
 
             var list = await _service.Get<List<Model.Kategorije>>(searchObject);
             dgvKategorije.DataSource = list;
+            dgvKategorije.Columns["Image"].Visible = false;
         }
     }
 }

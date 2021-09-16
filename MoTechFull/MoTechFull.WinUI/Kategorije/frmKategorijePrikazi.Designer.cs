@@ -98,7 +98,7 @@ namespace MoTechFull.WinUI.Kategorije
             this.Controls.Add(this.txtNaziv);
             this.Controls.Add(this.label1);
             this.Name = "frmKategorijePrikazi";
-            this.Text = "frmKategorijePrikazi";
+            this.Text = "Kategorije";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKategorije)).EndInit();
             this.ResumeLayout(false);

@@ -114,7 +114,7 @@ namespace MoTechFull.WinUI.Korpe
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnZatvori);
             this.Name = "frmKorpaShow";
-            this.Text = "frmKorpaShow";
+            this.Text = "Pregled Korpe";
             this.Load += new System.EventHandler(this.frmKorpaShow_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorpa)).EndInit();

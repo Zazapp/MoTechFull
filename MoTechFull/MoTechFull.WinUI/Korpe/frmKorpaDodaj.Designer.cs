@@ -164,7 +164,7 @@ namespace MoTechFull.WinUI.Korpe
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNaziv);
             this.Name = "frmKorpaDodaj";
-            this.Text = "frmKorpaDodaj";
+            this.Text = "Dodaj u korpu";
             this.Load += new System.EventHandler(this.frmKorpaDodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

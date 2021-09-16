@@ -103,7 +103,7 @@ namespace MoTechFull.WinUI.Kategorije
             this.Controls.Add(this.lblKategorija);
             this.Controls.Add(this.label1);
             this.Name = "frmKategorijeDodajUredi";
-            this.Text = "frmKategorijeDodajUredi";
+            this.Text = "Dodaj/Uredi Kategoriju";
             this.Load += new System.EventHandler(this.frmKategorijeDodajUredi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

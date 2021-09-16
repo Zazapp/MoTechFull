@@ -83,7 +83,7 @@ namespace MoTechFull.WinUI.Proizvodjaci
             this.Controls.Add(this.lblProizvodjac);
             this.Controls.Add(this.label1);
             this.Name = "frmProizvodjaciDodajUredi";
-            this.Text = "frmProizvodjaciDodajUredi";
+            this.Text = "Dodaj/Uredi Proizvodjaca";
             this.Load += new System.EventHandler(this.frmProizvodjaciDodajUredi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

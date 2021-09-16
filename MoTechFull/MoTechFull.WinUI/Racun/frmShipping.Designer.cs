@@ -35,6 +35,8 @@ namespace MoTechFull.WinUI.Racun
             this.cmbGrad = new System.Windows.Forms.ComboBox();
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.btnNazad = new System.Windows.Forms.Button();
+            this.lblGrad = new System.Windows.Forms.Label();
+            this.lblAdresa = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtAdresa
@@ -90,11 +92,37 @@ namespace MoTechFull.WinUI.Racun
             this.btnNazad.UseVisualStyleBackColor = true;
             this.btnNazad.Click += new System.EventHandler(this.btnNazad_Click);
             // 
+            // lblGrad
+            // 
+            this.lblGrad.AutoSize = true;
+            this.lblGrad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrad.ForeColor = System.Drawing.Color.Red;
+            this.lblGrad.Location = new System.Drawing.Point(206, 38);
+            this.lblGrad.Name = "lblGrad";
+            this.lblGrad.Size = new System.Drawing.Size(18, 24);
+            this.lblGrad.TabIndex = 6;
+            this.lblGrad.Text = "*";
+            this.lblGrad.Visible = false;
+            // 
+            // lblAdresa
+            // 
+            this.lblAdresa.AutoSize = true;
+            this.lblAdresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdresa.ForeColor = System.Drawing.Color.Red;
+            this.lblAdresa.Location = new System.Drawing.Point(205, 93);
+            this.lblAdresa.Name = "lblAdresa";
+            this.lblAdresa.Size = new System.Drawing.Size(18, 24);
+            this.lblAdresa.TabIndex = 7;
+            this.lblAdresa.Text = "*";
+            this.lblAdresa.Visible = false;
+            // 
             // frmShipping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(317, 183);
+            this.Controls.Add(this.lblAdresa);
+            this.Controls.Add(this.lblGrad);
             this.Controls.Add(this.btnNazad);
             this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.cmbGrad);
@@ -102,7 +130,7 @@ namespace MoTechFull.WinUI.Racun
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtAdresa);
             this.Name = "frmShipping";
-            this.Text = "frmShipping";
+            this.Text = "Dostava";
             this.Load += new System.EventHandler(this.frmShipping_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,5 +145,7 @@ namespace MoTechFull.WinUI.Racun
         private System.Windows.Forms.ComboBox cmbGrad;
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Button btnNazad;
+        private System.Windows.Forms.Label lblGrad;
+        private System.Windows.Forms.Label lblAdresa;
     }
 }

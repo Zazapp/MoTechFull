@@ -46,6 +46,9 @@ namespace MoTechFull.WinUI.Artikli
             this.rtxtOpis = new System.Windows.Forms.RichTextBox();
             this.pcbSlika = new System.Windows.Forms.PictureBox();
             this.ofdSlika = new System.Windows.Forms.OpenFileDialog();
+            this.lblObavezna = new System.Windows.Forms.Label();
+            this.lblCijena = new System.Windows.Forms.Label();
+            this.lblSlika = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSlika)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,11 +193,50 @@ namespace MoTechFull.WinUI.Artikli
             // 
             this.ofdSlika.FileName = "ofdSlika";
             // 
+            // lblObavezna
+            // 
+            this.lblObavezna.AutoSize = true;
+            this.lblObavezna.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObavezna.ForeColor = System.Drawing.Color.Red;
+            this.lblObavezna.Location = new System.Drawing.Point(166, 40);
+            this.lblObavezna.Name = "lblObavezna";
+            this.lblObavezna.Size = new System.Drawing.Size(18, 24);
+            this.lblObavezna.TabIndex = 16;
+            this.lblObavezna.Text = "*";
+            this.lblObavezna.Visible = false;
+            // 
+            // lblCijena
+            // 
+            this.lblCijena.AutoSize = true;
+            this.lblCijena.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCijena.ForeColor = System.Drawing.Color.Red;
+            this.lblCijena.Location = new System.Drawing.Point(165, 175);
+            this.lblCijena.Name = "lblCijena";
+            this.lblCijena.Size = new System.Drawing.Size(18, 24);
+            this.lblCijena.TabIndex = 17;
+            this.lblCijena.Text = "*";
+            this.lblCijena.Visible = false;
+            // 
+            // lblSlika
+            // 
+            this.lblSlika.AutoSize = true;
+            this.lblSlika.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSlika.ForeColor = System.Drawing.Color.Red;
+            this.lblSlika.Location = new System.Drawing.Point(416, 175);
+            this.lblSlika.Name = "lblSlika";
+            this.lblSlika.Size = new System.Drawing.Size(18, 24);
+            this.lblSlika.TabIndex = 18;
+            this.lblSlika.Text = "*";
+            this.lblSlika.Visible = false;
+            // 
             // frmArtikliDodajUredi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 451);
+            this.Controls.Add(this.lblSlika);
+            this.Controls.Add(this.lblCijena);
+            this.Controls.Add(this.lblObavezna);
             this.Controls.Add(this.pcbSlika);
             this.Controls.Add(this.rtxtOpis);
             this.Controls.Add(this.label6);
@@ -212,7 +254,7 @@ namespace MoTechFull.WinUI.Artikli
             this.Controls.Add(this.txtCijena);
             this.Controls.Add(this.txtNaziv);
             this.Name = "frmArtikliDodajUredi";
-            this.Text = "frmArtikliDodajUredi";
+            this.Text = "Dodaj/Uredi Artikal";
             this.Load += new System.EventHandler(this.frmArtikliDodajUredi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbSlika)).EndInit();
             this.ResumeLayout(false);
@@ -239,5 +281,8 @@ namespace MoTechFull.WinUI.Artikli
         private System.Windows.Forms.RichTextBox rtxtOpis;
         private System.Windows.Forms.PictureBox pcbSlika;
         private System.Windows.Forms.OpenFileDialog ofdSlika;
+        private System.Windows.Forms.Label lblObavezna;
+        private System.Windows.Forms.Label lblCijena;
+        private System.Windows.Forms.Label lblSlika;
     }
 }

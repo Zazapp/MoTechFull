@@ -54,61 +54,69 @@ namespace MoTechFull.WinUI.Racun
         private async void btnCheckOut_Click(object sender, EventArgs e)
         {
 
-            KorpeArtikliSearchObject korpeArtikliRequest = new KorpeArtikliSearchObject
+            if(txtAdresa.Text!="" && cmbGrad.SelectedItem != null) 
             {
-                IncludeListArtikal = true,
-                IncludeListKorpa = true,
-                KorpaId = _korpa.KorpaId
-            };
-
-            var korpaArtikli = await _korpeArtikli.Get<List<Model.KorpeArtikli>>(korpeArtikliRequest);
-            int korisnikId = _korpa.KorisnickiNalogId;
-
-            int gradID = (int)cmbGrad.SelectedValue;
-            string adresa = txtAdresa.Text;
-
-            RacuniInsertRequest novi = new RacuniInsertRequest
-            {
-                DatumIzdavanja = DateTime.Now,
-                Iznos = _ukupno
-
-            };
-
-            var result = await _racuni.Insert<Model.Racuni>(novi);
-
-
-            foreach (var kartikal in korpaArtikli)
-            {
-                KupciNarudzbeInsertRequest knir = new KupciNarudzbeInsertRequest
+            
+                KorpeArtikliSearchObject korpeArtikliRequest = new KorpeArtikliSearchObject
                 {
-                    Datum = DateTime.Now,
-                    IsIsporucena = false,
-                    KorisnickiNalogId = korisnikId,
-                    AdresaDostave = adresa,
-                    GradId = gradID
+                    IncludeListArtikal = true,
+                    IncludeListKorpa = true,
+                    KorpaId = _korpa.KorpaId
                 };
 
-                var knResult = await _kupciNarudzbe.Insert<Model.KupciNarudzbe>(knir);
+                var korpaArtikli = await _korpeArtikli.Get<List<Model.KorpeArtikli>>(korpeArtikliRequest);
+                int korisnikId = _korpa.KorisnickiNalogId;
 
-                int racunId = result.RacunId;
+                int gradID = (int)cmbGrad.SelectedValue;
+                string adresa = txtAdresa.Text;
 
-                NarudzbeStavkeInsertRequest nsir = new NarudzbeStavkeInsertRequest
+                RacuniInsertRequest novi = new RacuniInsertRequest
                 {
-                    RacunId = racunId,
-                    Kolicina = kartikal.Kolicina,
-                    ArtikalId = kartikal.ArtikalId,
-                    Popust = 0,
-                    UnitCijena = kartikal.Artikal.Cijena,
-                    KupacNarudzbeId = knResult.KupacNarudzbeId
+                    DatumIzdavanja = DateTime.Now,
+                    Iznos = _ukupno
+
                 };
 
-                var nsResult = await _narudzbeStavke.Insert<Model.NarudzbeStavke>(nsir);
+                var result = await _racuni.Insert<Model.Racuni>(novi);
 
+
+                foreach (var kartikal in korpaArtikli)
+                {
+                    KupciNarudzbeInsertRequest knir = new KupciNarudzbeInsertRequest
+                    {
+                        Datum = DateTime.Now,
+                        IsIsporucena = false,
+                        KorisnickiNalogId = korisnikId,
+                        AdresaDostave = adresa,
+                        GradId = gradID
+                    };
+
+                    var knResult = await _kupciNarudzbe.Insert<Model.KupciNarudzbe>(knir);
+
+                    int racunId = result.RacunId;
+
+                    NarudzbeStavkeInsertRequest nsir = new NarudzbeStavkeInsertRequest
+                    {
+                        RacunId = racunId,
+                        Kolicina = kartikal.Kolicina,
+                        ArtikalId = kartikal.ArtikalId,
+                        Popust = 0,
+                        UnitCijena = kartikal.Artikal.Cijena,
+                        KupacNarudzbeId = knResult.KupacNarudzbeId
+                    };
+
+                    var nsResult = await _narudzbeStavke.Insert<Model.NarudzbeStavke>(nsir);
+
+                }
+
+                frmRacun frm = new frmRacun(result as Model.Racuni,_ukupno,_korpa.KorpaId);
+                frm.ShowDialog();
             }
-
-            frmRacun frm = new frmRacun(result as Model.Racuni,_ukupno,_korpa.KorpaId);
-            frm.ShowDialog();
-
+            else 
+            {
+                lblAdresa.Visible = true;
+                lblGrad.Visible = true;
+            }
         }
     }
 }

@@ -56,6 +56,7 @@ namespace MoTechFull.WinUI.Racun
             dgvRacun.DataSource = listStavke;
             dgvRacun.Columns["NarudzbaStavkeId"].Visible = false;
             dgvRacun.Columns["KupacNarudzbeId"].Visible = false;
+            dgvRacun.Columns["KupacNarudzbe"].Visible = false;
             dgvRacun.Columns["ArtikalId"].Visible = false;
             dgvRacun.Columns["Artikal"].Visible = false;
             dgvRacun.Columns["Racun"].Visible = false;

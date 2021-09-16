@@ -182,7 +182,7 @@ namespace MoTechFull.WinUI.Shop
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNaziv);
             this.Name = "frmShop";
-            this.Text = "frmShop";
+            this.Text = "MoTech Shop";
             this.Load += new System.EventHandler(this.frmShop_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShop)).EndInit();

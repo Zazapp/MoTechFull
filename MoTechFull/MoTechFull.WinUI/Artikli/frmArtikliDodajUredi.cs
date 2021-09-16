@@ -86,61 +86,75 @@ namespace MoTechFull.WinUI.Artikli
             
         private async void btnSave_Click(object sender, EventArgs e)
         {
-            int katId = 0;
-            int proId = 0;
-            var ms = new MemoryStream();
-            slikaR.Save(ms, slikaR.RawFormat);
-            byte[] slikapre = ms.ToArray();
 
-            if (double.TryParse(txtCijena.Text.ToString(), out double _cijena))
+            if (txtNaziv.Text != "" && txtNaziv.Text.Length > 3 && txtCijena.Text!="" && txtSlika.Text!="")
             {
-                if (int.TryParse(cmbKategorije.SelectedValue.ToString(), out int kid))
-                {
-                    katId = kid;
-                }
-                if (int.TryParse(cmbProizvodjaci.SelectedValue.ToString(), out int pid))
-                {
-                    proId = pid;
-                }
 
-                if (_artikal == null)
-                {
-                    ArtikliInsertRequest novi = new ArtikliInsertRequest
+
+                    int katId = 0;
+                    int proId = 0;
+                    var ms = new MemoryStream();
+                    slikaR.Save(ms, slikaR.RawFormat);
+                    byte[] slikapre = ms.ToArray();
+
+                    if (double.TryParse(txtCijena.Text.ToString(), out double _cijena))
                     {
-                        Cijena = _cijena,
-                        Dostupan = chbDostupan.Checked,
-                        Image= slikapre,
-                        Naziv = txtNaziv.Text.ToString(),
-                        Opis = rtxtOpis.Text.ToString(),
-                        KategorijaId = katId,
-                        ProizvodjacId = proId
+                        if (int.TryParse(cmbKategorije.SelectedValue.ToString(), out int kid))
+                        {
+                            katId = kid;
+                        }
+                        if (int.TryParse(cmbProizvodjaci.SelectedValue.ToString(), out int pid))
+                        {
+                            proId = pid;
+                        }
 
-                    };
+                        if (_artikal == null)
+                        {
+                            ArtikliInsertRequest novi = new ArtikliInsertRequest
+                            {
+                                Cijena = _cijena,
+                                Dostupan = chbDostupan.Checked,
+                                Image = slikapre,
+                                Naziv = txtNaziv.Text.ToString(),
+                                Opis = rtxtOpis.Text.ToString(),
+                                KategorijaId = katId,
+                                ProizvodjacId = proId
 
-                    var k = await _artikli.Insert<Model.Artikli>(novi);
-                    frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
-                    uspjeh.Show();
-                }
-                else
-                {
-                    int id = _artikal.ArtikalId;
-                    ArtikliUpdateRequest noviE = new ArtikliUpdateRequest
-                    {
-                        Cijena = _cijena,
-                        Dostupan = chbDostupan.Checked,
-                        Image = slikapre,
-                        Naziv = txtNaziv.Text.ToString(),
-                        Opis = rtxtOpis.Text.ToString(),
-                        KategorijaId = katId,
-                        ProizvodjacId = proId,
-                        Id = id
+                            };
+
+                            var k = await _artikli.Insert<Model.Artikli>(novi);
+                            frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
+                            uspjeh.Show();
+                        }
+                        else
+                        {
+                            int id = _artikal.ArtikalId;
+                            ArtikliUpdateRequest noviE = new ArtikliUpdateRequest
+                            {
+                                Cijena = _cijena,
+                                Dostupan = chbDostupan.Checked,
+                                Image = slikapre,
+                                Naziv = txtNaziv.Text.ToString(),
+                                Opis = rtxtOpis.Text.ToString(),
+                                KategorijaId = katId,
+                                ProizvodjacId = proId,
+                                Id = id
 
 
-                    };
-                    var k = await _artikli.Update<Model.Artikli>(id, noviE);
-                    frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
-                    uspjeh.Show();
-                }
+                            };
+                            var k = await _artikli.Update<Model.Artikli>(id, noviE);
+                            frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
+                            uspjeh.Show();
+                        }
+                    }
+                    
+            }
+            else
+            {
+                lblObavezna.Visible = true;
+                lblCijena.Visible = true;
+                lblSlika.Visible = true;
+
             }
         }
     }

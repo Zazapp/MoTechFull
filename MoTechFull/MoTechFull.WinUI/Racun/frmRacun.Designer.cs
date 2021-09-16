@@ -120,7 +120,7 @@ namespace MoTechFull.WinUI.Racun
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDatum);
             this.Name = "frmRacun";
-            this.Text = "frmRacun";
+            this.Text = "Racun";
             this.Load += new System.EventHandler(this.frmRacun_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRacun)).EndInit();

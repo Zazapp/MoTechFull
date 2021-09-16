@@ -38,6 +38,7 @@ namespace MoTechFull.WinUI.KorisnickiNalozi
             this.txtLozinka1 = new System.Windows.Forms.TextBox();
             this.txtLozinka2 = new System.Windows.Forms.TextBox();
             this.cmbTip = new System.Windows.Forms.ComboBox();
+            this.lblNaziv = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSave
@@ -120,11 +121,24 @@ namespace MoTechFull.WinUI.KorisnickiNalozi
             this.cmbTip.TabIndex = 8;
             this.cmbTip.SelectedIndexChanged += new System.EventHandler(this.cmbTip_SelectedIndexChanged);
             // 
+            // lblNaziv
+            // 
+            this.lblNaziv.AutoSize = true;
+            this.lblNaziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNaziv.ForeColor = System.Drawing.Color.Red;
+            this.lblNaziv.Location = new System.Drawing.Point(190, 53);
+            this.lblNaziv.Name = "lblNaziv";
+            this.lblNaziv.Size = new System.Drawing.Size(167, 13);
+            this.lblNaziv.TabIndex = 9;
+            this.lblNaziv.Text = "Naziv mora biti >3 karaktera";
+            this.lblNaziv.Visible = false;
+            // 
             // frmKorisnickiNaloziDodajUredi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 340);
+            this.Controls.Add(this.lblNaziv);
             this.Controls.Add(this.cmbTip);
             this.Controls.Add(this.txtLozinka2);
             this.Controls.Add(this.txtLozinka1);
@@ -135,7 +149,7 @@ namespace MoTechFull.WinUI.KorisnickiNalozi
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
             this.Name = "frmKorisnickiNaloziDodajUredi";
-            this.Text = "frmKorisnickiNaloziDodajUredi";
+            this.Text = "Dodaj/Uredi Korisnicki Nalog";
             this.Load += new System.EventHandler(this.frmKorisnickiNaloziDodajUredi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -153,5 +167,6 @@ namespace MoTechFull.WinUI.KorisnickiNalozi
         private System.Windows.Forms.TextBox txtLozinka1;
         private System.Windows.Forms.TextBox txtLozinka2;
         private System.Windows.Forms.ComboBox cmbTip;
+        private System.Windows.Forms.Label lblNaziv;
     }
 }

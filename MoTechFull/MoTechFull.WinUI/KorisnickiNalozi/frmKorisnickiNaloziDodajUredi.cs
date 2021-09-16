@@ -27,6 +27,10 @@ namespace MoTechFull.WinUI.KorisnickiNalozi
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
+            if(txtNaziv.Text!="" && txtNaziv.Text.Length > 3 ) 
+            {
+            
+
             if (_korisnik == null)
             {
                 if (txtLozinka1.Text != "" && txtLozinka1.Text == txtLozinka2.Text)
@@ -66,6 +70,8 @@ namespace MoTechFull.WinUI.KorisnickiNalozi
                 }
                 else lblMatching.Show();
             }
+            }
+            else { lblNaziv.Visible = true; }
         }
 
         private void frmKorisnickiNaloziDodajUredi_Load(object sender, EventArgs e)
