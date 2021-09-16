@@ -117,6 +117,12 @@
     <Compile Include="frmPočetna.Designer.cs">
       <DependentUpon>frmPočetna.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\frmZabranjeno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper\frmZabranjeno.Designer.cs">
+      <DependentUpon>frmZabranjeno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kantoni\frmKantoniDodajUredi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPočetna.resx">
       <DependentUpon>frmPočetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helper\frmZabranjeno.resx">
+      <DependentUpon>frmZabranjeno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kantoni\frmKantoniDodajUredi.resx">
       <DependentUpon>frmKantoniDodajUredi.cs</DependentUpon>

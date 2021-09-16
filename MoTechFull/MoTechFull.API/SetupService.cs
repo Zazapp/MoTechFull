@@ -45,6 +45,14 @@ namespace MoTechFull.API
                 context.Kantons.Add(new Kanton() { Naziv = "Tuzlanski Kanton", Oznaka = "TK" });
             }
 
+            if (!context.Grads.Any(x => x.Naziv == "Mostar")) 
+            {
+                context.Grads.Add(new Grad() { Naziv = "Mostar", KantonId = 1 });
+                context.Grads.Add(new Grad() { Naziv = "Sarajevo", KantonId = 2 });
+                context.Grads.Add(new Grad() { Naziv = "Tuzla", KantonId = 3 });
+
+            }
+
             context.SaveChanges();
         }
     }

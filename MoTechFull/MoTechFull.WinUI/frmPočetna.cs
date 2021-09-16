@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MoTechFull.WinUI.Artikli;
 using MoTechFull.WinUI.Gradovi;
+using MoTechFull.WinUI.Helper;
 using MoTechFull.WinUI.Kantoni;
 using MoTechFull.WinUI.Kategorije;
 using MoTechFull.WinUI.KorisnickiNalozi;
@@ -20,7 +21,7 @@ namespace MoTechFull.WinUI
     public partial class frmPocetna : Form
     {
         private int childFormNumber = 0;
-
+        APIService _korisniciService = new APIService("KorisnickiNalog");
         public frmPocetna()
         {
             InitializeComponent();
@@ -125,18 +126,46 @@ namespace MoTechFull.WinUI
             frm.Show();
         }
 
-        private void pregledKorisnikaToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void pregledKorisnikaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmKorisnickiNaloziPrikazi frm = new frmKorisnickiNaloziPrikazi();
-            frm.MdiParent = this;
-            frm.Show();
+
+            var lista = await _korisniciService.Get<List<Model.KorisnickiNalozi>>();
+            int tip = lista.Where(q => q.KorisnickoIme == APIService.Username && q.Lozinka == APIService.Password).Select(w => w.Tip).FirstOrDefault();
+
+            if (tip == 1)
+            {
+                frmKorisnickiNaloziPrikazi frm = new frmKorisnickiNaloziPrikazi();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+
+            else
+            {
+                frmZabranjeno frm = new frmZabranjeno();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+
         }
 
-        private void dodajUrediKorisnikaToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void dodajUrediKorisnikaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmKorisnickiNaloziDodajUredi frm = new frmKorisnickiNaloziDodajUredi();
-            frm.MdiParent = this;
-            frm.Show();
+            var lista = await _korisniciService.Get<List<Model.KorisnickiNalozi>>();
+            int tip = lista.Where(q => q.KorisnickoIme == APIService.Username && q.Lozinka == APIService.Password).Select(w => w.Tip).FirstOrDefault();
+
+            if (tip == 1) 
+            {
+                frmKorisnickiNaloziDodajUredi frm = new frmKorisnickiNaloziDodajUredi();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+
+            else 
+            {
+                frmZabranjeno frm = new frmZabranjeno();
+                frm.MdiParent = this;
+                frm.Show();
+            }
         }
 
         private void pregledKategorijaToolStripMenuItem_Click(object sender, EventArgs e)
