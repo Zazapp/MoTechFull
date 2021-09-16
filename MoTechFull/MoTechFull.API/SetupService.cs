@@ -27,6 +27,13 @@ namespace MoTechFull.API
                 context.Kategorijas.Add(new Kategorija() { Naziv = "RAM" });
                 context.Kategorijas.Add(new Kategorija() { Naziv = "Memorija" });
                 context.Kategorijas.Add(new Kategorija() { Naziv = "Misevi" });
+                context.Kategorijas.Add(new Kategorija() { Naziv = "Kucista" });
+                context.Kategorijas.Add(new Kategorija() { Naziv = "Tastature" });
+                context.Kategorijas.Add(new Kategorija() { Naziv = "Kamere" });
+                context.Kategorijas.Add(new Kategorija() { Naziv = "Mikrofoni" });
+
+
+
             }
 
             if (!context.Proizvodjacs.Any(x => x.Naziv == "Intel"))
@@ -36,6 +43,12 @@ namespace MoTechFull.API
                 context.Proizvodjacs.Add(new Proizvodjac() { Naziv = "G.SKILL" });
                 context.Proizvodjacs.Add(new Proizvodjac() { Naziv = "Nvidia" });
                 context.Proizvodjacs.Add(new Proizvodjac() { Naziv = "Logitech" });
+                context.Proizvodjacs.Add(new Proizvodjac() { Naziv = "Corsair" });
+                context.Proizvodjacs.Add(new Proizvodjac() { Naziv = "Samson" });
+                context.Proizvodjacs.Add(new Proizvodjac() { Naziv = "BENQ" });
+
+
+
             }
 
             if (!context.Kantons.Any(x => x.Naziv == "Hercegovacko Neretvanski Kanton"))
@@ -43,14 +56,6 @@ namespace MoTechFull.API
                 context.Kantons.Add(new Kanton() { Naziv = "Hercegovacko-Neretvanski Kanton", Oznaka = "HNK" });
                 context.Kantons.Add(new Kanton() { Naziv = "Kanton Sarajevo", Oznaka = "KS" });
                 context.Kantons.Add(new Kanton() { Naziv = "Tuzlanski Kanton", Oznaka = "TK" });
-            }
-
-            if (!context.Grads.Any(x => x.Naziv == "Mostar")) 
-            {
-                context.Grads.Add(new Grad() { Naziv = "Mostar", KantonId = 1 });
-                context.Grads.Add(new Grad() { Naziv = "Sarajevo", KantonId = 2 });
-                context.Grads.Add(new Grad() { Naziv = "Tuzla", KantonId = 3 });
-
             }
 
             context.SaveChanges();
