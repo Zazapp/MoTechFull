@@ -1,10 +1,10 @@
 # MoTechFull
 
-User: admin 
-password: admin
+- User: admin 
+- password: admin
 
-User: klijent
-Password: Klijent
+- User: klijent
+- Password: klijent
 
 
 
@@ -18,5 +18,6 @@ Password: Klijent
 
     docker-compose up
 
-Samo admin ima pristup upravljanju korisnika, sve ostalo je dopusteno svim korisnicima radi demonstracije.
-Recommender liste u shopu su prazne ako nema dovoljno dobra korelacija izmedju artikala.
+- Samo admin ima pristup upravljanju korisnika, sve ostalo je dopusteno svim korisnicima radi demonstracije.
+- Dodati artikle sa slikama i nakon ~5 narudzbi sa vise artikala recommender pocinje sa najboljim ponudama na osnovu pretrage.
+- Recommender liste u shopu su prazne ako nema dovoljno dobra korelacija izmedju artikala.
