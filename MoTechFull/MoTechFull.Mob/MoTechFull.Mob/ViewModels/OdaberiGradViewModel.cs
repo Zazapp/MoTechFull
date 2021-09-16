@@ -27,8 +27,11 @@ namespace MoTechFull.Mob.ViewModels
         {
             APIService.Adresa = Adresa;
             APIService.Grad = SelectedGrad;
-
-            await App.Current.MainPage.DisplayAlert("Uspjeh", "Lokacija postavljena", "OK");
+            
+            if(Adresa!="" && SelectedGrad != null) 
+            {
+                await App.Current.MainPage.DisplayAlert("Uspjeh", "Lokacija postavljena", "OK");
+            }
         }
 
         public ObservableCollection<Gradovi> GradoviList { get; set; } = new ObservableCollection<Gradovi>();

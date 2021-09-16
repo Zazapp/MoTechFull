@@ -36,7 +36,11 @@ namespace MoTechFull.Mob.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new OdaberiGradPage());
+            if (model.korpaArtikli.Any()) 
+            {
+                await Navigation.PushAsync(new OdaberiGradPage());
+            }
+            else { await App.Current.MainPage.DisplayAlert("Nije uspješno", "Korpa je prazna", "OK"); }
         }
     }
 }

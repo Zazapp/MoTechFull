@@ -29,8 +29,14 @@ namespace MoTechFull.Mob.Views
 
         private async void Button_Clicked1(object sender, EventArgs e)
         {
-
-            await Navigation.PushAsync(new RacunShowPage());
+            if(model.GGrad!=null && model.AAdresa != "") 
+            {
+                await Navigation.PushAsync(new RacunShowPage());
+            }
+            else 
+            {
+                await App.Current.MainPage.DisplayAlert("Nije uspješno", "Polja su obavezna", "OK");
+            }
         }
     }
 }
