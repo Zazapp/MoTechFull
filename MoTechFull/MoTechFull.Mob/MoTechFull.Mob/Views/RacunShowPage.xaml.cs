@@ -29,5 +29,12 @@ namespace MoTechFull.Mob.Views
 
         }
 
+        private async void OkClicked(object sender, EventArgs e)
+        {
+
+                await Navigation.PushAsync(new AboutPage());
+
+        }
+
     }
 }

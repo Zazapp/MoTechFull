@@ -78,6 +78,7 @@
                 
                 <Button Margin="0,10,0,0" Text="Ok"
                     Command="{Binding Ok}"
+                        Clicked="OkClicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
             </StackLayout>
