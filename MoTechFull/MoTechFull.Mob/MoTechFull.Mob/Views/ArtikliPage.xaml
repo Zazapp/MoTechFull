@@ -46,6 +46,34 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+            <StackLayout>
+                <Label Text="Za vas preporuceno: " FontSize="22" FontAttributes="Bold"></Label>
+            </StackLayout>
+            <ListView ItemsSource="{Binding ArtikliRecommendList}" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Orientation="Horizontal">
+                                <StackLayout WidthRequest="100" HeightRequest="100">
+                                    <Image Source="{Binding Image, Converter={StaticResource imgConv}}"></Image>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Naziv}" 
+                                           LineBreakMode="NoWrap" 
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="16" />
+                                    <Label Text="{Binding Cijena}" 
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="13" />
+                                </StackLayout>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

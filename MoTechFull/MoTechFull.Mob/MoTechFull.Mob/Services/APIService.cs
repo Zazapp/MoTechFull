@@ -63,6 +63,13 @@ namespace MoTechFull.Mob.Services
             return await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
         }
 
+        public async Task<T> Recommend<T>(object id)
+        {
+            var url = $"{DockerUrl}{_route}/Recommend/{id}";
+            var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+            return result;
+        }
+
         public async Task<T> Insert<T>(object request)
         {
             var url = $"{DockerUrl}{_route}";

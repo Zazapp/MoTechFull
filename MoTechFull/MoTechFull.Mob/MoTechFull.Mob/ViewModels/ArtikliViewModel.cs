@@ -23,6 +23,8 @@ namespace MoTechFull.Mob.ViewModels
 
         public ObservableCollection<Artikli> ArtikliList { get; set; } = new ObservableCollection<Artikli>();
         public ObservableCollection<Kategorije> KategorijeList { get; set; } = new ObservableCollection<Kategorije>();
+        public ObservableCollection<Artikli> ArtikliRecommendList { get; set; } = new ObservableCollection<Artikli>();
+
         Kategorije _selectedKategorija = null;
 
         public Kategorije SelectedKategorija
@@ -60,10 +62,25 @@ namespace MoTechFull.Mob.ViewModels
 
                 var list = await _artikliService.Get<IList<Artikli>>(searchRequest);
                 ArtikliList.Clear();
+
+
+
                 foreach (var item in list)
                 {
                     ArtikliList.Add(item);
                 }
+
+                if (list.Count > 0)
+                {
+                    var listRecommended = await _artikliService.Recommend<List<Model.Artikli>>(list[0].ArtikalId);
+
+                    ArtikliRecommendList.Clear();
+                    foreach (var rec in listRecommended) 
+                    {
+                        ArtikliRecommendList.Add(rec);
+                    }
+                }
+               
             }
 
         }

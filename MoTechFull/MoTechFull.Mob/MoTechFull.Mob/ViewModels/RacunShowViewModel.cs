@@ -33,25 +33,20 @@ namespace MoTechFull.Mob.ViewModels
         }
 
         public ObservableCollection<NarudzbeStavke> narudzbaStavke { get; set; } = new ObservableCollection<NarudzbeStavke>();
+        public ObservableCollection<Artikli> narudzbaStavkeArtikli { get; set; } = new ObservableCollection<Artikli>();
 
-        bool racun = false;
         int korisnikId = 0;
         int korpaId = 0;
-        double _ukupno = 0;
+        public double _ukupno = 0;
 
-        public double Ukupno 
+
+        public double Iznos
         {
-
             get { return _ukupno; }
-            set
-            {
-                SetProperty(ref _ukupno, value);
-                
-                    InitCommand.Execute(null);
-                
-
-            }
+            set { SetProperty(ref _ukupno, value); }
         }
+
+
         public Gradovi Grad
         {
             get { return ggrad; }
@@ -65,6 +60,7 @@ namespace MoTechFull.Mob.ViewModels
 
             }
         }
+
         public string Adress
         {
             get { return aadresa; }
@@ -78,12 +74,16 @@ namespace MoTechFull.Mob.ViewModels
 
             }
         }
+
+
+
+
         public Command InitCommand { get; }
         public Command PrikaziRacunC { get; }
-
         public Command Ok { get; }
 
-        public void Init() { return; }
+
+        public void Init() {  }
         public async void PrikaziRacun()
         {
             var listKorisnika = await _korisniciService.Get<List<Model.KorisnickiNalozi>>();
@@ -108,7 +108,7 @@ namespace MoTechFull.Mob.ViewModels
             var racunRezultati = await _racuniService.Get<List<Racuni>>();
             var racunRezultat = racunRezultati.Last();
             var racunId = racunRezultat.RacunId;
-                racun = true;
+
             
             
             foreach (var kArt in listaKorpaArtikli) 
@@ -134,12 +134,12 @@ namespace MoTechFull.Mob.ViewModels
                     RacunId = racunId,
                     KupacNarudzbeId = kupciNarudzbeId
                 };
-                _ukupno += kArt.Kolicina * kArt.Artikal.Cijena;
+                Iznos =Iznos+( kArt.Kolicina * kArt.Artikal.Cijena);
+                
 
                 var narudzbeStavkeRezultat = await _narudzbeStavkeService.Insert<Model.NarudzbeStavke>(narudbeStavkeIR);
             }
-
-            foreach(var kArt in listaKorpaArtikli) 
+            foreach (var kArt in listaKorpaArtikli) 
             {
                 await _korpeArtikliService.Update<Model.KorpeArtikli>(kArt.KorpaArtikliId, new KorpeArtikliUpdateRequest() { Kolicina = 0 });
             }
@@ -149,13 +149,17 @@ namespace MoTechFull.Mob.ViewModels
 
             var listaStavki = await _narudzbeStavkeService.Get<List<Model.NarudzbeStavke>>(new NarudzbeStavkeSearchObject
             {
-                RacunId = racunId
+                RacunId = racunId,
+                IncludeListArtikal=true
             });
+
 
             foreach(var stavka in listaStavki) 
             {
                 narudzbaStavke.Add(stavka);
+
             }
+            
         }
 
 
