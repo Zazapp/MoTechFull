@@ -3,6 +3,9 @@
 User: admin 
 password: admin
 
+User: klijent
+Password: Klijent
+
 
 
     Clone repository
@@ -15,5 +18,5 @@ password: admin
 
     docker-compose up
 
-
+Samo admin ima pristup upravljanju korisnika, sve ostalo je dopusteno svim korisnicima radi demonstracije.
 Recommender liste u shopu su prazne ako nema dovoljno dobra korelacija izmedju artikala.
