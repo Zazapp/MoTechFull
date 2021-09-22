@@ -21,6 +21,17 @@ namespace MoTechFull.Services
             //WARNING: NEVER DO THIS. EXECUTES QUERY ON DB
             //entity = entity.ToList();
 
+            if (search.KorisnickiNalogId.HasValue)
+            {
+                entity = entity.Where(x => x.KorisnickiNalogId == search.KorisnickiNalogId);
+            }
+
+
+            if (search.Iznos.HasValue)
+            {
+                entity = entity.Where(x => x.Iznos == search.Iznos);
+            }
+
 
             var list = entity.ToList();
 

@@ -87,8 +87,11 @@
     <FlyoutItem Title="Artikli" Icon="icon_feed.png">
         <ShellContent Route="ArtikliPage" ContentTemplate="{DataTemplate local:ArtikliPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Korpa" Icon="icon_feed.png">
+    <FlyoutItem Title="Korpa" Icon="cart.png">
         <ShellContent Route="KorpaPage" ContentTemplate="{DataTemplate local:KorpaShowPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Moji Računi" Icon="cart.png">
+        <ShellContent Route="RacuniPage" ContentTemplate="{DataTemplate local:RacuniShowPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->

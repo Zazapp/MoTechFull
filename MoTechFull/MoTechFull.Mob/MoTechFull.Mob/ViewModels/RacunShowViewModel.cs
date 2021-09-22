@@ -89,6 +89,14 @@ namespace MoTechFull.Mob.ViewModels
             var listKorisnika = await _korisniciService.Get<List<Model.KorisnickiNalozi>>();
             korisnikId = listKorisnika.Where(q => q.KorisnickoIme == APIService.Username && q.Lozinka == APIService.Password).Select(w => w.KorisnickiNalogId).FirstOrDefault();
 
+            var listaRacuna = await _racuniService.Get<List<Model.Racuni>>(new RacuniSearchObject() {KorisnickiNalogId=korisnikId });
+
+            foreach (var r in listaRacuna) 
+            {
+                if (DateTime.Now < r.DatumIzdavanja.AddMinutes(1))
+                    return;
+            }
+
             KorpeSearchObject korpeS = new KorpeSearchObject()
             {
                 KorisnickiNalogId = korisnikId

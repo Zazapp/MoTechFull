@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModels="clr-namespace:MoTechFull.Mob.ViewModels"
+             x:Class="MoTechFull.Mob.Views.RacuniShowPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:RacuniShowViewModel></viewModels:RacuniShowViewModel>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Proizvodi"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Picker ItemsSource="{Binding RacuniList}" SelectedItem="{Binding SelectedRacun}"
+                    ItemDisplayBinding="{Binding DatumIzdavanja}"></Picker>
+
+            <ListView ItemsSource="{Binding RacuniList}" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Orientation="Horizontal">
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding DatumIzdavanja}" 
+                                           LineBreakMode="NoWrap" 
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="16" />
+                                    <Label Text="{Binding Iznos}" 
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="14" />
+                                </StackLayout>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

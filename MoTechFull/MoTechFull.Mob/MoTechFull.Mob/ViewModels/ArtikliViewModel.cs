@@ -75,10 +75,14 @@ namespace MoTechFull.Mob.ViewModels
                     var listRecommended = await _artikliService.Recommend<List<Model.Artikli>>(list[0].ArtikalId);
 
                     ArtikliRecommendList.Clear();
-                    foreach (var rec in listRecommended) 
+                    if (listRecommended !=null) 
                     {
-                        ArtikliRecommendList.Add(rec);
+                        foreach (var rec in listRecommended)
+                        {
+                            ArtikliRecommendList.Add(rec);
+                        }
                     }
+                   
                 }
                
             }
