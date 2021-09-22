@@ -32,7 +32,8 @@ namespace MoTechFull.Mob.Views
         private async void OkClicked(object sender, EventArgs e)
         {
 
-                await Navigation.PushAsync(new AboutPage());
+                //await Navigation.PushAsync(new AboutPage());
+            Application.Current.MainPage = new AppShell();
 
         }
 

@@ -73,7 +73,8 @@ namespace MoTechFull.WinUI.Racun
                 RacuniInsertRequest novi = new RacuniInsertRequest
                 {
                     DatumIzdavanja = DateTime.Now,
-                    Iznos = _ukupno
+                    Iznos = _ukupno,
+                    KorisnickiNalogId=korisnikId
 
                 };
 

@@ -32,6 +32,7 @@ C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\o
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Gradovi.frmGradoviPregled.resources
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Helper.frmUspjehDodajUredi.resources
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.frmPocetna.resources
+C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Helper.frmZabranjeno.resources
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Kantoni.frmKantoniDodajUredi.resources
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Kantoni.frmKantoniPregled.resources
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Kategorije.frmKategorijeDodajUredi.resources
@@ -52,4 +53,3 @@ C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\o
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.csproj.CopyComplete
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.exe
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.pdb
-C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.WinUI\obj\Debug\MoTechFull.WinUI.Helper.frmZabranjeno.resources

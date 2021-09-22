@@ -91,11 +91,15 @@ namespace MoTechFull.Mob.ViewModels
 
             var listaRacuna = await _racuniService.Get<List<Model.Racuni>>(new RacuniSearchObject() {KorisnickiNalogId=korisnikId });
 
-            foreach (var r in listaRacuna) 
+            if(listaRacuna.Count > 0) 
             {
-                if (DateTime.Now < r.DatumIzdavanja.AddMinutes(1))
-                    return;
+                foreach (var r in listaRacuna)
+                {
+                    if (DateTime.Now < r.DatumIzdavanja.AddMinutes(1))
+                        return;
+                }
             }
+
 
             KorpeSearchObject korpeS = new KorpeSearchObject()
             {
@@ -109,7 +113,7 @@ namespace MoTechFull.Mob.ViewModels
             var listaKorpaArtikli = await _korpeArtikliService.Get<List<Model.KorpeArtikli>>
                 (new KorpeArtikliSearchObject() { IncludeListArtikal = true, IncludeListKorpa = true, KorpaId = korpaId });
 
-            RacuniInsertRequest racunIR = new RacuniInsertRequest { DatumIzdavanja = DateTime.Now };
+            RacuniInsertRequest racunIR = new RacuniInsertRequest { DatumIzdavanja = DateTime.Now , KorisnickiNalogId=korisnikId};
 
 
             await _racuniService.Insert<Racuni>(racunIR);
