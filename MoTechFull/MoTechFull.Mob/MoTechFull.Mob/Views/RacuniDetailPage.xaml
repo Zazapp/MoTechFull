@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:MoTechFull.Mob.ViewModels" xmlns:converters="clr-namespace:MoTechFull.Mob.Converters"
+             x:Class="MoTechFull.Mob.Views.RacuniDetailPage">
+
+    <ContentPage.BindingContext>
+        <vm:RacuniDetailViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Racun"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Vertical">
+
+                <StackLayout>
+                    <Label Text="Datum "></Label>
+                    <Entry Text="{Binding Racun.DatumIzdavanja}" IsReadOnly="True"></Entry>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Ime na računu "></Label>
+                    <Entry Text="{Binding Racun.KoriscnickiNalog.KorisnickoIme}" IsReadOnly="True"></Entry>
+                </StackLayout>
+
+                <ListView ItemsSource="{Binding narudzbaStavke}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="10" Orientation="Horizontal">
+                                    <StackLayout WidthRequest="100" HeightRequest="100">
+                                        <Image Source="{Binding Artikal.Image, Converter={StaticResource imgConv}}"></Image>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout Orientation="Vertical">
+                                            <Label Text="Naziv artikla: "></Label>
+                                            <Label Text="{Binding Artikal.Naziv}" 
+                                           LineBreakMode="NoWrap" 
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="16" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical">
+                                            <Label Text="Cijena artikla: "></Label>
+                                            <Label Text="{Binding Artikal.Cijena}" 
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="18" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical">
+                                            <Label Text="Kolicina: "></Label>
+                                            <Label Text="{Binding Kolicina}" 
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="18" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Ukupno: " FontSize="18" FontAttributes="Bold"></Label>
+                    <Entry Text="{Binding Racun.Iznos}" IsReadOnly="True" FontAttributes="Bold" FontSize="18"></Entry>
+                </StackLayout>
+
+
+
+                <Button Margin="0,10,0,0" Text="Ok"
+                    
+                        Clicked="OkClicked"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-22T15:39:03.152</Modified>
+      <Modified>2021-09-22T16:37:12.333</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\MoTechFull.Mob.UWP.exe">
       <PackagePath>entrypoint\MoTechFull.Mob.UWP.exe</PackagePath>
-      <Modified>2021-09-22T15:39:00.595</Modified>
+      <Modified>2021-09-22T16:37:11.003</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\.nuget\packages\flurl\3.0.2\lib\netstandard2.0\Flurl.dll">
       <PackagePath>Flurl.dll</PackagePath>
@@ -84,11 +84,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\bin\Debug\netstandard2.0\MoTechFull.Mob.dll">
       <PackagePath>MoTechFull.Mob.dll</PackagePath>
-      <Modified>2021-09-22T15:48:48.075</Modified>
+      <Modified>2021-09-22T16:37:01.640</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\bin\Debug\netstandard2.0\MoTechFull.Model.dll">
       <PackagePath>MoTechFull.Model.dll</PackagePath>
-      <Modified>2021-09-22T15:38:52.561</Modified>
+      <Modified>2021-09-22T15:52:05.088</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -104,174 +104,174 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\cart.png">
       <PackagePath>cart.png</PackagePath>
-      <Modified>2021-09-15T14:59:32.270</Modified>
+      <Modified>2021-09-22T15:52:04.850</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\motech_logo.png">
       <PackagePath>motech_logo.png</PackagePath>
-      <Modified>2021-09-15T13:49:44.104</Modified>
+      <Modified>2021-09-22T15:52:04.851</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.063</Modified>
+      <Modified>2021-09-22T15:52:04.621</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.066</Modified>
+      <Modified>2021-09-22T15:52:04.622</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.069</Modified>
+      <Modified>2021-09-22T15:52:04.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.070</Modified>
+      <Modified>2021-09-22T15:52:04.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.071</Modified>
+      <Modified>2021-09-22T15:52:04.625</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.073</Modified>
+      <Modified>2021-09-22T15:52:04.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.079</Modified>
+      <Modified>2021-09-22T15:52:04.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.081</Modified>
+      <Modified>2021-09-22T15:52:04.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.083</Modified>
+      <Modified>2021-09-22T15:52:04.628</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.084</Modified>
+      <Modified>2021-09-22T15:52:04.629</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.086</Modified>
+      <Modified>2021-09-22T15:52:04.629</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.088</Modified>
+      <Modified>2021-09-22T15:52:04.630</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.089</Modified>
+      <Modified>2021-09-22T15:52:04.631</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.091</Modified>
+      <Modified>2021-09-22T15:52:04.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.099</Modified>
+      <Modified>2021-09-22T15:52:04.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.101</Modified>
+      <Modified>2021-09-22T15:52:04.633</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.102</Modified>
+      <Modified>2021-09-22T15:52:04.634</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.104</Modified>
+      <Modified>2021-09-22T15:52:04.635</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.321</Modified>
+      <Modified>2021-09-22T15:52:04.636</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.324</Modified>
+      <Modified>2021-09-22T15:52:04.636</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.326</Modified>
+      <Modified>2021-09-22T15:52:04.636</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.332</Modified>
+      <Modified>2021-09-22T15:52:04.638</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.334</Modified>
+      <Modified>2021-09-22T15:52:04.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.335</Modified>
+      <Modified>2021-09-22T15:52:04.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.337</Modified>
+      <Modified>2021-09-22T15:52:04.640</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.338</Modified>
+      <Modified>2021-09-22T15:52:04.641</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-15T12:54:00.340</Modified>
+      <Modified>2021-09-22T15:52:04.641</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\xamarin_logo.png">
       <PackagePath>xamarin_logo.png</PackagePath>
-      <Modified>2021-09-15T12:54:01.161</Modified>
+      <Modified>2021-09-22T15:52:04.882</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\icon_about.png">
       <PackagePath>icon_about.png</PackagePath>
-      <Modified>2021-09-15T12:54:01.129</Modified>
+      <Modified>2021-09-22T15:52:04.850</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\icon_feed.png">
       <PackagePath>icon_feed.png</PackagePath>
-      <Modified>2021-09-15T12:54:01.131</Modified>
+      <Modified>2021-09-22T15:52:04.851</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-09-15T12:54:00.343</Modified>
+      <Modified>2021-09-22T15:52:04.646</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\MoTechFull.Mob.UWP.xr.xml">
       <PackagePath>MoTechFull.Mob.UWP.xr.xml</PackagePath>
-      <Modified>2021-09-15T13:08:52.984</Modified>
+      <Modified>2021-09-22T15:52:04.868</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-09-22T15:39:00.532</Modified>
+      <Modified>2021-09-22T16:37:10.911</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-09-22T15:39:00.532</Modified>
+      <Modified>2021-09-22T16:37:10.911</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -287,11 +287,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-09-22T15:39:01.268</Modified>
+      <Modified>2021-09-22T16:35:49.498</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\Core\MoTechFull.Mob.UWP.exe">
       <PackagePath>MoTechFull.Mob.UWP.exe</PackagePath>
-      <Modified>2021-09-22T15:39:03.145</Modified>
+      <Modified>2021-09-22T16:37:12.325</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

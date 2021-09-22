@@ -30,8 +30,8 @@ namespace MoTechFull.Mob.Views
         private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as Racuni;
-            await App.Current.MainPage.DisplayAlert("Uspjeh", item.Iznos.ToString(), "OK");
-            //await Navigation.PushAsync(new RacuniDetailPage(item));
+            //await App.Current.MainPage.DisplayAlert("Uspjeh", item.Iznos.ToString(), "OK");
+            await Navigation.PushAsync(new RacuniDetailPage(item));
         }
     }
 }

@@ -9,7 +9,7 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Proizvodi"
+            <Label Text="Moji Računi"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Picker ItemsSource="{Binding RacuniList}" SelectedItem="{Binding SelectedRacun}"
