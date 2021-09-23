@@ -1,4 +1,5 @@
 ﻿using MoTechFull.Mob.ViewModels;
+using MoTechFull.Mob.Views;
 using MoTechFull.Model;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace MoTechFull.Mob.ViewModels
             Title = "About";
 
         }
+
 
 
     }

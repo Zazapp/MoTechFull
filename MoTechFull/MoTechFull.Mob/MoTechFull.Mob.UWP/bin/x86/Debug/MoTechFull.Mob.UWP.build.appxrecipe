@@ -79,8 +79,14 @@
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\cart.png">
       <PackagePath>cart.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\location.png">
+      <PackagePath>location.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\motech_logo.png">
       <PackagePath>motech_logo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\PC1.png">
+      <PackagePath>PC1.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
@@ -189,6 +195,12 @@
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\ram1.png">
+      <PackagePath>ram1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\receipt.png">
+      <PackagePath>receipt.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\xamarin_logo.png">
       <PackagePath>xamarin_logo.png</PackagePath>

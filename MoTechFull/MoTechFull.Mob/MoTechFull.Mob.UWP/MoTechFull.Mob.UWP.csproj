@@ -107,7 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cart.png" />
+    <Content Include="location.png" />
     <Content Include="motech_logo.png" />
+    <Content Include="PC1.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
@@ -136,6 +138,8 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="ram1.png" />
+    <Content Include="receipt.png" />
     <Content Include="xamarin_logo.png" />
     <Content Include="icon_about.png" />
     <Content Include="icon_feed.png" />

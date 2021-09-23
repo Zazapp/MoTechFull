@@ -1,6 +1,7 @@
 ﻿using MoTechFull.Mob.ViewModels;
 using System;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -26,8 +27,6 @@ namespace MoTechFull.Mob.Views
         {
             await Navigation.PushAsync(new KorpaShowPage());
         }
-
-
 
     }
 }
