@@ -28,5 +28,10 @@ namespace MoTechFull.Mob.Views
             await Navigation.PushAsync(new KorpaShowPage());
         }
 
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ArtikliPage());
+
+        }
     }
 }
