@@ -51,7 +51,7 @@ namespace MoTechFull.API
 
             }
 
-            if (!context.Kantons.Any(x => x.Naziv == "Hercegovacko Neretvanski Kanton"))
+            if (!context.Kantons.Any(x => x.Naziv == "Hercegovacko-Neretvanski Kanton"))
             {
                 context.Kantons.Add(new Kanton() { Naziv = "Hercegovacko-Neretvanski Kanton", Oznaka = "HNK" });
                 context.Kantons.Add(new Kanton() { Naziv = "Kanton Sarajevo", Oznaka = "KS" });

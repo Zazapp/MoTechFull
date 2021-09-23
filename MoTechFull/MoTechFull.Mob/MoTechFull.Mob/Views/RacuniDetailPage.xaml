@@ -26,7 +26,7 @@
                 </StackLayout>
                 <StackLayout>
                     <Label Text="Ime na računu "></Label>
-                    <Entry Text="{Binding Racun.KoriscnickiNalog.KorisnickoIme}" IsReadOnly="True"></Entry>
+                    <Entry Text="{Binding Ime}" IsReadOnly="True"></Entry>
                 </StackLayout>
 
                 <ListView ItemsSource="{Binding narudzbaStavke}">

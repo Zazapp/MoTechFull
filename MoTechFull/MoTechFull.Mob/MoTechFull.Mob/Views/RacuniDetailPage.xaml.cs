@@ -28,5 +28,12 @@ namespace MoTechFull.Mob.Views
              Application.Current.MainPage = new AppShell();
 
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            model.Init();
+
+        }
     }
 }
