@@ -87,7 +87,7 @@ namespace MoTechFull.WinUI.Artikli
         private async void btnSave_Click(object sender, EventArgs e)
         {
 
-            if (txtNaziv.Text != "" && txtNaziv.Text.Length > 3 && txtCijena.Text!="" && txtSlika.Text!="")
+            if (txtNaziv.Text != "" && txtNaziv.Text.Length >= 3 && txtCijena.Text!="" && txtSlika.Text!="")
             {
 
 
@@ -154,6 +154,7 @@ namespace MoTechFull.WinUI.Artikli
                 lblObavezna.Visible = true;
                 lblCijena.Visible = true;
                 lblSlika.Visible = true;
+                lblMinimum.Visible = true;
 
             }
         }

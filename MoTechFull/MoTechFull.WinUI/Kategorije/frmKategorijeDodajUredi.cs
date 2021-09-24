@@ -1,4 +1,5 @@
-﻿using MoTechFull.WinUI.Helper;
+﻿using MoTechFull.Model.Requests;
+using MoTechFull.WinUI.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,28 +28,32 @@ namespace MoTechFull.WinUI.Kategorije
 
             if (_kategorija == null)
             {
-                if (txtNaziv.Text != "")
+                if (txtNaziv.Text != "" && txtNaziv.Text.Length >= 3)
                 {
-                    Model.Kategorije nova = new Model.Kategorije
+                    KategorijeInsertUpdateRequest nova = new KategorijeInsertUpdateRequest
                     {
                         Naziv = txtNaziv.Text,
                         Opis = rtxtOpis.Text
-
+                       
                     };
 
                     var kategorija = await _service.Insert<Model.Kategorije>(nova);
                     frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
                     uspjeh.Show();
                 }
-                else lblKategorija.Show();
+                else 
+                { 
+                    lblKategorija.Show();
+                    lblMinimum.Show();
+                }
             }
 
             else
             {
-                if (txtNaziv.Text != null)
+                if (txtNaziv.Text != null && txtNaziv.Text.Length >= 3)
                 {
                     int id = _kategorija.KategorijaId;
-                    Model.Kategorije nova = new Model.Kategorije
+                    KategorijeInsertUpdateRequest nova = new KategorijeInsertUpdateRequest
                     {
                         Naziv = txtNaziv.Text,
                         Opis = rtxtOpis.Text
@@ -59,7 +64,11 @@ namespace MoTechFull.WinUI.Kategorije
                     frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
                     uspjeh.Show();
                 }
-                else lblKategorija.Show();
+                else
+                {
+                    lblKategorija.Show();
+                    lblMinimum.Show();
+                }
             }
         }
 

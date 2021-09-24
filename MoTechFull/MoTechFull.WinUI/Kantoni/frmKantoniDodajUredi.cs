@@ -1,4 +1,5 @@
-﻿using MoTechFull.WinUI.Helper;
+﻿using MoTechFull.Model.Requests;
+using MoTechFull.WinUI.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,9 +28,9 @@ namespace MoTechFull.WinUI.Kantoni
         {
             if (_kanton == null)
             {
-                if (txtNaziv.Text != "" && txtOznaka.Text!="")
+                if (txtNaziv.Text != "" && txtNaziv.Text.Length >= 3 && txtOznaka.Text != "")
                 {
-                    Model.Kantoni novi = new Model.Kantoni
+                    KantoniInsertUpdateRequest novi = new KantoniInsertUpdateRequest
                     {
                         Naziv = txtNaziv.Text,
                         Oznaka = txtOznaka.Text
@@ -40,15 +41,19 @@ namespace MoTechFull.WinUI.Kantoni
                     frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
                     uspjeh.Show();
                 }
-                else lblKanton.Show();
+                else 
+                {
+                    lblKanton.Show();
+                    lblMinimum.Show();
+                } 
             }
 
             else
             {
-                if (txtNaziv.Text != null && txtNaziv!=null)
+                if (txtNaziv.Text != null && txtNaziv.Text.Length >= 3 && txtOznaka!=null)
                 {
                     int id = _kanton.KantonId;
-                    Model.Kantoni novi = new Model.Kantoni
+                    KantoniInsertUpdateRequest novi = new KantoniInsertUpdateRequest
                     {
                         Naziv = txtNaziv.Text,
                         Oznaka = txtOznaka.Text
@@ -59,7 +64,11 @@ namespace MoTechFull.WinUI.Kantoni
                     frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
                     uspjeh.Show();
                 }
-                else lblKanton.Show();
+                else
+                {
+                    lblKanton.Show();
+                    lblMinimum.Show();
+                }
             }
 
         }

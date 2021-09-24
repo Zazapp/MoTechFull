@@ -12,5 +12,6 @@ namespace MoTechFull.Model.Requests
         [MinLength(3)]
         [MaxLength(20)]
         public string Naziv { get; set; }
+        public int KantonId { get; set; }
     }
 }

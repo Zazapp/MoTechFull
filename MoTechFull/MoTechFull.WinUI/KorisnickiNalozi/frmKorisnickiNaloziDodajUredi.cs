@@ -27,7 +27,7 @@ namespace MoTechFull.WinUI.KorisnickiNalozi
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtNaziv.Text!="" && txtNaziv.Text.Length > 3 ) 
+            if(txtNaziv.Text!="" && txtNaziv.Text.Length >= 3 ) 
             {
             
 

@@ -49,6 +49,7 @@ namespace MoTechFull.WinUI.Artikli
             this.lblObavezna = new System.Windows.Forms.Label();
             this.lblCijena = new System.Windows.Forms.Label();
             this.lblSlika = new System.Windows.Forms.Label();
+            this.lblMinimum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSlika)).BeginInit();
             this.SuspendLayout();
             // 
@@ -229,11 +230,24 @@ namespace MoTechFull.WinUI.Artikli
             this.lblSlika.Text = "*";
             this.lblSlika.Visible = false;
             // 
+            // lblMinimum
+            // 
+            this.lblMinimum.AutoSize = true;
+            this.lblMinimum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimum.ForeColor = System.Drawing.Color.Red;
+            this.lblMinimum.Location = new System.Drawing.Point(84, 51);
+            this.lblMinimum.Name = "lblMinimum";
+            this.lblMinimum.Size = new System.Drawing.Size(87, 13);
+            this.lblMinimum.TabIndex = 19;
+            this.lblMinimum.Text = "(3+ karaktera)";
+            this.lblMinimum.Visible = false;
+            // 
             // frmArtikliDodajUredi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 451);
+            this.Controls.Add(this.lblMinimum);
             this.Controls.Add(this.lblSlika);
             this.Controls.Add(this.lblCijena);
             this.Controls.Add(this.lblObavezna);
@@ -284,5 +298,6 @@ namespace MoTechFull.WinUI.Artikli
         private System.Windows.Forms.Label lblObavezna;
         private System.Windows.Forms.Label lblCijena;
         private System.Windows.Forms.Label lblSlika;
+        private System.Windows.Forms.Label lblMinimum;
     }
 }

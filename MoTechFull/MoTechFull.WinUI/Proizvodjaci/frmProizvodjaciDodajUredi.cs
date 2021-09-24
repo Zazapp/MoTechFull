@@ -1,4 +1,5 @@
-﻿using MoTechFull.WinUI.Helper;
+﻿using MoTechFull.Model.Requests;
+using MoTechFull.WinUI.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,9 +28,9 @@ namespace MoTechFull.WinUI.Proizvodjaci
         {
             if (_proizvodjac == null)
             {
-                if (txtNaziv.Text != "")
+                if (txtNaziv.Text != "" && txtNaziv.Text.Length >= 3)
                 {
-                    Model.Proizvodjaci novi = new Model.Proizvodjaci
+                    ProizvodjaciInsertUpdateRequest novi = new ProizvodjaciInsertUpdateRequest
                     {
                         Naziv = txtNaziv.Text
                     };
@@ -38,15 +39,20 @@ namespace MoTechFull.WinUI.Proizvodjaci
                     frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
                     uspjeh.Show();
                 }
-                else lblProizvodjac.Show();
+                else
+                {
+                    lblProizvodjac.Show();
+                    lblMinimum.Show();
+                }
+
             }
 
             else
             {
-                if (txtNaziv.Text != null)
+                if (txtNaziv.Text != null && txtNaziv.Text.Length >= 3)
                 {
                     int id = _proizvodjac.ProizvodjacId;
-                    Model.Proizvodjaci nova = new Model.Proizvodjaci
+                    ProizvodjaciInsertUpdateRequest nova = new ProizvodjaciInsertUpdateRequest
                     {
                         Naziv = txtNaziv.Text
                     };
@@ -55,7 +61,11 @@ namespace MoTechFull.WinUI.Proizvodjaci
                     frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
                     uspjeh.Show();
                 }
-                else lblProizvodjac.Show();
+                else
+                {
+                    lblProizvodjac.Show();
+                    lblMinimum.Show();
+                }
             }
         }
 

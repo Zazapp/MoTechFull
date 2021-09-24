@@ -35,6 +35,7 @@ namespace MoTechFull.WinUI.Gradovi
             this.cmbKanton = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.lblGrad = new System.Windows.Forms.Label();
+            this.lblMinimum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -92,11 +93,24 @@ namespace MoTechFull.WinUI.Gradovi
             this.lblGrad.Text = "Naziv je obavezan.";
             this.lblGrad.Visible = false;
             // 
+            // lblMinimum
+            // 
+            this.lblMinimum.AutoSize = true;
+            this.lblMinimum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimum.ForeColor = System.Drawing.Color.Red;
+            this.lblMinimum.Location = new System.Drawing.Point(211, 15);
+            this.lblMinimum.Name = "lblMinimum";
+            this.lblMinimum.Size = new System.Drawing.Size(87, 13);
+            this.lblMinimum.TabIndex = 6;
+            this.lblMinimum.Text = "(3+ karaktera)";
+            this.lblMinimum.Visible = false;
+            // 
             // frmGradoviDodajUredi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(342, 175);
+            this.Controls.Add(this.lblMinimum);
             this.Controls.Add(this.lblGrad);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbKanton);
@@ -119,5 +133,6 @@ namespace MoTechFull.WinUI.Gradovi
         private System.Windows.Forms.ComboBox cmbKanton;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblGrad;
+        private System.Windows.Forms.Label lblMinimum;
     }
 }

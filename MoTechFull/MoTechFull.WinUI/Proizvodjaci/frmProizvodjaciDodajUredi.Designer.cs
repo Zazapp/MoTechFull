@@ -33,6 +33,7 @@ namespace MoTechFull.WinUI.Proizvodjaci
             this.lblProizvodjac = new System.Windows.Forms.Label();
             this.txtNaziv = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.lblMinimum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -51,9 +52,9 @@ namespace MoTechFull.WinUI.Proizvodjaci
             this.lblProizvodjac.ForeColor = System.Drawing.Color.Red;
             this.lblProizvodjac.Location = new System.Drawing.Point(53, 103);
             this.lblProizvodjac.Name = "lblProizvodjac";
-            this.lblProizvodjac.Size = new System.Drawing.Size(178, 13);
+            this.lblProizvodjac.Size = new System.Drawing.Size(182, 13);
             this.lblProizvodjac.TabIndex = 1;
-            this.lblProizvodjac.Text = "Ime proizvođača je obavezno!";
+            this.lblProizvodjac.Text = "Ime proizvođača je obavezno! ";
             this.lblProizvodjac.Visible = false;
             // 
             // txtNaziv
@@ -73,11 +74,24 @@ namespace MoTechFull.WinUI.Proizvodjaci
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // lblMinimum
+            // 
+            this.lblMinimum.AutoSize = true;
+            this.lblMinimum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimum.ForeColor = System.Drawing.Color.Red;
+            this.lblMinimum.Location = new System.Drawing.Point(90, 116);
+            this.lblMinimum.Name = "lblMinimum";
+            this.lblMinimum.Size = new System.Drawing.Size(88, 13);
+            this.lblMinimum.TabIndex = 4;
+            this.lblMinimum.Text = "(3+ Karaktera)";
+            this.lblMinimum.Visible = false;
+            // 
             // frmProizvodjaciDodajUredi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(296, 182);
+            this.Controls.Add(this.lblMinimum);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtNaziv);
             this.Controls.Add(this.lblProizvodjac);
@@ -96,5 +110,6 @@ namespace MoTechFull.WinUI.Proizvodjaci
         private System.Windows.Forms.Label lblProizvodjac;
         private System.Windows.Forms.TextBox txtNaziv;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label lblMinimum;
     }
 }

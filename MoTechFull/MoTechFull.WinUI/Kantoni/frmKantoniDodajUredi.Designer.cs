@@ -35,6 +35,7 @@ namespace MoTechFull.WinUI.Kantoni
             this.txtNaziv = new System.Windows.Forms.TextBox();
             this.txtOznaka = new System.Windows.Forms.TextBox();
             this.lblKanton = new System.Windows.Forms.Label();
+            this.lblMinimum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -91,11 +92,24 @@ namespace MoTechFull.WinUI.Kantoni
             this.lblKanton.Text = "Oba polja su obavezna!";
             this.lblKanton.Visible = false;
             // 
+            // lblMinimum
+            // 
+            this.lblMinimum.AutoSize = true;
+            this.lblMinimum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimum.ForeColor = System.Drawing.Color.Red;
+            this.lblMinimum.Location = new System.Drawing.Point(170, 33);
+            this.lblMinimum.Name = "lblMinimum";
+            this.lblMinimum.Size = new System.Drawing.Size(87, 13);
+            this.lblMinimum.TabIndex = 6;
+            this.lblMinimum.Text = "(3+ karaktera)";
+            this.lblMinimum.Visible = false;
+            // 
             // frmKantoniDodajUredi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(269, 182);
+            this.Controls.Add(this.lblMinimum);
             this.Controls.Add(this.lblKanton);
             this.Controls.Add(this.txtOznaka);
             this.Controls.Add(this.txtNaziv);
@@ -118,5 +132,6 @@ namespace MoTechFull.WinUI.Kantoni
         private System.Windows.Forms.TextBox txtNaziv;
         private System.Windows.Forms.TextBox txtOznaka;
         private System.Windows.Forms.Label lblKanton;
+        private System.Windows.Forms.Label lblMinimum;
     }
 }

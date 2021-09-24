@@ -35,6 +35,7 @@ namespace MoTechFull.WinUI.Kategorije
             this.rtxtOpis = new System.Windows.Forms.RichTextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtNaziv = new System.Windows.Forms.TextBox();
+            this.lblMinimum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -49,10 +50,11 @@ namespace MoTechFull.WinUI.Kategorije
             // lblKategorija
             // 
             this.lblKategorija.AutoSize = true;
+            this.lblKategorija.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKategorija.ForeColor = System.Drawing.Color.Red;
-            this.lblKategorija.Location = new System.Drawing.Point(221, 51);
+            this.lblKategorija.Location = new System.Drawing.Point(203, 51);
             this.lblKategorija.Name = "lblKategorija";
-            this.lblKategorija.Size = new System.Drawing.Size(137, 13);
+            this.lblKategorija.Size = new System.Drawing.Size(164, 13);
             this.lblKategorija.TabIndex = 1;
             this.lblKategorija.Text = "Ime kategorije je obavezno!";
             this.lblKategorija.Visible = false;
@@ -91,11 +93,24 @@ namespace MoTechFull.WinUI.Kategorije
             this.txtNaziv.Size = new System.Drawing.Size(178, 20);
             this.txtNaziv.TabIndex = 5;
             // 
+            // lblMinimum
+            // 
+            this.lblMinimum.AutoSize = true;
+            this.lblMinimum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimum.ForeColor = System.Drawing.Color.Red;
+            this.lblMinimum.Location = new System.Drawing.Point(98, 71);
+            this.lblMinimum.Name = "lblMinimum";
+            this.lblMinimum.Size = new System.Drawing.Size(87, 13);
+            this.lblMinimum.TabIndex = 6;
+            this.lblMinimum.Text = "(3+ karaktera)";
+            this.lblMinimum.Visible = false;
+            // 
             // frmKategorijeDodajUredi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 293);
+            this.Controls.Add(this.lblMinimum);
             this.Controls.Add(this.txtNaziv);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.rtxtOpis);
@@ -118,5 +133,6 @@ namespace MoTechFull.WinUI.Kategorije
         private System.Windows.Forms.RichTextBox rtxtOpis;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtNaziv;
+        private System.Windows.Forms.Label lblMinimum;
     }
 }

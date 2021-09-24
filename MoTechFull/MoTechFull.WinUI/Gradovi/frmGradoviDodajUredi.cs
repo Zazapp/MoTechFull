@@ -1,4 +1,5 @@
-﻿using MoTechFull.WinUI.Helper;
+﻿using MoTechFull.Model.Requests;
+using MoTechFull.WinUI.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,27 +37,31 @@ namespace MoTechFull.WinUI.Gradovi
                 }
 
 
-                if (txtNaziv.Text != "")
+                if (txtNaziv.Text != "" && txtNaziv.Text.Length >= 3)
                 {
-                    Model.Gradovi novi = new Model.Gradovi
+                    GradoviInsertRequest novi = new GradoviInsertRequest
                     {
                         Naziv = txtNaziv.Text,
-                        KantonId=gId
+                        KantonId = gId
                     };
 
                     var grad = await _gradovi.Insert<Model.Gradovi>(novi);
                     frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
                     uspjeh.Show();
                 }
-                else lblGrad.Show();
+                else 
+                {
+                    lblGrad.Show();
+                    lblMinimum.Show();
+                }
             }
 
             else
             {
-                if (txtNaziv.Text != null)
+                if (txtNaziv.Text != null && txtNaziv.Text.Length >= 3)
                 {
                     int id = _grad.GradId;
-                    Model.Gradovi novi = new Model.Gradovi
+                    GradoviUpdateRequest novi = new GradoviUpdateRequest
                     {
                         Naziv = txtNaziv.Text,
                         KantonId = gId
@@ -66,7 +71,11 @@ namespace MoTechFull.WinUI.Gradovi
                     frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
                     uspjeh.Show();
                 }
-                else lblGrad.Show();
+                else
+                {
+                    lblGrad.Show();
+                    lblMinimum.Show();
+                }
             }
         }
 
