@@ -84,7 +84,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\bin\Debug\netstandard2.0\MoTechFull.Mob.dll">
       <PackagePath>MoTechFull.Mob.dll</PackagePath>
-      <Modified>2021-09-23T15:55:56.331</Modified>
+      <Modified>2021-09-24T00:05:53.529</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob\bin\Debug\netstandard2.0\MoTechFull.Model.dll">
       <PackagePath>MoTechFull.Model.dll</PackagePath>
