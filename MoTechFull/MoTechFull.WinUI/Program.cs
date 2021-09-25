@@ -17,7 +17,15 @@ namespace MoTechFull.WinUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+
+            var frm = new frmLogin();
+
+            if (frm.ShowDialog() == DialogResult.OK) 
+            {
+                Application.Run(new frmPocetna());
+            }
+
+
         }
     }
 }

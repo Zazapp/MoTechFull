@@ -28,8 +28,9 @@ namespace MoTechFull.WinUI.Login
             {
                 var result = await _api.Get<List<Model.KorisnickiNalozi>>();
 
-                frmPocetna frm = new frmPocetna();
-                frm.Show();
+                DialogResult = DialogResult.OK;
+                //frmPocetna frm = new frmPocetna();
+                //frm.Show();
             }
             catch
             {
