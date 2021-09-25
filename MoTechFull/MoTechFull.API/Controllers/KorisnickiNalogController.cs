@@ -38,14 +38,13 @@ namespace MoTechFull.Controllers
 
         [Authorize(Roles = "1")]
         [HttpPost]
-        public Model.KorisnickiNalozi Insert(KorisnickiNaloziInsertUpdateRequest korisnici)
+        public Model.KorisnickiNalozi Insert(KorisnickiNaloziInsertRequest korisnici)
         {
             return _service.Insert(korisnici);
         }
 
-        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
-        public Model.KorisnickiNalozi Update(int id, [FromBody] KorisnickiNaloziInsertUpdateRequest request)
+        public Model.KorisnickiNalozi Update(int id, [FromBody] KorisnickiNaloziUpdateRequest request)
         {
             return _service.Update(id, request);
         }

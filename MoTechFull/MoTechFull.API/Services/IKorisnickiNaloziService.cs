@@ -17,8 +17,8 @@ namespace MoTechFull.Services
 
         Model.KorisnickiNalozi GetById(int id);
 
-        Model.KorisnickiNalozi Insert(KorisnickiNaloziInsertUpdateRequest korisnici);
+        Model.KorisnickiNalozi Insert(KorisnickiNaloziInsertRequest korisnici);
 
-        Model.KorisnickiNalozi Update(int id, KorisnickiNaloziInsertUpdateRequest korisnici);
+        Model.KorisnickiNalozi Update(int id, KorisnickiNaloziUpdateRequest korisnici);
     }
 }

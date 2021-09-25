@@ -74,7 +74,7 @@ namespace MoTechFull.Services
             return _mapper.Map<Model.KorisnickiNalozi>(entity);
         }
 
-        public Model.KorisnickiNalozi Insert(KorisnickiNaloziInsertUpdateRequest request)
+        public Model.KorisnickiNalozi Insert(KorisnickiNaloziInsertRequest request)
         {
             var entity = _mapper.Map<Database.KorisnickiNalog>(request);
 
@@ -85,7 +85,7 @@ namespace MoTechFull.Services
             return _mapper.Map<Model.KorisnickiNalozi>(entity);
         }
 
-        public KorisnickiNalozi Update(int id, KorisnickiNaloziInsertUpdateRequest request)
+        public KorisnickiNalozi Update(int id, KorisnickiNaloziUpdateRequest request)
         {
             var entity = Context.KorisnickiNalogs.Find(id);
             _mapper.Map(request, entity);

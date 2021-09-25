@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:MoTechFull.Mob.ViewModels"
+             x:Class="MoTechFull.Mob.Views.NalogShowPage">
+
+    <ContentPage.BindingContext>
+        <vm:NalogShowViewModel></vm:NalogShowViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Edit profile"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout Orientation="Vertical" HeightRequest="100" WidthRequest="100">
+                <Label Text="Promjenite Korisničko ime: "></Label>
+                <Entry Text="{Binding Username}"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HeightRequest="100" WidthRequest="100">
+                <Label Text="Unesite lozinku: "></Label>
+                <Entry Text="{Binding Password1}" IsPassword="True"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HeightRequest="100" WidthRequest="100">
+                <Label Text="Potvrdite lozinku: "></Label>
+                <Entry Text="{Binding Password2}" IsPassword="True"></Entry>
+            </StackLayout>
+
+            <Button Margin="0,10,0,0" Text="Spasi promjene"
+                    Command="{Binding UpdateUser}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

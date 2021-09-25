@@ -36,7 +36,7 @@ namespace MoTechFull.WinUI.KorisnickiNalozi
                 if (txtLozinka1.Text != "" && txtLozinka1.Text == txtLozinka2.Text)
                 {
 
-                    KorisnickiNaloziInsertUpdateRequest novi = new KorisnickiNaloziInsertUpdateRequest
+                    KorisnickiNaloziInsertRequest novi = new KorisnickiNaloziInsertRequest
                     {
                         KorisnickoIme = txtNaziv.Text,
                         Lozinka = txtLozinka1.Text,
@@ -57,7 +57,7 @@ namespace MoTechFull.WinUI.KorisnickiNalozi
                 if (txtLozinka1.Text != "" && txtLozinka1.Text == txtLozinka2.Text)
                 {
                     int id = _korisnik.KorisnickiNalogId;
-                    KorisnickiNaloziInsertUpdateRequest noviEdit = new KorisnickiNaloziInsertUpdateRequest
+                    KorisnickiNaloziInsertRequest noviEdit = new KorisnickiNaloziInsertRequest
                     {
                         KorisnickoIme = txtNaziv.Text,
                         Lozinka = txtLozinka1.Text,

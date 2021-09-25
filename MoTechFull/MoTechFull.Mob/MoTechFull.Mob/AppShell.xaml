@@ -93,6 +93,10 @@
     <FlyoutItem Title="Moji Računi" Icon="receipt.png">
         <ShellContent Route="RacuniPage" ContentTemplate="{DataTemplate local:RacuniShowPage}" />
     </FlyoutItem>
+    <FlyoutItem Title="Moj Nalog" Icon="receipt.png">
+        <ShellContent Route="NalogPage" ContentTemplate="{DataTemplate local:NalogShowPage}" />
+    </FlyoutItem>
+
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
