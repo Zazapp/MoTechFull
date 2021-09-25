@@ -14,7 +14,7 @@ namespace MoTechFull.Database
 
         public int KupacNarudzbeId { get; set; }
         public int KorisnickiNalogId { get; set; }
-        public int AdresaId { get; set; }
+        //public int AdresaId { get; set; }
         public string AdresaDostave { get; set; }
         public int GradId { get; set; }
         public DateTime Datum { get; set; }

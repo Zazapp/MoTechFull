@@ -13,7 +13,6 @@ namespace MoTechFull.Model
         public double Cijena { get; set; }
         public byte[] Image { get; set; }
         public int ProizvodjacId { get; set; }
-        public bool Dostupan { get; set; }
 
         public virtual Kategorije Kategorija { get; set; }
         public virtual Proizvodjaci Proizvodjac { get; set; }

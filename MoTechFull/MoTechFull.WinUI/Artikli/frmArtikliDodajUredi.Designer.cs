@@ -41,7 +41,6 @@ namespace MoTechFull.WinUI.Artikli
             this.label5 = new System.Windows.Forms.Label();
             this.cmbKategorije = new System.Windows.Forms.ComboBox();
             this.cmbProizvodjaci = new System.Windows.Forms.ComboBox();
-            this.chbDostupan = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.rtxtOpis = new System.Windows.Forms.RichTextBox();
             this.pcbSlika = new System.Windows.Forms.PictureBox();
@@ -155,16 +154,6 @@ namespace MoTechFull.WinUI.Artikli
             this.cmbProizvodjaci.Size = new System.Drawing.Size(169, 21);
             this.cmbProizvodjaci.TabIndex = 11;
             // 
-            // chbDostupan
-            // 
-            this.chbDostupan.AutoSize = true;
-            this.chbDostupan.Location = new System.Drawing.Point(262, 69);
-            this.chbDostupan.Name = "chbDostupan";
-            this.chbDostupan.Size = new System.Drawing.Size(72, 17);
-            this.chbDostupan.TabIndex = 12;
-            this.chbDostupan.Text = "Dostupan";
-            this.chbDostupan.UseVisualStyleBackColor = true;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -254,7 +243,6 @@ namespace MoTechFull.WinUI.Artikli
             this.Controls.Add(this.pcbSlika);
             this.Controls.Add(this.rtxtOpis);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.chbDostupan);
             this.Controls.Add(this.cmbProizvodjaci);
             this.Controls.Add(this.cmbKategorije);
             this.Controls.Add(this.label5);
@@ -290,7 +278,6 @@ namespace MoTechFull.WinUI.Artikli
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbKategorije;
         private System.Windows.Forms.ComboBox cmbProizvodjaci;
-        private System.Windows.Forms.CheckBox chbDostupan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox rtxtOpis;
         private System.Windows.Forms.PictureBox pcbSlika;

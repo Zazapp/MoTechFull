@@ -16,6 +16,5 @@ namespace MoTechFull.Model.Requests
         public double Cijena { get; set; }
         public byte[] Image  { get; set; }
         public int ProizvodjacId { get; set; }
-        public bool Dostupan { get; set; }
     }
 }

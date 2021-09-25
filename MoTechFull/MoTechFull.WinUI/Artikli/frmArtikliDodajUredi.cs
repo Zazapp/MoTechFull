@@ -44,7 +44,6 @@ namespace MoTechFull.WinUI.Artikli
                 txtNaziv.Text = _artikal.Naziv;
                 txtCijena.Text= _artikal.Cijena.ToString();
                 rtxtOpis.Text = _artikal.Opis;
-                chbDostupan.Checked = _artikal.Dostupan;
             }
         }
 
@@ -113,7 +112,6 @@ namespace MoTechFull.WinUI.Artikli
                             ArtikliInsertRequest novi = new ArtikliInsertRequest
                             {
                                 Cijena = _cijena,
-                                Dostupan = chbDostupan.Checked,
                                 Image = slikapre,
                                 Naziv = txtNaziv.Text.ToString(),
                                 Opis = rtxtOpis.Text.ToString(),
@@ -132,7 +130,6 @@ namespace MoTechFull.WinUI.Artikli
                             ArtikliUpdateRequest noviE = new ArtikliUpdateRequest
                             {
                                 Cijena = _cijena,
-                                Dostupan = chbDostupan.Checked,
                                 Image = slikapre,
                                 Naziv = txtNaziv.Text.ToString(),
                                 Opis = rtxtOpis.Text.ToString(),

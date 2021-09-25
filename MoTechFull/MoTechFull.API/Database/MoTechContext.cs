@@ -297,7 +297,8 @@ namespace MoTechFull.Database
                     .WithMany(p => p.Recenzijas)
                     .HasForeignKey(d => d.KupacId);
             });
-        
+
+
 
             OnModelCreatingPartial(modelBuilder);
         }

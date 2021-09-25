@@ -1,9 +1,9 @@
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Model\bin\Debug\netstandard2.0\MoTechFull.Model.deps.json
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Model\bin\Debug\netstandard2.0\MoTechFull.Model.dll
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Model\bin\Debug\netstandard2.0\MoTechFull.Model.pdb
+C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Model\obj\Debug\netstandard2.0\MoTechFull.Model.csproj.AssemblyReference.cache
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Model\obj\Debug\netstandard2.0\MoTechFull.Model.AssemblyInfoInputs.cache
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Model\obj\Debug\netstandard2.0\MoTechFull.Model.AssemblyInfo.cs
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Model\obj\Debug\netstandard2.0\MoTechFull.Model.csproj.CoreCompileInputs.cache
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Model\obj\Debug\netstandard2.0\MoTechFull.Model.dll
 C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Model\obj\Debug\netstandard2.0\MoTechFull.Model.pdb
-C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Model\obj\Debug\netstandard2.0\MoTechFull.Model.csproj.AssemblyReference.cache

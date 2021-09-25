@@ -388,9 +388,6 @@ namespace MoTechFull.API.Migrations
                     b.Property<string>("AdresaDostave")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("AdresaId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("Datum")
                         .HasColumnType("datetime2");
 
