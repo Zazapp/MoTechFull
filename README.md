@@ -17,6 +17,10 @@
     docker-compose build
 
     docker-compose up
+    
+    Open MoTechFull Solution
+    
+    Rebuild Solution
 
 - Samo admin ima pristup upravljanju korisnika, sve ostalo je dopusteno svim korisnicima radi demonstracije.
 - Postavljeno je dovoljno podataka da recommender preporuci najbolje artikle na osnovu pretrage.
