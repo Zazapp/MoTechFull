@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>35EFD6A0520CBC2778D61BB18796BBCDEE8C26ADED9155A65242CF3C66F2A080</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>0FC632834E359C6A5F914EADE24E2729C162BCC871F89E94DB23D50B24DA7F52</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>0018e8e8-3c77-4f8d-b99b-fda4bc035577_1.0.0.0_x86__kvgwkfqeq3q88</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>0018e8e8-3c77-4f8d-b99b-fda4bc035577_kvgwkfqeq3q88!App</RegisteredUserModeAppID>
     <RegisteredPackageID>0018e8e8-3c77-4f8d-b99b-fda4bc035577</RegisteredPackageID>
@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-25T17:05:57.910</Modified>
+      <Modified>2021-09-25T18:51:24.631</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -307,11 +307,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-09-25T17:05:56.760</Modified>
+      <Modified>2021-09-25T18:45:35.162</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\bin\x86\Debug\Core\MoTechFull.Mob.UWP.exe">
       <PackagePath>MoTechFull.Mob.UWP.exe</PackagePath>
-      <Modified>2021-09-25T17:05:57.904</Modified>
+      <Modified>2021-09-25T18:51:24.623</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
