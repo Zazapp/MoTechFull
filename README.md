@@ -19,5 +19,5 @@
     docker-compose up
 
 - Samo admin ima pristup upravljanju korisnika, sve ostalo je dopusteno svim korisnicima radi demonstracije.
-- Dodati artikle sa slikama i nakon ~5 narudzbi sa vise artikala recommender pocinje sa najboljim ponudama na osnovu pretrage.
+- Postavljeno je dovoljno podataka da recommender preporuci najbolje artikle na osnovu pretrage.
 - Recommender liste u shopu su prazne ako nema dovoljno dobra korelacija izmedju artikala.
