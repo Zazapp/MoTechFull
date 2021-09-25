@@ -93,7 +93,7 @@
     <FlyoutItem Title="Moji Računi" Icon="receipt.png">
         <ShellContent Route="RacuniPage" ContentTemplate="{DataTemplate local:RacuniShowPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Moj Nalog" Icon="receipt.png">
+    <FlyoutItem Title="Moj Nalog" Icon="profile.png">
         <ShellContent Route="NalogPage" ContentTemplate="{DataTemplate local:NalogShowPage}" />
     </FlyoutItem>
 

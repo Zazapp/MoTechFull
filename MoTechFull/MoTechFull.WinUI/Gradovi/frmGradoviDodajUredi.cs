@@ -58,18 +58,22 @@ namespace MoTechFull.WinUI.Gradovi
 
             else
             {
-                if (txtNaziv.Text != null && txtNaziv.Text.Length >= 3)
+                if (txtNaziv.Text != null && txtNaziv.Text.Length >= 3 && cmbKanton.SelectedValue!=null)
                 {
-                    int id = _grad.GradId;
-                    GradoviUpdateRequest novi = new GradoviUpdateRequest
+                    if (int.TryParse(cmbKanton.SelectedValue.ToString(), out int gid))
                     {
-                        Naziv = txtNaziv.Text,
-                        KantonId = gId
-                    };
+                        gId = gid;
+                        int id = _grad.GradId;
+                        GradoviUpdateRequest novi = new GradoviUpdateRequest
+                        {
+                            Naziv = txtNaziv.Text,
+                            KantonId = gId
+                        };
 
-                    var grad = await _gradovi.Update<Model.Gradovi>(id, novi);
-                    frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
-                    uspjeh.Show();
+                        var grad = await _gradovi.Update<Model.Gradovi>(id, novi);
+                        frmUspjehDodajUredi uspjeh = new frmUspjehDodajUredi();
+                        uspjeh.Show();
+                    }                   
                 }
                 else
                 {

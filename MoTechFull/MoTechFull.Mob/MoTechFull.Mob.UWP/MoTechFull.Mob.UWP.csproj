@@ -110,6 +110,7 @@
     <Content Include="location.png" />
     <Content Include="motech_logo.png" />
     <Content Include="PC1.png" />
+    <Content Include="profile.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />

@@ -88,6 +88,9 @@
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\PC1.png">
       <PackagePath>PC1.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\profile.png">
+      <PackagePath>profile.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azzapp\source\repos\MoTechFull\MoTechFull\MoTechFull\MoTechFull.Mob\MoTechFull.Mob.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
